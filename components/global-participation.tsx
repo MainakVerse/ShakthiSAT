@@ -29,7 +29,7 @@ export function GlobalParticipation() {
     <section className="relative py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight mb-6">
+          <h2 className="text-4xl text-white md:text-6xl font-bold uppercase tracking-tight mb-6">
             Global Participation & Impact
           </h2>
           <p className="text-xl md:text-2xl text-[#FFD700] font-semibold italic">

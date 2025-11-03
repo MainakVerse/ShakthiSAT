@@ -29,7 +29,8 @@ export function Why108Countries() {
             <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">Why 108 Countries?</h2>
             <p className="text-lg md:text-xl text-[#C0C0C0] leading-relaxed">
               The number <span className="text-[#FFD700] font-semibold">108</span> holds deep spiritual and cultural
-              significance across many traditions—representing wholeness, the universe, and cosmic unity.
+              significance across many traditions—representing wholeness, the universe, and cosmic unity. Uniting 108 nations in a shared cosmic mission, we ignite innovation through diversity, break barriers through collaboration, and build a future where humanity explores, learns, and thrives together among the stars.
+
             </p>
             <p className="text-lg md:text-xl text-[#C0C0C0] leading-relaxed">
               By bringing together 108 nations, we celebrate diversity as our greatest strength. Innovation thrives

@@ -1,5 +1,6 @@
 import { Globe, MapPin, Users } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { WorldMap } from "@/components/world-map"
 
 export default function CountriesPage() {
   return (
@@ -42,6 +43,8 @@ export default function CountriesPage() {
             </CardHeader>
           </Card>
         </div>
+
+        <WorldMap />
 
         {/* Content Section */}
         <Card className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30">

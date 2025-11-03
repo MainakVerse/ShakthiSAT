@@ -24,18 +24,18 @@ export function WhyGirlsInSpace() {
   }, [facts.length]);
 
   return (
-    <section className="relative py-24 px-4">
+    <section className="relative py-16 md:py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Section */}
-          <div className="space-y-6">
-            <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">
+          <div className="space-y-6 text-center lg:text-left">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-tight leading-tight">
               Why Girls in Space?
             </h2>
 
             <div className="space-y-4">
               {/* Animated Facts Box */}
-              <div className="bg-[#6A4FC8]/10 border border-[#6A4FC8]/30 rounded-lg p-6 text-center overflow-hidden relative">
+              <div className="bg-[#6A4FC8]/10 border border-[#6A4FC8]/30 rounded-lg p-4 sm:p-6 text-center overflow-hidden relative">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={facts[index].stat}
@@ -44,15 +44,15 @@ export function WhyGirlsInSpace() {
                     exit={{ opacity: 0, y: -10 }}
                     transition={{ duration: 0.6 }}
                   >
-                    <p className="text-5xl font-bold text-[#E26EE5] mb-2">
+                    <p className="text-4xl sm:text-5xl font-bold text-[#E26EE5] mb-2">
                       {facts[index].stat}
                     </p>
-                    <p className="text-lg text-[#C0C0C0]">{facts[index].text}</p>
+                    <p className="text-base sm:text-lg text-[#C0C0C0]">{facts[index].text}</p>
                   </motion.div>
                 </AnimatePresence>
               </div>
 
-              <p className="text-lg md:text-xl text-[#C0C0C0] leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-[#C0C0C0] leading-relaxed">
                 The gender gap in space and STEM fields remains significant.
                 ShakthiSAT is our answer—a bold initiative to ignite passion,
                 build leaders, and break barriers. Empowering girls in space ignites
@@ -61,7 +61,7 @@ export function WhyGirlsInSpace() {
                 beyond limits and shape humanity’s cosmic journey.
               </p>
 
-              <p className="text-lg md:text-xl text-[#C0C0C0] leading-relaxed">
+              <p className="text-base sm:text-lg md:text-xl text-[#C0C0C0] leading-relaxed">
                 We believe in{" "}
                 <span className="text-[#FFD700] font-semibold">
                   equal access to infinity
@@ -70,9 +70,9 @@ export function WhyGirlsInSpace() {
               </p>
             </div>
 
-            <div className="flex items-center gap-3 pt-4">
-              <Sparkles className="h-8 w-8 text-[#FFD700]" />
-              <p className="text-xl font-semibold text-[#FFD700]">
+            <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 pt-4">
+              <Sparkles className="h-7 w-7 sm:h-8 sm:w-8 text-[#FFD700]" />
+              <p className="text-lg sm:text-xl font-semibold text-[#FFD700] text-center sm:text-left">
                 Ignite Passion • Build Leaders • Break Barriers
               </p>
             </div>
@@ -80,12 +80,13 @@ export function WhyGirlsInSpace() {
 
           {/* Right Section - Image */}
           <div className="flex items-center justify-center">
-            <div className="w-[500px] aspect-square rounded-lg bg-gradient-to-br from-[#E26EE5]/20 to-[#6A4FC8]/20 backdrop-blur-sm border border-[#6A4FC8]/30 overflow-hidden relative hover:scale-105 transition-all duration-300">
+            <div className="w-64 sm:w-80 md:w-[400px] lg:w-[500px] aspect-square rounded-lg bg-gradient-to-br from-[#E26EE5]/20 to-[#6A4FC8]/20 backdrop-blur-sm border border-[#6A4FC8]/30 overflow-hidden relative hover:scale-105 transition-transform duration-300">
               <Image
                 src="/shakthisat-poster-girls.png"
                 alt="Girls in Space"
                 fill
                 className="object-cover rounded-lg"
+                priority
               />
             </div>
           </div>

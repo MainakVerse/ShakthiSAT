@@ -19,7 +19,7 @@ export function WhyShakthiSAT() {
           </div>
 
           <div className="space-y-6 order-1 md:order-2">
-            <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">Why ShakthiSAT?</h2>
+            <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight">What is Mission ShakthiSAT?</h2>
             <p className="text-lg md:text-xl text-[#C0C0C0] leading-relaxed">
               ShakthiSAT represents more than a satellite mission—it's a philosophy of building bridges across cultures
               through STEM and space collaboration.

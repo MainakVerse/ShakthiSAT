@@ -9,25 +9,25 @@ const satellites = [
     name: "KALAMSAT",
     year: "2017",
     description: "World's lightest satellite",
-    image: "/small-black-cube-satellite-kalamsat.jpg",
+    image: "/kalamsat.jpg",
   },
   {
     name: "SKISAT",
     year: "2018",
     description: "Most number of sensors flown in a reusable rocket",
-    image: "/complex-sensor-array-satellite-skisat.jpg",
+    image: "/skisat.jpg",
   },
   {
     name: "KALAMSAT V2",
     year: "2019",
     description: "1st Orbital mission of Space Kidz India",
-    image: "/yellow-green-orbital-satellite-kalamsat-v2.jpg",
+    image: "/kalamsat-v2.jpg",
   },
   {
     name: "JATAYU 14 and 15",
     year: "2021",
     description: "High altitude balloons to research air quality",
-    image: "/high-altitude-weather-balloon-jatayu.jpg",
+    image: "/jatayu.jpg",
   },
   {
     name: "SD SAT",
@@ -39,7 +39,7 @@ const satellites = [
     name: "AZAADISAT",
     year: "2023",
     description: "Satellite built by 750 girl students",
-    image: "/yellow-cubesat-azaadisat-built-by-students.jpg",
+    image: "/azaadisat.jpg",
   },
 ]
 
@@ -59,7 +59,7 @@ export function ShakthiSATInSpace() {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-[#6A4FC8] via-[#E26EE5] to-[#FFD700] bg-clip-text text-transparent">
-            ShakthiSAT in Space
+            Our Journey
           </h2>
           <p className="text-xl text-[#C0C0C0] max-w-3xl mx-auto text-balance">
             Our Journey So Far: A Legacy of Innovation and Empowerment

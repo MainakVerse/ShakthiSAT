@@ -18,14 +18,12 @@ export default function Page() {
     <main className="relative min-h-screen bg-[#0B0C2A] text-white overflow-x-hidden">
       <Starfield />
       <ScrollProgress />
-
       <HeroSection />
-      <MissionOverview />
-      <ShakthiSATInSpace />
+      <MissionOverview />      
       <WhyShakthiSAT />
       <WhyGirlsInSpace />
       <Why108Countries />
-      <OurLegacy />
+      <ShakthiSATInSpace />
       <DirectorSection />
       <AboutFoundation />
       <GlobalParticipation />

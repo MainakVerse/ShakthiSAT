@@ -13,11 +13,9 @@ export function MissionOverview() {
               <span className="text-[#E26EE5] font-semibold">108 countries</span> through real-time satellite projects.
             </p>
             <p className="text-lg md:text-xl text-[#C0C0C0] leading-relaxed">
-              We unite humanity under one sky, building bridges across cultures through STEM education and space
-              collaboration. Together, we create a message of unity, hope, and infinite possibility.
-            </p>
+              ShakthiSAT, driven by the burning desire to empower little girls globally through the awe-inspiring realm of space exploration, plans the participation of 12000 courageous girls from every corner of the globe, representing 108 diverse nations. With unwavering determination, the mission sets out to extend a golden opportunity to 108 talented students from each country, igniting their passion for STEM and space.</p>
             <div className="pt-4">
-              <p className="text-2xl md:text-3xl font-semibold text-[#6A4FC8] italic">
+              <p className="text-2xl md:text-3xl font-semibold text-[#63d7e9] italic">
                 "Uniting Humanity Under One Sky."
               </p>
             </div>

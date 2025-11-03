@@ -104,7 +104,7 @@ export function HeroSection() {
             onClick={toggleMotionMode}
             variant="outline"
             disabled={prefersReducedMotion}
-            className={`bg-green-500 text-white hover:bg-blue-600 font-semibold text-lg px-8 py-6 ${
+            className={`bg-green-900 text-white hover:bg-blue-600 font-semibold text-lg px-8 py-6 ${
               motionMode ? "pulse-ring-green" : ""
             }`}
           >

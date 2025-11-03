@@ -64,7 +64,7 @@ export function HeroSection() {
       return
     }
 
-    const duration = 40000 // 40 seconds
+    const duration = 50000 // 50 seconds
     const startScroll = window.scrollY
     const endScroll = document.body.scrollHeight - window.innerHeight
 

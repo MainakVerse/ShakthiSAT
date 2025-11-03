@@ -14,17 +14,14 @@ export function HeroSection() {
   const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
   const scrollIntervalRef = useRef<NodeJS.Timeout | null>(null)
 
-  // Check for reduced motion preference
   useEffect(() => {
     const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
     setPrefersReducedMotion(mediaQuery.matches)
-
     const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
     mediaQuery.addEventListener("change", handler)
     return () => mediaQuery.removeEventListener("change", handler)
   }, [])
 
-  // Typewriter effect
   useEffect(() => {
     if (prefersReducedMotion) {
       setDisplayText(phrases.join(" "))
@@ -43,57 +40,12 @@ export function HeroSection() {
       } else {
         setIsTyping(false)
         clearInterval(typeInterval)
-        setTimeout(() => {
-          setCurrentPhrase((prev) => (prev + 1) % phrases.length)
-        }, 2000)
+        setTimeout(() => setCurrentPhrase((prev) => (prev + 1) % phrases.length), 2000)
       }
     }, 80)
 
     return () => clearInterval(typeInterval)
   }, [currentPhrase, prefersReducedMotion])
-
-  // Motion mode auto-scroll
-  useEffect(() => {
-    if (motionMode && !prefersReducedMotion) {
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight
-      const duration = 40000 // 40 seconds
-      const startTime = Date.now()
-      const startScroll = window.scrollY
-
-      const scroll = () => {
-        const elapsed = Date.now() - startTime
-        const progress = Math.min(elapsed / duration, 1)
-        window.scrollTo(0, startScroll + (scrollHeight - startScroll) * progress)
-
-        if (progress < 1) {
-          scrollIntervalRef.current = setTimeout(scroll, 16)
-        } else {
-          setMotionMode(false)
-        }
-      }
-
-      scroll()
-
-      // Pause on user interaction
-      const pauseScroll = () => {
-        if (scrollIntervalRef.current) {
-          clearTimeout(scrollIntervalRef.current)
-          setMotionMode(false)
-        }
-      }
-
-      window.addEventListener("wheel", pauseScroll)
-      window.addEventListener("touchstart", pauseScroll)
-      window.addEventListener("keydown", pauseScroll)
-
-      return () => {
-        if (scrollIntervalRef.current) clearTimeout(scrollIntervalRef.current)
-        window.removeEventListener("wheel", pauseScroll)
-        window.removeEventListener("touchstart", pauseScroll)
-        window.removeEventListener("keydown", pauseScroll)
-      }
-    }
-  }, [motionMode, prefersReducedMotion])
 
   const scrollToMission = () => {
     document.getElementById("mission-overview")?.scrollIntoView({ behavior: "smooth" })
@@ -105,17 +57,31 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-4 py-20">
-      {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#6A4FC8]/20 via-transparent to-[#E26EE5]/10 pointer-events-none" />
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Background Video */}
+      <video
+        className="absolute inset-0 w-full h-full object-cover"
+        autoPlay
+        loop
+        muted
+        playsInline
+        src="/videos/space-bg.mp4" // <-- replace with your video path
+      />
 
-      <div className="relative z-10 text-center max-w-5xl mx-auto">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tight mb-6 glow-text">
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-b from-[#6A4FC8]/30 via-transparent to-[#E26EE5]/20 pointer-events-none" />
+
+      {/* Content */}
+      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 py-20">
+        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tight mb-6 text-white drop-shadow-lg">
           ShakthiSAT
         </h1>
 
         <div className="h-16 md:h-20 flex items-center justify-center mb-12" aria-live="polite" aria-atomic="true">
-          <p className="text-xl md:text-3xl font-medium text-[#C0C0C0]">
+          <p className="text-xl md:text-3xl font-medium text-gray-200">
             {displayText}
             {isTyping && !prefersReducedMotion && (
               <span className="inline-block w-0.5 h-6 md:h-8 bg-[#FFD700] ml-1 animate-pulse" />
@@ -144,24 +110,20 @@ export function HeroSection() {
           >
             {motionMode ? (
               <>
-                <Pause className="mr-2 h-5 w-5" />
-                Pause Motion
+                <Pause className="mr-2 h-5 w-5" /> Pause Motion
               </>
             ) : (
               <>
-                <Play className="mr-2 h-5 w-5" />
-                Motion Mode
+                <Play className="mr-2 h-5 w-5" /> Motion Mode
               </>
             )}
           </Button>
         </div>
-
-        {prefersReducedMotion && <p className="sr-only">Motion mode disabled due to reduced motion preference</p>}
       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
-        <ChevronDown className="h-8 w-8 text-[#C0C0C0]" />
+      {/* Scroll Indicator */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10">
+        <ChevronDown className="h-8 w-8 text-white" />
       </div>
     </section>
   )

@@ -56,9 +56,7 @@ export function GlobalParticipation() {
         <div className="relative aspect-video rounded-lg bg-gradient-to-br from-[#0B0C2A] to-[#0B0C2A]/90 backdrop-blur-sm border border-[#6A4FC8]/30 overflow-hidden">
           <WorldMap />
         </div>
-
-        <p className="text-center mt-6 text-[#C0C0C0] text-lg">Interactive World Map — Connecting 108 Nations</p>
-      </div>
+</div>
     </section>
   )
 }

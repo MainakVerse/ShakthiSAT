@@ -1,0 +1,401 @@
+[
+  {
+    "name": "Aanya Patel",
+    "role": "STEM Advocate, India",
+    "image": "/images/aanya.jpg",
+    "short": "Inspires young girls to pursue space tech and coding.",
+    "full": "Aanya Patel has mentored over 200 girls in rural India through STEM workshops focused on robotics and satellite engineering."
+  },
+  {
+    "name": "Luna Garcia",
+    "role": "Aerospace Student, Mexico",
+    "image": "/images/luna.jpg",
+    "short": "Passionate about propulsion systems and rocketry.",
+    "full": "Luna leads a nanosatellite design team at her university and promotes eco-friendly rocket propulsion technologies."
+  },
+  {
+    "name": "Sarah Ahmed",
+    "role": "Astrophysicist, Egypt",
+    "image": "/images/sarah.jpg",
+    "short": "Researches exoplanets and deep-space imaging.",
+    "full": "Sarah studies planetary atmospheres and helps young women enter astrophysics through mentorship programs."
+  },
+  {
+    "name": "Mei Tan",
+    "role": "Robotics Engineer, Singapore",
+    "image": "/images/mei.jpg",
+    "short": "Designs autonomous systems for satellite repair.",
+    "full": "Mei focuses on robotic arms for orbit servicing missions and hosts regional STEM workshops for girls."
+  },
+  {
+    "name": "Zara Khan",
+    "role": "Astrochemist, Pakistan",
+    "image": "/images/zara.jpg",
+    "short": "Studies chemical compositions of interstellar dust.",
+    "full": "Zara researches cosmic organic molecules that shape planetary formation, inspiring students across South Asia."
+  },
+  {
+    "name": "Elena Rossi",
+    "role": "Space Educator, Italy",
+    "image": "/images/elena.jpg",
+    "short": "Leads educational space initiatives across Europe.",
+    "full": "Elena develops learning programs connecting students with the European Space Agency’s missions."
+  },
+  {
+    "name": "Amara Johnson",
+    "role": "Astrobiologist, USA",
+    "image": "/images/amara.jpg",
+    "short": "Explores microbial life in extreme environments.",
+    "full": "Amara’s research in astrobiology inspires young minds to think beyond Earth’s boundaries."
+  },
+  {
+    "name": "Keiko Nakamura",
+    "role": "Satellite Systems Engineer, Japan",
+    "image": "/images/keiko.jpg",
+    "short": "Specializes in CubeSat design and telemetry systems.",
+    "full": "Keiko leads university satellite projects and advocates for more women in aerospace engineering."
+  },
+  {
+    "name": "Fatima Suleiman",
+    "role": "Rocket Design Engineer, Nigeria",
+    "image": "/images/fatima.jpg",
+    "short": "Focuses on propulsion and reusable launch systems.",
+    "full": "Fatima’s innovations in propulsion efficiency are shaping Nigeria’s growing space program."
+  },
+  {
+    "name": "Maria Oliveira",
+    "role": "Planetary Scientist, Brazil",
+    "image": "/images/maria.jpg",
+    "short": "Studies Martian terrain and habitability.",
+    "full": "Maria collaborates with international agencies to research Mars’ geology and life potential."
+  },
+  {
+    "name": "Claire Dubois",
+    "role": "Astronomy Lecturer, France",
+    "image": "/images/claire.jpg",
+    "short": "Teaches stellar evolution and space science.",
+    "full": "Claire has inspired thousands through her public astronomy lectures and youth outreach."
+  },
+  {
+    "name": "Ingrid Larsen",
+    "role": "Orbital Mechanics Researcher, Norway",
+    "image": "/images/ingrid.jpg",
+    "short": "Develops models for satellite trajectory optimization.",
+    "full": "Ingrid’s mathematical expertise improves fuel efficiency for small satellite missions."
+  },
+  {
+    "name": "Rina Das",
+    "role": "Software Engineer, India",
+    "image": "/images/rina.jpg",
+    "short": "Builds AI tools for space mission control systems.",
+    "full": "Rina’s code powers real-time telemetry analysis for satellites and space simulations."
+  },
+  {
+    "name": "Sofia Martinez",
+    "role": "Space Policy Analyst, Spain",
+    "image": "/images/sofia.jpg",
+    "short": "Advocates for ethical and inclusive space exploration.",
+    "full": "Sofia advises European governments on diversity and sustainability in aerospace development."
+  },
+  {
+    "name": "Hannah Park",
+    "role": "Data Scientist, South Korea",
+    "image": "/images/hannah.jpg",
+    "short": "Processes satellite data for climate monitoring.",
+    "full": "Hannah’s work with Earth observation datasets contributes to global environmental awareness."
+  },
+  {
+    "name": "Nadia Petrova",
+    "role": "Astrophysics PhD, Russia",
+    "image": "/images/nadia.jpg",
+    "short": "Specializes in neutron stars and cosmic radiation.",
+    "full": "Nadia mentors female physics students and collaborates with global observatories."
+  },
+  {
+    "name": "Chloe Brown",
+    "role": "Mission Operations Engineer, UK",
+    "image": "/images/chloe.jpg",
+    "short": "Monitors and coordinates satellite flight operations.",
+    "full": "Chloe ensures mission safety at the European Space Operations Centre."
+  },
+  {
+    "name": "Thandiwe Moyo",
+    "role": "STEM Educator, South Africa",
+    "image": "/images/thandiwe.jpg",
+    "short": "Brings space science to underprivileged schools.",
+    "full": "Thandiwe founded a space education NGO reaching thousands of African students."
+  },
+  {
+    "name": "Leila Haddad",
+    "role": "Aerospace Engineer, Morocco",
+    "image": "/images/leila.jpg",
+    "short": "Works on satellite launch vehicle design.",
+    "full": "Leila’s innovative work in aerodynamics strengthens North Africa’s aerospace community."
+  },
+  {
+    "name": "Emily Carter",
+    "role": "Mechanical Engineer, Canada",
+    "image": "/images/emily.jpg",
+    "short": "Designs components for small-satellite missions.",
+    "full": "Emily’s precision engineering ensures successful satellite assembly and deployment."
+  },
+  {
+    "name": "Ruqayyah Al Mansoori",
+    "role": "Space Researcher, UAE",
+    "image": "/images/ruqayyah.jpg",
+    "short": "Explores Mars and lunar mission technologies.",
+    "full": "Ruqayyah contributes to the Emirates Mars Mission and promotes STEM education for girls."
+  },
+  {
+    "name": "Adaeze Okafor",
+    "role": "Aerospace Project Lead, Nigeria",
+    "image": "/images/adaeze.jpg",
+    "short": "Leads student-built satellite initiatives.",
+    "full": "Adaeze’s leadership inspires African youth to innovate in space science."
+  },
+  {
+    "name": "Kiana Lee",
+    "role": "Space Systems Designer, Malaysia",
+    "image": "/images/kiana.jpg",
+    "short": "Focuses on nanosatellite integration and testing.",
+    "full": "Kiana develops payload systems for educational CubeSat projects in Southeast Asia."
+  },
+  {
+    "name": "Anika Bose",
+    "role": "AI Researcher, Bangladesh",
+    "image": "/images/anika.jpg",
+    "short": "Applies AI to satellite image recognition.",
+    "full": "Anika’s AI algorithms help predict weather and detect deforestation using orbital data."
+  },
+  {
+    "name": "Isabella Cruz",
+    "role": "Astroinformatics Expert, Chile",
+    "image": "/images/isabella.jpg",
+    "short": "Combines astronomy and data science for discovery.",
+    "full": "Isabella’s algorithms assist observatories in mapping star systems."
+  },
+  {
+    "name": "Mina Osei",
+    "role": "Space Policy Advisor, Ghana",
+    "image": "/images/mina.jpg",
+    "short": "Develops national space education strategies.",
+    "full": "Mina represents Africa in global discussions about ethical space exploration."
+  },
+  {
+    "name": "Nora Jensen",
+    "role": "Atmospheric Scientist, Denmark",
+    "image": "/images/nora.jpg",
+    "short": "Studies Earth’s upper atmosphere using satellite data.",
+    "full": "Nora’s climate analysis projects raise awareness about environmental sustainability."
+  },
+  {
+    "name": "Diana Popescu",
+    "role": "Space Robotics Researcher, Romania",
+    "image": "/images/diana.jpg",
+    "short": "Develops rover navigation algorithms.",
+    "full": "Diana’s software enables autonomous Mars rover decision-making."
+  },
+  {
+    "name": "Layla Farouk",
+    "role": "Astrophysics Lecturer, Egypt",
+    "image": "/images/layla.jpg",
+    "short": "Teaches cosmic evolution and interstellar physics.",
+    "full": "Layla inspires her students to pursue research in dark matter and cosmology."
+  },
+  {
+    "name": "Ava Thompson",
+    "role": "Astronaut Trainee, USA",
+    "image": "/images/ava.jpg",
+    "short": "Prepares for suborbital flight missions.",
+    "full": "Ava is part of a global astronaut program promoting women in spaceflight."
+  },
+  {
+    "name": "Riley Moore",
+    "role": "Flight Software Developer, Australia",
+    "image": "/images/riley.jpg",
+    "short": "Programs spacecraft control systems.",
+    "full": "Riley develops critical flight software for Australian nanosatellite missions."
+  },
+  {
+    "name": "Ivy Zhang",
+    "role": "Aerospace Materials Scientist, China",
+    "image": "/images/ivy.jpg",
+    "short": "Studies ultra-lightweight composites for rockets.",
+    "full": "Ivy’s research advances reusable rocket technologies across Asia."
+  },
+  {
+    "name": "Tasha Mbatha",
+    "role": "Astrophysics Student, Kenya",
+    "image": "/images/tasha.jpg",
+    "short": "Works on optical telescope calibration.",
+    "full": "Tasha is building Kenya’s first student-run observatory for deep-space studies."
+  },
+  {
+    "name": "Julia Novak",
+    "role": "Cosmologist, Poland",
+    "image": "/images/julia.jpg",
+    "short": "Researches dark energy and the early universe.",
+    "full": "Julia is part of international teams exploring cosmic microwave background radiation."
+  },
+  {
+    "name": "Olivia Hughes",
+    "role": "Space Communications Engineer, UK",
+    "image": "/images/olivia.jpg",
+    "short": "Designs antenna systems for satellites.",
+    "full": "Olivia works on signal optimization for interplanetary communication networks."
+  },
+  {
+    "name": "Emma Lopez",
+    "role": "Astronomy Researcher, Argentina",
+    "image": "/images/emma.jpg",
+    "short": "Studies binary star systems and their dynamics.",
+    "full": "Emma collaborates with global observatories to analyze celestial patterns."
+  },
+  {
+    "name": "Priya Menon",
+    "role": "Quantum Computing Specialist, India",
+    "image": "/images/priya.jpg",
+    "short": "Explores quantum algorithms for space simulations.",
+    "full": "Priya integrates physics and computation for next-gen space mission models."
+  },
+  {
+    "name": "Nadia Torres",
+    "role": "Aerospace Analyst, Colombia",
+    "image": "/images/nadia_t.jpg",
+    "short": "Focuses on sustainable space mission design.",
+    "full": "Nadia promotes eco-conscious satellite development across Latin America."
+  },
+  {
+    "name": "Amira Said",
+    "role": "Rocket Propulsion Scientist, Egypt",
+    "image": "/images/amira.jpg",
+    "short": "Develops clean fuel alternatives for rockets.",
+    "full": "Amira leads experiments optimizing green propellants for orbital missions."
+  },
+  {
+    "name": "Selene Costa",
+    "role": "Planetary Geologist, Portugal",
+    "image": "/images/selene.jpg",
+    "short": "Analyzes lunar and Martian surface samples.",
+    "full": "Selene’s work enhances our understanding of extraterrestrial mineralogy."
+  },
+  {
+    "name": "Aria Chen",
+    "role": "Optical Engineer, Taiwan",
+    "image": "/images/aria.jpg",
+    "short": "Designs high-resolution imaging sensors for telescopes.",
+    "full": "Aria’s optical systems help capture deep-space imagery from orbit."
+  },
+  {
+    "name": "Tara O'Neill",
+    "role": "Astrophysics Lecturer, Ireland",
+    "image": "/images/tara.jpg",
+    "short": "Lectures on stellar formation and galactic dynamics.",
+    "full": "Tara’s research delves into young star clusters and nebulae."
+  },
+  {
+    "name": "Sasha Ivanova",
+    "role": "Aerospace Technician, Ukraine",
+    "image": "/images/sasha.jpg",
+    "short": "Assembles small-satellite propulsion systems.",
+    "full": "Sasha’s hands-on expertise brings precision manufacturing to aerospace labs."
+  },
+  {
+    "name": "Kiara Ali",
+    "role": "STEM Coordinator, UAE",
+    "image": "/images/kiara.jpg",
+    "short": "Organizes youth STEM events across the Middle East.",
+    "full": "Kiara’s outreach bridges innovation and education for thousands of students."
+  },
+  {
+    "name": "Lina Svensson",
+    "role": "Data Engineer, Sweden",
+    "image": "/images/lina.jpg",
+    "short": "Processes cosmic ray data for research teams.",
+    "full": "Lina develops cloud systems for international astrophysics collaborations."
+  },
+  {
+    "name": "Freya Müller",
+    "role": "Astrophotographer, Germany",
+    "image": "/images/freya.jpg",
+    "short": "Captures breathtaking images of deep space.",
+    "full": "Freya’s award-winning space photography inspires millions online."
+  },
+  {
+    "name": "Ayaka Mori",
+    "role": "Space Medicine Researcher, Japan",
+    "image": "/images/ayaka.jpg",
+    "short": "Studies astronaut health in microgravity.",
+    "full": "Ayaka’s research supports future long-duration space missions."
+  },
+  {
+    "name": "Bella Russo",
+    "role": "Materials Engineer, Italy",
+    "image": "/images/bella.jpg",
+    "short": "Develops radiation-resistant spacecraft materials.",
+    "full": "Bella’s nanomaterials protect satellites from extreme space environments."
+  },
+  {
+    "name": "Jasmine Clark",
+    "role": "AI Engineer, USA",
+    "image": "/images/jasmine.jpg",
+    "short": "Designs AI navigation for space rovers.",
+    "full": "Jasmine builds intelligent pathfinding systems for extraterrestrial robotics."
+  },
+  {
+    "name": "Helena Petrović",
+    "role": "Space Law Researcher, Croatia",
+    "image": "/images/helena.jpg",
+    "short": "Advocates for responsible space resource use.",
+    "full": "Helena shapes global policies for ethical space exploration."
+  },
+  {
+    "name": "Mila Nguyen",
+    "role": "Orbital Analyst, Vietnam",
+    "image": "/images/mila.jpg",
+    "short": "Tracks and models orbital debris fields.",
+    "full": "Mila’s work ensures safer satellite trajectories in low Earth orbit."
+  },
+  {
+    "name": "Saanvi Reddy",
+    "role": "AI Researcher, India",
+    "image": "/images/saanvi.jpg",
+    "short": "Builds AI models for astronomy data interpretation.",
+    "full": "Saanvi develops neural networks to detect celestial patterns from telescope images."
+  },
+  {
+    "name": "Yara Mahmoud",
+    "role": "Astronomy Club Mentor, Jordan",
+    "image": "/images/yara.jpg",
+    "short": "Runs space outreach programs for students.",
+    "full": "Yara organizes community stargazing and science literacy initiatives."
+  },
+  {
+    "name": "Noor Hassan",
+    "role": "Astrophysics PhD, Saudi Arabia",
+    "image": "/images/noor.jpg",
+    "short": "Researches galaxy clusters and cosmic structure.",
+    "full": "Noor promotes women’s participation in astronomy research across the Arab world."
+  },
+  {
+    "name": "Grace Walker",
+    "role": "Space Simulation Engineer, USA",
+    "image": "/images/grace.jpg",
+    "short": "Designs simulations for deep-space missions.",
+    "full": "Grace’s models assist NASA projects in optimizing spacecraft control algorithms."
+  },
+  {
+    "name": "Elif Kaya",
+    "role": "Rocket Dynamics Engineer, Turkey",
+    "image": "/images/elif.jpg",
+    "short": "Tests reusable rocket systems.",
+    "full": "Elif leads performance optimization studies for national space programs."
+  },
+  {
+    "name": "Carolina Vega",
+    "role": "Astrophysics Postdoc, Chile",
+    "image": "/images/carolina.jpg",
+    "short": "Researches cosmic dust in star-forming regions.",
+    "full": "Carolina collaborates with ALMA to map interstellar dust structures."
+  }
+]

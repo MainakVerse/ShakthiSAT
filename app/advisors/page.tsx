@@ -1,35 +1,63 @@
-import { GraduationCap, Award, Users, BookOpen } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+"use client"
+import { SciFiInfoBox } from "@/components/scifi-info-box"
 
 export default function AdvisorsPage() {
   const advisorCategories = [
     {
-      icon: GraduationCap,
+      id: "academic",
       title: "Academic Advisors",
-      description: "Leading professors and researchers from top universities worldwide",
-      count: "50+",
-      color: "text-[#FFD700]",
+      description: "Leading professors and researchers guiding our mission with expertise and innovation.",
+      image: "/professor-scientist-academic.jpg",
+      fullDescription:
+        "Our academic advisors bring decades of combined experience from prestigious universities worldwide. They provide strategic guidance on curriculum development, research initiatives, and ensure our programs meet the highest standards of excellence in STEM education.",
+      details: [
+        "50+ leading professors and researchers",
+        "Expertise across multiple scientific disciplines",
+        "Contributors to cutting-edge research",
+        "Mentors for next-generation scientists",
+      ],
     },
     {
-      icon: Award,
+      id: "space",
       title: "Space Industry Experts",
-      description: "Veterans from space agencies and aerospace companies",
-      count: "30+",
-      color: "text-[#FF6EC7]",
+      description: "Veterans from space agencies and aerospace companies driving innovation forward.",
+      image: "/astronaut-space-engineer-spacecraft.jpg",
+      fullDescription:
+        "Our space industry experts bring real-world experience from leading space agencies and aerospace corporations. They share practical knowledge about satellite technology, mission operations, and the latest advancements in space exploration.",
+      details: [
+        "30+ aerospace and space agency veterans",
+        "Direct satellite mission experience",
+        "Advanced propulsion system expertise",
+        "Commercial space industry insight",
+      ],
     },
     {
-      icon: Users,
+      id: "education",
       title: "Education Specialists",
-      description: "Experts in STEM education and curriculum development",
-      count: "40+",
-      color: "text-[#6A4FC8]",
+      description: "Experts in STEM education and curriculum development for future leaders.",
+      image: "/teacher-education-classroom-learning.jpg",
+      fullDescription:
+        "Education specialists on our team focus on making complex space science concepts accessible and engaging for students at all levels. They develop innovative teaching methodologies and ensure our content is both rigorous and inspiring.",
+      details: [
+        "40+ dedicated education professionals",
+        "STEM curriculum development expertise",
+        "Online and classroom teaching experience",
+        "Educational technology specialists",
+      ],
     },
     {
-      icon: BookOpen,
+      id: "policy",
       title: "Policy Advisors",
-      description: "Government officials and international relations experts",
-      count: "25+",
-      color: "text-[#C0C0C0]",
+      description: "Government officials and international relations experts shaping the future.",
+      image: "/government-policy-diplomat-international.jpg",
+      fullDescription:
+        "Policy advisors help navigate the complex landscape of international space law and government relations. They facilitate partnerships with governmental bodies and ensure compliance with international space regulations.",
+      details: [
+        "25+ policy and government experts",
+        "International space law knowledge",
+        "Government relations experience",
+        "Strategic partnership facilitators",
+      ],
     },
   ]
 
@@ -47,41 +75,17 @@ export default function AdvisorsPage() {
           </p>
         </div>
 
-        {/* Advisory Board Overview */}
-        <Card className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 mb-12">
-          <CardHeader>
-            <CardTitle className="text-2xl text-white">Advisory Board</CardTitle>
-          </CardHeader>
-          <CardContent className="text-[#C0C0C0] space-y-4">
-            <p>
-              Our advisory board comprises distinguished leaders from academia, space industry, education, and
-              policy-making. These experts provide strategic guidance, technical expertise, and invaluable insights to
-              ensure ShakthiSAT achieves its ambitious goals.
-            </p>
-            <p>
-              With decades of combined experience in space science, satellite technology, and STEM education, our
-              advisors help shape curriculum, establish partnerships, and ensure that our programs meet the highest
-              standards of excellence.
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Advisor Categories Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {advisorCategories.map((category, index) => (
-            <Card
-              key={index}
-              className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 hover:border-[#FFD700]/50 transition-all duration-300"
-            >
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <category.icon className={`h-12 w-12 ${category.color} mb-4`} />
-                  <span className={`text-3xl font-bold ${category.color}`}>{category.count}</span>
-                </div>
-                <CardTitle className="text-white text-xl">{category.title}</CardTitle>
-                <CardDescription className="text-[#C0C0C0] text-base">{category.description}</CardDescription>
-              </CardHeader>
-            </Card>
+        {/* Sci-Fi Info Boxes Grid */}
+        <div className="grid md:grid-cols-2 gap-8">
+          {advisorCategories.map((category) => (
+            <SciFiInfoBox
+              key={category.id}
+              title={category.title}
+              description={category.description}
+              image={category.image}
+              fullDescription={category.fullDescription}
+              details={category.details}
+            />
           ))}
         </div>
       </div>

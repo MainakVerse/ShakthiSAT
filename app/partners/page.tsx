@@ -1,36 +1,25 @@
-import { Building2, Satellite, Globe2, Handshake } from "lucide-react"
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-
 export default function PartnersPage() {
-  const partnerTypes = [
-    {
-      icon: Satellite,
-      title: "Space Agencies",
-      description: "Collaborating with national and international space organizations",
-      examples: "ISRO, NASA, ESA, and more",
-      color: "text-[#FFD700]",
-    },
-    {
-      icon: Building2,
-      title: "Educational Institutions",
-      description: "Partnering with universities and research centers worldwide",
-      examples: "Leading universities across 108 countries",
-      color: "text-[#FF6EC7]",
-    },
-    {
-      icon: Globe2,
-      title: "Technology Companies",
-      description: "Working with aerospace and tech industry leaders",
-      examples: "Satellite manufacturers and tech innovators",
-      color: "text-[#6A4FC8]",
-    },
-    {
-      icon: Handshake,
-      title: "NGOs & Foundations",
-      description: "Collaborating with organizations focused on education and empowerment",
-      examples: "Global education and women empowerment organizations",
-      color: "text-[#C0C0C0]",
-    },
+  const partners = [
+    { id: 1, name: "ISRO", logo: "/isro-indian-space-research-organisation-logo.jpg" },
+    { id: 2, name: "SpaceX", logo: "/spacex-logo.jpg" },
+    { id: 3, name: "NASA", logo: "/nasa-logo.png" },
+    { id: 4, name: "ESA", logo: "/european-space-agency-esa-logo.jpg" },
+    { id: 5, name: "JAXA", logo: "/jaxa-japan-aerospace-exploration-agency-logo.jpg" },
+    { id: 6, name: "Axiom Space", logo: "/axiom-space-logo.jpg" },
+    { id: 7, name: "Blue Origin", logo: "/blue-origin-logo.png" },
+    { id: 8, name: "Rocket Lab", logo: "/rocket-lab-logo.jpg" },
+    { id: 9, name: "Relativity Space", logo: "/relativity-space-logo.jpg" },
+    { id: 10, name: "Axiom Mission", logo: "/axiom-mission-logo.jpg" },
+    { id: 11, name: "Virgin Galactic", logo: "/virgin-galactic-logo.jpg" },
+    { id: 12, name: "CNES", logo: "/cnes-french-space-agency-logo.jpg" },
+    { id: 13, name: "CNSA", logo: "/cnsa-china-national-space-administration-logo.jpg" },
+    { id: 14, name: "Roscosmos", logo: "/roscosmos-russian-space-agency-logo.jpg" },
+    { id: 15, name: "Orbital Dynamics", logo: "/orbital-dynamics-space-company-logo.jpg" },
+    { id: 16, name: "Axiom Industries", logo: "/axiom-industries-logo.jpg" },
+    { id: 17, name: "Intuitive Machines", logo: "/intuitive-machines-logo.jpg" },
+    { id: 18, name: "Axiom Space Corp", logo: "/placeholder.svg?height=150&width=300" },
+    { id: 19, name: "Space Services", logo: "/placeholder.svg?height=150&width=300" },
+    { id: 20, name: "Orbital Services", logo: "/placeholder.svg?height=150&width=300" },
   ]
 
   return (
@@ -39,47 +28,22 @@ export default function PartnersPage() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
-            Our Partners
+            PARTNERS
           </h1>
-          <p className="text-xl text-[#C0C0C0] max-w-3xl mx-auto leading-relaxed">
-            Building a global ecosystem of collaboration with organizations that share our vision of empowering girls
-            through space science.
-          </p>
         </div>
 
-        {/* Partnership Philosophy */}
-        <Card className="bg-gradient-to-br from-[#6A4FC8]/20 to-[#FF6EC7]/20 border-[#FFD700]/30 mb-12">
-          <CardHeader>
-            <CardTitle className="text-2xl text-white">Partnership Philosophy</CardTitle>
-          </CardHeader>
-          <CardContent className="text-[#C0C0C0] space-y-4">
-            <p>
-              ShakthiSAT's success depends on strong partnerships with organizations that bring expertise, resources,
-              and shared commitment to our mission. Together, we create opportunities that would be impossible alone.
-            </p>
-            <p>
-              Our partners provide technical knowledge, educational resources, funding, and mentorship that directly
-              benefit the 12,000+ girls participating in our programs across 108 countries.
-            </p>
-          </CardContent>
-        </Card>
-
-        {/* Partner Types Grid */}
-        <div className="grid md:grid-cols-2 gap-6">
-          {partnerTypes.map((partner, index) => (
-            <Card
-              key={index}
-              className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 hover:border-[#FFD700]/50 transition-all duration-300"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {partners.map((partner) => (
+            <div
+              key={partner.id}
+              className="aspect-video bg-white border-2 border-[#FFD700]/20 rounded-lg flex items-center justify-center hover:shadow-lg hover:border-[#FFD700]/50 transition-all duration-300 overflow-hidden"
             >
-              <CardHeader>
-                <partner.icon className={`h-12 w-12 ${partner.color} mb-4`} />
-                <CardTitle className="text-white text-xl">{partner.title}</CardTitle>
-                <CardDescription className="text-[#C0C0C0] text-base mb-2">{partner.description}</CardDescription>
-              </CardHeader>
-              <CardContent>
-                <p className="text-sm text-[#C0C0C0]/70 italic">{partner.examples}</p>
-              </CardContent>
-            </Card>
+              <img
+                src={partner.logo || "/placeholder.svg"}
+                alt={`${partner.name} logo`}
+                className="w-full h-full object-cover p-4"
+              />
+            </div>
           ))}
         </div>
       </div>

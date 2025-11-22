@@ -6,22 +6,70 @@ import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react"
 import ambassadorsData from "@/data/ambassadors.json"
 
+// ✅ Country name → ISO code mapping (SMALL FLAG SIZE)
+const countryCodes: Record<string, string> = {
+  India: "IN", USA: "US", UK: "GB", Canada: "CA", France: "FR", Germany: "DE",
+  Brazil: "BR", Japan: "JP", Australia: "AU", "South Korea": "KR", Italy: "IT",
+  Spain: "ES", Russia: "RU", Mexico: "MX", "South Africa": "ZA", Argentina: "AR",
+  Netherlands: "NL", Sweden: "SE", Norway: "NO", Finland: "FI", Denmark: "DK",
+  Poland: "PL", Turkey: "TR", Singapore: "SG", Malaysia: "MY", Thailand: "TH",
+  Vietnam: "VN", Indonesia: "ID", Philippines: "PH", Bangladesh: "BD",
+  Nepal: "NP", "Sri Lanka": "LK", UAE: "AE", "Saudi Arabia": "SA", Egypt: "EG",
+  Kenya: "KE", Nigeria: "NG", Ghana: "GH", Ethiopia: "ET", Morocco: "MA",
+  Chile: "CL", Peru: "PE", Colombia: "CO", Venezuela: "VE", "New Zealand": "NZ",
+  Israel: "IL", Portugal: "PT", Greece: "GR", Switzerland: "CH", Austria: "AT",
+  Belgium: "BE", "Czech Republic": "CZ", Hungary: "HU", Romania: "RO",
+  Croatia: "HR", Ireland: "IE", Iceland: "IS", Luxembourg: "LU", Qatar: "QA",
+  Oman: "OM", Kuwait: "KW", Jordan: "JO", Lebanon: "LB", Pakistan: "PK",
+  Uzbekistan: "UZ", Kazakhstan: "KZ", Mongolia: "MN", Cambodia: "KH", Laos: "LA",
+  Myanmar: "MM", Tanzania: "TZ", Uganda: "UG", Zimbabwe: "ZW", Zambia: "ZM",
+  Algeria: "DZ", Tunisia: "TN", Paraguay: "PY", Bolivia: "BO", Ecuador: "EC",
+  Panama: "PA", "Costa Rica": "CR", Honduras: "HN", "El Salvador": "SV",
+  Guatemala: "GT", Cuba: "CU", Jamaica: "JM", "Dominican Republic": "DO",
+  Haiti: "HT", "Trinidad and Tobago": "TT", Fiji: "FJ", "Papua New Guinea": "PG",
+  Maldives: "MV", Bhutan: "BT", Rwanda: "RW", Namibia: "NA", Botswana: "BW",
+  Mozambique: "MZ", Madagascar: "MG", Mauritius: "MU", Brunei: "BN",
+  Seychelles: "SC", Malawi: "MW", Burundi: "BI", Georgia: "GE", Armenia: "AM",
+  Moldova: "MD", Ukraine: "UA", "North Macedonia": "MK",
+}
+
 export default function AmbassadorsPage() {
   const ambassadors = ambassadorsData
+
   const [search, setSearch] = useState("")
   const [selected, setSelected] = useState<any>(null)
   const [page, setPage] = useState(1)
+
   const perPage = 6
 
-  const filtered = ambassadors.filter((a) =>
-    a.name.toLowerCase().includes(search.toLowerCase())
-  )
+  // ✅ Continent Filter State
+  const [continentFilter, setContinentFilter] = useState("All")
+
+  const continents = [
+    "All",
+    "Asia",
+    "Europe",
+    "Africa",
+    "North America",
+    "South America",
+    "Oceania"
+  ]
+
+  // ✅ Combined Filtering (search + continent)
+  const filtered = ambassadors.filter((a) => {
+    const matchesName = a.name.toLowerCase().includes(search.toLowerCase())
+    const matchesContinent = continentFilter === "All" || a.continent === continentFilter
+    return matchesName && matchesContinent
+  })
+
+  // ✅ Pagination applied AFTER filtering
   const totalPages = Math.ceil(filtered.length / perPage)
   const paginated = filtered.slice((page - 1) * perPage, page * perPage)
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16 text-white">
       <div className="max-w-7xl mx-auto px-6">
+
         {/* Title */}
         <div className="text-center mb-10">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-[#00FFFF] to-[#9D4EDD] bg-clip-text text-transparent">
@@ -33,7 +81,7 @@ export default function AmbassadorsPage() {
         </div>
 
         {/* Search */}
-        <div className="flex justify-center mb-10">
+        <div className="flex justify-center mb-6">
           <input
             type="text"
             value={search}
@@ -46,43 +94,79 @@ export default function AmbassadorsPage() {
           />
         </div>
 
+        {/* ✅ Continent Filter Dropdown */}
+        <div className="flex justify-center mb-10">
+          <select
+            value={continentFilter}
+            onChange={(e) => {
+              setContinentFilter(e.target.value)
+              setPage(1)
+            }}
+            className="px-4 py-2 rounded-full bg-[#1a1f3a] border border-[#6A4FC8] text-white focus:border-[#00FFFF] cursor-pointer"
+          >
+            {continents.map((c) => (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            ))}
+          </select>
+        </div>
+
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginated.map((person, i) => (
             <motion.div
               key={i}
-              whileHover={{ scale: 1.03 }}
-              className="relative bg-[#1a1f3a]/70 p-4 rounded-2xl
-              border border-[#6A4FC8]/40 shadow-[0_0_15px_#6A4FC8]
-              hover:shadow-[0_0_25px_#00FFFF] transition-all"
+              whileHover={{ scale: 1.02 }}
+              className="relative bg-[#1a1f3a]/70 p-6 rounded-2xl border border-[#6A4FC8]/40 shadow-lg"
             >
-              {/* Image + Name */}
-              <div className="flex items-center gap-4">
-                <div className="w-24 h-24 rounded-xl overflow-hidden border-2 border-[#00FFFF]">
-                  <Image
-                    src={person.image}
-                    alt={person.name}
-                    width={100}
-                    height={100}
-                    className="object-cover w-full h-full"
-                  />
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-white">{person.name}</h3>
-                  <p className="text-[#C0C0C0]">{person.role}</p>
+              {/* ✅ REAL FLAG (SMALL SIZE) */}
+              {countryCodes[person.country] && (
+                <Image
+                  src={`https://flagcdn.com/w40/${countryCodes[
+                    person.country
+                  ].toLowerCase()}.png`}
+                  alt={person.country}
+                  width={28}
+                  height={20}
+                  className="absolute top-3 right-3 rounded-sm shadow-md"
+                />
+              )}
+
+              {/* Image Container */}
+              <div className="relative mx-auto w-48 h-48 rounded-3xl border-2 border-[#00FFFF] overflow-hidden bg-black">
+                <Image
+                  src={person.image}
+                  alt={person.name}
+                  fill
+                  className="object-cover"
+                />
+
+                {/* Ribbon Label */}
+                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#9D4EDD] text-white text-xs font-bold px-4 py-1 rounded-md shadow-md">
+                  {person.name.split(" ")[0].toUpperCase()}
                 </div>
               </div>
 
-              {/* Short Info */}
-              <p className="mt-4 text-[#C0C0C0] text-sm leading-relaxed">{person.short}</p>
+              {/* Name */}
+              <h3 className="mt-10 text-xl font-semibold text-center">
+                {person.name}
+              </h3>
+
+              {/* Short */}
+              <p className="text-[#C0C0C0] text-center text-sm mt-2">
+                {person.short}
+              </p>
 
               {/* Button */}
-              <button
-                onClick={() => setSelected(person)}
-                className="mt-4 px-4 py-2 bg-gradient-to-r from-[#00FFFF] to-[#9D4EDD] rounded-full text-black font-semibold hover:opacity-90 transition"
-              >
-                Know More
-              </button>
+              <div className="flex justify-center mt-6">
+                <button
+                  onClick={() => setSelected(person)}
+                  className="px-6 py-2 bg-gradient-to-r from-[#00FFFF] to-[#9D4EDD] rounded-full text-black font-semibold hover:opacity-90 transition"
+                >
+                  Know More
+                </button>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -131,8 +215,9 @@ export default function AmbassadorsPage() {
                 <X className="h-6 w-6" />
               </button>
 
+              {/* Modal Header */}
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-24 h-24 rounded-xl overflow-hidden border-2 border-[#9D4EDD]">
+                <div className="w-24 h-24 rounded-xl overflow-hidden border-2 border-[#9D4EDD] relative">
                   <Image
                     src={selected.image}
                     alt={selected.name}
@@ -141,12 +226,33 @@ export default function AmbassadorsPage() {
                     className="object-cover w-full h-full"
                   />
                 </div>
+
                 <div>
                   <h2 className="text-2xl font-bold">{selected.name}</h2>
-                  <p className="text-gray-700">{selected.role}</p>
+
+                  <div className="flex items-center gap-2">
+                    <p className="text-gray-700">{selected.designation}</p>
+
+                    {/* ✅ REAL FLAG IN MODAL (SMALL SIZE) */}
+                    {countryCodes[selected.country] && (
+                      <Image
+                        src={`https://flagcdn.com/w40/${countryCodes[
+                          selected.country
+                        ].toLowerCase()}.png`}
+                        alt={selected.country}
+                        width={28}
+                        height={20}
+                        className="rounded-sm border border-black/20 shadow-sm"
+                      />
+                    )}
+                  </div>
                 </div>
               </div>
-              <p className="text-gray-800 leading-relaxed">{selected.full}</p>
+
+              {/* Short */}
+              <p className="text-gray-800 leading-relaxed">
+                {selected.short}
+              </p>
             </motion.div>
           </motion.div>
         )}

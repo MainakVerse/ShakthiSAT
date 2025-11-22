@@ -1,167 +1,156 @@
-"use client"
+"use client";
 
-import { useEffect, useState, useRef } from "react"
-import { Button } from "@/components/ui/button"
-import { ChevronDown, Play, Pause } from "lucide-react"
+import { useEffect, useState, Suspense, useMemo, useRef } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import { OrbitControls, useGLTF } from "@react-three/drei";
+import * as THREE from "three";
+import { Button } from "@/components/ui/button";
+import { ChevronDown } from "lucide-react";
+
+
 
 const phrases = [
   "From AzaadiSAT to the Moon.",
   "108 Nations — 12,000 Girls.",
   "One Mission: Empower Futures.",
-]
+];
 
-export function HeroSection() {
-  const [currentPhrase, setCurrentPhrase] = useState(0)
-  const [displayText, setDisplayText] = useState("")
-  const [isTyping, setIsTyping] = useState(true)
-  const [motionMode, setMotionMode] = useState(false)
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false)
-  const scrollAnimationRef = useRef<number | null>(null)
-  const startTimeRef = useRef<number | null>(null)
+function MoonModel() {
+  const { scene } = useGLTF("/models/moon.glb");
+  return (
+    <primitive
+      object={scene}
+      scale={1.8}
+      rotation={[0.3, 0.6, 0]}
+      position={[0, 0, 0]}
+    />
+  );
+}
 
-  // Detect reduced motion preference
-  useEffect(() => {
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)")
-    setPrefersReducedMotion(mediaQuery.matches)
-    const handler = (e: MediaQueryListEvent) => setPrefersReducedMotion(e.matches)
-    mediaQuery.addEventListener("change", handler)
-    return () => mediaQuery.removeEventListener("change", handler)
-  }, [])
+/* ⭐ Background Stars (separate canvas) */
+function BackgroundStars() {
+  const ref = useRef<THREE.Points | null>(null);
+  const starCount = 5000;
 
-  // Typing animation
-  useEffect(() => {
-    if (prefersReducedMotion) {
-      setDisplayText(phrases.join(" "))
-      return
+  const positions = useMemo(() => {
+    const arr = new Float32Array(starCount * 3);
+    for (let i = 0; i < starCount; i++) {
+      arr[i * 3] = (Math.random() - 0.5) * 200;
+      arr[i * 3 + 1] = (Math.random() - 0.5) * 200;
+      arr[i * 3 + 2] = (Math.random() - 0.5) * 200;
     }
+    return arr;
+  }, []);
 
-    let charIndex = 0
-    const phrase = phrases[currentPhrase]
-    setDisplayText("")
-    setIsTyping(true)
-
-    const typeInterval = setInterval(() => {
-      if (charIndex < phrase.length) {
-        setDisplayText(phrase.slice(0, charIndex + 1))
-        charIndex++
-      } else {
-        setIsTyping(false)
-        clearInterval(typeInterval)
-        setTimeout(
-          () => setCurrentPhrase((prev) => (prev + 1) % phrases.length),
-          2000
-        )
-      }
-    }, 80)
-
-    return () => clearInterval(typeInterval)
-  }, [currentPhrase, prefersReducedMotion])
-
-  // Smooth continuous scroll for 40 seconds
-  useEffect(() => {
-    if (!motionMode) {
-      if (scrollAnimationRef.current) cancelAnimationFrame(scrollAnimationRef.current)
-      return
-    }
-
-    const duration = 50000 // 50 seconds
-    const startScroll = window.scrollY
-    const endScroll = document.body.scrollHeight - window.innerHeight
-
-    const step = (timestamp: number) => {
-      if (!startTimeRef.current) startTimeRef.current = timestamp
-      const elapsed = timestamp - startTimeRef.current
-      const progress = Math.min(elapsed / duration, 1)
-      const scrollPosition = startScroll + progress * (endScroll - startScroll)
-      window.scrollTo(0, scrollPosition)
-
-      if (progress < 1 && motionMode) {
-        scrollAnimationRef.current = requestAnimationFrame(step)
-      } else {
-        setMotionMode(false)
-        startTimeRef.current = null
-      }
-    }
-
-    scrollAnimationRef.current = requestAnimationFrame(step)
-
-    return () => {
-      if (scrollAnimationRef.current) cancelAnimationFrame(scrollAnimationRef.current)
-      startTimeRef.current = null
-    }
-  }, [motionMode])
-
-  const scrollToMission = () => {
-    document.getElementById("mission-overview")?.scrollIntoView({ behavior: "smooth" })
-  }
+  useFrame(() => {
+    if (ref.current) ref.current.rotation.z += 0.0002;
+  });
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Video */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        loop
-        muted
-        playsInline
-        src="/videos/space-bg.mp4"
-      />
+    <points ref={ref}>
+      <bufferGeometry>
+        <bufferAttribute
+          attach="attributes-position"
+          args={[positions, 3]}
+        />
+      </bufferGeometry>
+      <pointsMaterial size={0.4} color="#ffffff" opacity={0.8} />
+    </points>
+  );
+}
 
-      {/* Overlays */}
-      <div className="absolute inset-0 bg-black/60" />
-      <div className="absolute inset-0 bg-gradient-to-b from-[#6A4FC8]/30 via-transparent to-[#E26EE5]/20 pointer-events-none" />
+export function HeroSection() {
+  const [currentPhrase, setCurrentPhrase] = useState(0);
+  const [displayText, setDisplayText] = useState("");
 
-      {/* Content */}
-      <div className="relative z-10 text-center max-w-5xl mx-auto px-4 py-20">
-        <h1 className="text-6xl md:text-8xl lg:text-9xl font-bold uppercase tracking-tight mb-6 text-white drop-shadow-lg">
+  // Typing effect
+  useEffect(() => {
+    let index = 0;
+    const phrase = phrases[currentPhrase];
+    setDisplayText("");
+
+    const interval = setInterval(() => {
+      if (index < phrase.length) {
+        setDisplayText(phrase.slice(0, index + 1));
+        index++;
+      } else {
+        clearInterval(interval);
+        setTimeout(
+          () => setCurrentPhrase((p) => (p + 1) % phrases.length),
+          2000
+        );
+      }
+    }, 80);
+
+    return () => clearInterval(interval);
+  }, [currentPhrase]);
+
+  const scrollToMission = () =>
+    document
+      .getElementById("mission-overview")
+      ?.scrollIntoView({ behavior: "smooth" });
+
+  return (
+    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+
+      {/* ⭐ Background Stars Canvas */}
+      <div className="absolute inset-0 -z-20">
+        <Canvas camera={{ position: [0, 0, 50], fov: 75 }}>
+          <BackgroundStars />
+        </Canvas>
+      </div>
+
+      {/* ⭐ Moon Canvas centered, mobile-friendly */}
+      <div className="relative flex justify-center items-center mt-5 z-10">
+        <Canvas
+          className="moon-canvas"
+          style={{ width: 450, height: 450 }}
+          camera={{ position: [0, 0, 10], fov: 40 }}
+        >
+          <ambientLight intensity={1.5} />
+          <directionalLight position={[5, 5, 5]} intensity={2} />
+
+          <Suspense fallback={null}>
+            <MoonModel />
+          </Suspense>
+
+          <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.7} />
+        </Canvas>
+      </div>
+
+      {/* ⭐ Header & Subheader */}
+      <div className="absolute top-[40%] text-center text-white px-4 z-20">
+        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-wide">
           ShakthiSAT
         </h1>
-
-        <div className="h-16 md:h-20 flex items-center justify-center mb-12" aria-live="polite" aria-atomic="true">
-          <p className="text-xl md:text-3xl font-medium text-gray-200">
-            {displayText}
-            {isTyping && !prefersReducedMotion && (
-              <span className="inline-block w-0.5 h-6 md:h-8 bg-[#FFD700] ml-1 animate-pulse" />
-            )}
-          </p>
-        </div>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-          <Button
-            size="lg"
-            onClick={scrollToMission}
-            className="bg-[#FFD700] text-[#0B0C2A] hover:bg-violet-500 font-semibold text-lg px-8 py-6"
-          >
-            Explore Mission
-            <ChevronDown className="ml-2 h-5 w-5" />
-          </Button>
-
-          <Button
-            size="lg"
-            onClick={() => setMotionMode(!motionMode)}
-            variant="outline"
-            disabled={prefersReducedMotion}
-            className={`bg-green-900 text-white hover:bg-blue-600 font-semibold text-lg px-8 py-6 ${
-              motionMode ? "pulse-ring-green" : ""
-            }`}
-          >
-            {motionMode ? (
-              <>
-                <Pause className="mr-2 h-5 w-5" /> Pause Motion
-              </>
-            ) : (
-              <>
-                <Play className="mr-2 h-5 w-5" /> Motion Mode
-              </>
-            )}
-          </Button>
-        </div>
+        <p className="text-lg md:text-2xl mt-4">{displayText}</p>
       </div>
 
-      {/* Scroll Indicator */}
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce z-10">
-        <ChevronDown className="h-8 w-8 text-white" />
+      {/* ⭐ CTA */}
+      <div className="mt-10 z-20">
+        <Button
+          size="lg"
+          onClick={scrollToMission}
+          className="bg-yellow-400 text-black hover:bg-yellow-500 font-semibold text-lg px-8 py-6"
+        >
+          Explore Mission
+          <ChevronDown className="ml-2 h-5 w-5" />
+        </Button>
       </div>
+
+    
+
+      {/* ⭐ Mobile centering override */}
+      <style>
+        {`
+          @media (max-width: 640px) {
+            .moon-canvas {
+              width: 300px !important;
+              height: 300px !important;
+            }
+          }
+        `}
+      </style>
     </section>
-  )
+  );
 }

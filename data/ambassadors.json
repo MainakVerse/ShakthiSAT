@@ -1,401 +1,572 @@
 [
   {
     "name": "Aanya Patel",
-    "role": "STEM Advocate, India",
+    "designation": "STEM Advocate",
     "image": "/images/aanya.jpg",
     "short": "Inspires young girls to pursue space tech and coding.",
-    "full": "Aanya Patel has mentored over 200 girls in rural India through STEM workshops focused on robotics and satellite engineering."
+    "country": "India",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-aanya.jpg"
   },
   {
     "name": "Luna Garcia",
-    "role": "Aerospace Student, Mexico",
+    "designation": "Aerospace Student",
     "image": "/images/luna.jpg",
     "short": "Passionate about propulsion systems and rocketry.",
-    "full": "Luna leads a nanosatellite design team at her university and promotes eco-friendly rocket propulsion technologies."
+    "country": "Mexico",
+    "continent": "North America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-luna.jpg"
   },
   {
     "name": "Sarah Ahmed",
-    "role": "Astrophysicist, Egypt",
+    "designation": "Astrophysicist",
     "image": "/images/sarah.jpg",
     "short": "Researches exoplanets and deep-space imaging.",
-    "full": "Sarah studies planetary atmospheres and helps young women enter astrophysics through mentorship programs."
+    "country": "Egypt",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-sarah.jpg"
   },
   {
     "name": "Mei Tan",
-    "role": "Robotics Engineer, Singapore",
+    "designation": "Robotics Engineer",
     "image": "/images/mei.jpg",
     "short": "Designs autonomous systems for satellite repair.",
-    "full": "Mei focuses on robotic arms for orbit servicing missions and hosts regional STEM workshops for girls."
+    "country": "Singapore",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-mei.jpg"
   },
   {
     "name": "Zara Khan",
-    "role": "Astrochemist, Pakistan",
+    "designation": "Astrochemist",
     "image": "/images/zara.jpg",
     "short": "Studies chemical compositions of interstellar dust.",
-    "full": "Zara researches cosmic organic molecules that shape planetary formation, inspiring students across South Asia."
+    "country": "Pakistan",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-zara.jpg"
   },
   {
     "name": "Elena Rossi",
-    "role": "Space Educator, Italy",
+    "designation": "Space Educator",
     "image": "/images/elena.jpg",
     "short": "Leads educational space initiatives across Europe.",
-    "full": "Elena develops learning programs connecting students with the European Space Agency’s missions."
+    "country": "Italy",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-elena.jpg"
   },
   {
     "name": "Amara Johnson",
-    "role": "Astrobiologist, USA",
+    "designation": "Astrobiologist",
     "image": "/images/amara.jpg",
     "short": "Explores microbial life in extreme environments.",
-    "full": "Amara’s research in astrobiology inspires young minds to think beyond Earth’s boundaries."
+    "country": "USA",
+    "continent": "North America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-amara.jpg"
   },
   {
     "name": "Keiko Nakamura",
-    "role": "Satellite Systems Engineer, Japan",
+    "designation": "Satellite Systems Engineer",
     "image": "/images/keiko.jpg",
     "short": "Specializes in CubeSat design and telemetry systems.",
-    "full": "Keiko leads university satellite projects and advocates for more women in aerospace engineering."
+    "country": "Japan",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-keiko.jpg"
   },
   {
     "name": "Fatima Suleiman",
-    "role": "Rocket Design Engineer, Nigeria",
+    "designation": "Rocket Design Engineer",
     "image": "/images/fatima.jpg",
     "short": "Focuses on propulsion and reusable launch systems.",
-    "full": "Fatima’s innovations in propulsion efficiency are shaping Nigeria’s growing space program."
+    "country": "Nigeria",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-fatima.jpg"
   },
   {
     "name": "Maria Oliveira",
-    "role": "Planetary Scientist, Brazil",
+    "designation": "Planetary Scientist",
     "image": "/images/maria.jpg",
     "short": "Studies Martian terrain and habitability.",
-    "full": "Maria collaborates with international agencies to research Mars’ geology and life potential."
+    "country": "Brazil",
+    "continent": "South America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-maria.jpg"
   },
   {
     "name": "Claire Dubois",
-    "role": "Astronomy Lecturer, France",
+    "designation": "Astronomy Lecturer",
     "image": "/images/claire.jpg",
     "short": "Teaches stellar evolution and space science.",
-    "full": "Claire has inspired thousands through her public astronomy lectures and youth outreach."
+    "country": "France",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-claire.jpg"
   },
   {
     "name": "Ingrid Larsen",
-    "role": "Orbital Mechanics Researcher, Norway",
+    "designation": "Orbital Mechanics Researcher",
     "image": "/images/ingrid.jpg",
     "short": "Develops models for satellite trajectory optimization.",
-    "full": "Ingrid’s mathematical expertise improves fuel efficiency for small satellite missions."
+    "country": "Norway",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-ingrid.jpg"
   },
   {
     "name": "Rina Das",
-    "role": "Software Engineer, India",
+    "designation": "Software Engineer",
     "image": "/images/rina.jpg",
     "short": "Builds AI tools for space mission control systems.",
-    "full": "Rina’s code powers real-time telemetry analysis for satellites and space simulations."
+    "country": "India",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-rina.jpg"
   },
   {
     "name": "Sofia Martinez",
-    "role": "Space Policy Analyst, Spain",
+    "designation": "Space Policy Analyst",
     "image": "/images/sofia.jpg",
     "short": "Advocates for ethical and inclusive space exploration.",
-    "full": "Sofia advises European governments on diversity and sustainability in aerospace development."
+    "country": "Spain",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-sofia.jpg"
   },
   {
     "name": "Hannah Park",
-    "role": "Data Scientist, South Korea",
+    "designation": "Data Scientist",
     "image": "/images/hannah.jpg",
     "short": "Processes satellite data for climate monitoring.",
-    "full": "Hannah’s work with Earth observation datasets contributes to global environmental awareness."
+    "country": "South Korea",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-hannah.jpg"
   },
   {
     "name": "Nadia Petrova",
-    "role": "Astrophysics PhD, Russia",
+    "designation": "Astrophysics PhD",
     "image": "/images/nadia.jpg",
     "short": "Specializes in neutron stars and cosmic radiation.",
-    "full": "Nadia mentors female physics students and collaborates with global observatories."
+    "country": "Russia",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-nadia.jpg"
   },
   {
     "name": "Chloe Brown",
-    "role": "Mission Operations Engineer, UK",
+    "designation": "Mission Operations Engineer",
     "image": "/images/chloe.jpg",
     "short": "Monitors and coordinates satellite flight operations.",
-    "full": "Chloe ensures mission safety at the European Space Operations Centre."
+    "country": "UK",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-chloe.jpg"
   },
   {
     "name": "Thandiwe Moyo",
-    "role": "STEM Educator, South Africa",
+    "designation": "STEM Educator",
     "image": "/images/thandiwe.jpg",
     "short": "Brings space science to underprivileged schools.",
-    "full": "Thandiwe founded a space education NGO reaching thousands of African students."
+    "country": "South Africa",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-thandiwe.jpg"
   },
   {
     "name": "Leila Haddad",
-    "role": "Aerospace Engineer, Morocco",
+    "designation": "Aerospace Engineer",
     "image": "/images/leila.jpg",
     "short": "Works on satellite launch vehicle design.",
-    "full": "Leila’s innovative work in aerodynamics strengthens North Africa’s aerospace community."
+    "country": "Morocco",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-leila.jpg"
   },
   {
     "name": "Emily Carter",
-    "role": "Mechanical Engineer, Canada",
+    "designation": "Mechanical Engineer",
     "image": "/images/emily.jpg",
     "short": "Designs components for small-satellite missions.",
-    "full": "Emily’s precision engineering ensures successful satellite assembly and deployment."
+    "country": "Canada",
+    "continent": "North America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-emily.jpg"
   },
   {
     "name": "Ruqayyah Al Mansoori",
-    "role": "Space Researcher, UAE",
+    "designation": "Space Researcher",
     "image": "/images/ruqayyah.jpg",
     "short": "Explores Mars and lunar mission technologies.",
-    "full": "Ruqayyah contributes to the Emirates Mars Mission and promotes STEM education for girls."
+    "country": "UAE",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-ruqayyah.jpg"
   },
   {
     "name": "Adaeze Okafor",
-    "role": "Aerospace Project Lead, Nigeria",
+    "designation": "Aerospace Project Lead",
     "image": "/images/adaeze.jpg",
     "short": "Leads student-built satellite initiatives.",
-    "full": "Adaeze’s leadership inspires African youth to innovate in space science."
+    "country": "Nigeria",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-adaeze.jpg"
   },
   {
     "name": "Kiana Lee",
-    "role": "Space Systems Designer, Malaysia",
+    "designation": "Space Systems Designer",
     "image": "/images/kiana.jpg",
     "short": "Focuses on nanosatellite integration and testing.",
-    "full": "Kiana develops payload systems for educational CubeSat projects in Southeast Asia."
+    "country": "Malaysia",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-kiana.jpg"
   },
   {
     "name": "Anika Bose",
-    "role": "AI Researcher, Bangladesh",
+    "designation": "AI Researcher",
     "image": "/images/anika.jpg",
     "short": "Applies AI to satellite image recognition.",
-    "full": "Anika’s AI algorithms help predict weather and detect deforestation using orbital data."
+    "country": "Bangladesh",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-anika.jpg"
   },
   {
     "name": "Isabella Cruz",
-    "role": "Astroinformatics Expert, Chile",
+    "designation": "Astroinformatics Expert",
     "image": "/images/isabella.jpg",
     "short": "Combines astronomy and data science for discovery.",
-    "full": "Isabella’s algorithms assist observatories in mapping star systems."
+    "country": "Chile",
+    "continent": "South America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-isabella.jpg"
   },
   {
     "name": "Mina Osei",
-    "role": "Space Policy Advisor, Ghana",
+    "designation": "Space Policy Advisor",
     "image": "/images/mina.jpg",
     "short": "Develops national space education strategies.",
-    "full": "Mina represents Africa in global discussions about ethical space exploration."
+    "country": "Ghana",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-mina.jpg"
   },
   {
     "name": "Nora Jensen",
-    "role": "Atmospheric Scientist, Denmark",
+    "designation": "Atmospheric Scientist",
     "image": "/images/nora.jpg",
-    "short": "Studies Earth’s upper atmosphere using satellite data.",
-    "full": "Nora’s climate analysis projects raise awareness about environmental sustainability."
+    "short": "Studies Earth\u2019s upper atmosphere using satellite data.",
+    "country": "Denmark",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-nora.jpg"
   },
   {
     "name": "Diana Popescu",
-    "role": "Space Robotics Researcher, Romania",
+    "designation": "Space Robotics Researcher",
     "image": "/images/diana.jpg",
     "short": "Develops rover navigation algorithms.",
-    "full": "Diana’s software enables autonomous Mars rover decision-making."
+    "country": "Romania",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-diana.jpg"
   },
   {
     "name": "Layla Farouk",
-    "role": "Astrophysics Lecturer, Egypt",
+    "designation": "Astrophysics Lecturer",
     "image": "/images/layla.jpg",
     "short": "Teaches cosmic evolution and interstellar physics.",
-    "full": "Layla inspires her students to pursue research in dark matter and cosmology."
+    "country": "Egypt",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-layla.jpg"
   },
   {
     "name": "Ava Thompson",
-    "role": "Astronaut Trainee, USA",
+    "designation": "Astronaut Trainee",
     "image": "/images/ava.jpg",
     "short": "Prepares for suborbital flight missions.",
-    "full": "Ava is part of a global astronaut program promoting women in spaceflight."
+    "country": "USA",
+    "continent": "North America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-ava.jpg"
   },
   {
     "name": "Riley Moore",
-    "role": "Flight Software Developer, Australia",
+    "designation": "Flight Software Developer",
     "image": "/images/riley.jpg",
     "short": "Programs spacecraft control systems.",
-    "full": "Riley develops critical flight software for Australian nanosatellite missions."
+    "country": "Australia",
+    "continent": "Australia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-riley.jpg"
   },
   {
     "name": "Ivy Zhang",
-    "role": "Aerospace Materials Scientist, China",
+    "designation": "Aerospace Materials Scientist",
     "image": "/images/ivy.jpg",
     "short": "Studies ultra-lightweight composites for rockets.",
-    "full": "Ivy’s research advances reusable rocket technologies across Asia."
+    "country": "China",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-ivy.jpg"
   },
   {
     "name": "Tasha Mbatha",
-    "role": "Astrophysics Student, Kenya",
+    "designation": "Astrophysics Student",
     "image": "/images/tasha.jpg",
     "short": "Works on optical telescope calibration.",
-    "full": "Tasha is building Kenya’s first student-run observatory for deep-space studies."
+    "country": "Kenya",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-tasha.jpg"
   },
   {
     "name": "Julia Novak",
-    "role": "Cosmologist, Poland",
+    "designation": "Cosmologist",
     "image": "/images/julia.jpg",
     "short": "Researches dark energy and the early universe.",
-    "full": "Julia is part of international teams exploring cosmic microwave background radiation."
+    "country": "Poland",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-julia.jpg"
   },
   {
     "name": "Olivia Hughes",
-    "role": "Space Communications Engineer, UK",
+    "designation": "Space Communications Engineer",
     "image": "/images/olivia.jpg",
     "short": "Designs antenna systems for satellites.",
-    "full": "Olivia works on signal optimization for interplanetary communication networks."
+    "country": "UK",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-olivia.jpg"
   },
   {
     "name": "Emma Lopez",
-    "role": "Astronomy Researcher, Argentina",
+    "designation": "Astronomy Researcher",
     "image": "/images/emma.jpg",
     "short": "Studies binary star systems and their dynamics.",
-    "full": "Emma collaborates with global observatories to analyze celestial patterns."
+    "country": "Argentina",
+    "continent": "South America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-emma.jpg"
   },
   {
     "name": "Priya Menon",
-    "role": "Quantum Computing Specialist, India",
+    "designation": "Quantum Computing Specialist",
     "image": "/images/priya.jpg",
     "short": "Explores quantum algorithms for space simulations.",
-    "full": "Priya integrates physics and computation for next-gen space mission models."
+    "country": "India",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-priya.jpg"
   },
   {
     "name": "Nadia Torres",
-    "role": "Aerospace Analyst, Colombia",
+    "designation": "Aerospace Analyst",
     "image": "/images/nadia_t.jpg",
     "short": "Focuses on sustainable space mission design.",
-    "full": "Nadia promotes eco-conscious satellite development across Latin America."
+    "country": "Colombia",
+    "continent": "South America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-nadia_t.jpg"
   },
   {
     "name": "Amira Said",
-    "role": "Rocket Propulsion Scientist, Egypt",
+    "designation": "Rocket Propulsion Scientist",
     "image": "/images/amira.jpg",
     "short": "Develops clean fuel alternatives for rockets.",
-    "full": "Amira leads experiments optimizing green propellants for orbital missions."
+    "country": "Egypt",
+    "continent": "Africa",
+    "ambassadorRole": "yes",
+    "about": "/images/about-amira.jpg"
   },
   {
     "name": "Selene Costa",
-    "role": "Planetary Geologist, Portugal",
+    "designation": "Planetary Geologist",
     "image": "/images/selene.jpg",
     "short": "Analyzes lunar and Martian surface samples.",
-    "full": "Selene’s work enhances our understanding of extraterrestrial mineralogy."
+    "country": "Portugal",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-selene.jpg"
   },
   {
     "name": "Aria Chen",
-    "role": "Optical Engineer, Taiwan",
+    "designation": "Optical Engineer",
     "image": "/images/aria.jpg",
     "short": "Designs high-resolution imaging sensors for telescopes.",
-    "full": "Aria’s optical systems help capture deep-space imagery from orbit."
+    "country": "Taiwan",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-aria.jpg"
   },
   {
     "name": "Tara O'Neill",
-    "role": "Astrophysics Lecturer, Ireland",
+    "designation": "Astrophysics Lecturer",
     "image": "/images/tara.jpg",
     "short": "Lectures on stellar formation and galactic dynamics.",
-    "full": "Tara’s research delves into young star clusters and nebulae."
+    "country": "Ireland",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-tara.jpg"
   },
   {
     "name": "Sasha Ivanova",
-    "role": "Aerospace Technician, Ukraine",
+    "designation": "Aerospace Technician",
     "image": "/images/sasha.jpg",
     "short": "Assembles small-satellite propulsion systems.",
-    "full": "Sasha’s hands-on expertise brings precision manufacturing to aerospace labs."
+    "country": "Ukraine",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-sasha.jpg"
   },
   {
     "name": "Kiara Ali",
-    "role": "STEM Coordinator, UAE",
+    "designation": "STEM Coordinator",
     "image": "/images/kiara.jpg",
     "short": "Organizes youth STEM events across the Middle East.",
-    "full": "Kiara’s outreach bridges innovation and education for thousands of students."
+    "country": "UAE",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-kiara.jpg"
   },
   {
     "name": "Lina Svensson",
-    "role": "Data Engineer, Sweden",
+    "designation": "Data Engineer",
     "image": "/images/lina.jpg",
     "short": "Processes cosmic ray data for research teams.",
-    "full": "Lina develops cloud systems for international astrophysics collaborations."
+    "country": "Sweden",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-lina.jpg"
   },
   {
-    "name": "Freya Müller",
-    "role": "Astrophotographer, Germany",
+    "name": "Freya M\u00fcller",
+    "designation": "Astrophotographer",
     "image": "/images/freya.jpg",
     "short": "Captures breathtaking images of deep space.",
-    "full": "Freya’s award-winning space photography inspires millions online."
+    "country": "Germany",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-freya.jpg"
   },
   {
     "name": "Ayaka Mori",
-    "role": "Space Medicine Researcher, Japan",
+    "designation": "Space Medicine Researcher",
     "image": "/images/ayaka.jpg",
     "short": "Studies astronaut health in microgravity.",
-    "full": "Ayaka’s research supports future long-duration space missions."
+    "country": "Japan",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-ayaka.jpg"
   },
   {
     "name": "Bella Russo",
-    "role": "Materials Engineer, Italy",
+    "designation": "Materials Engineer",
     "image": "/images/bella.jpg",
     "short": "Develops radiation-resistant spacecraft materials.",
-    "full": "Bella’s nanomaterials protect satellites from extreme space environments."
+    "country": "Italy",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-bella.jpg"
   },
   {
     "name": "Jasmine Clark",
-    "role": "AI Engineer, USA",
+    "designation": "AI Engineer",
     "image": "/images/jasmine.jpg",
     "short": "Designs AI navigation for space rovers.",
-    "full": "Jasmine builds intelligent pathfinding systems for extraterrestrial robotics."
+    "country": "USA",
+    "continent": "North America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-jasmine.jpg"
   },
   {
-    "name": "Helena Petrović",
-    "role": "Space Law Researcher, Croatia",
+    "name": "Helena Petrovi\u0107",
+    "designation": "Space Law Researcher",
     "image": "/images/helena.jpg",
     "short": "Advocates for responsible space resource use.",
-    "full": "Helena shapes global policies for ethical space exploration."
+    "country": "Croatia",
+    "continent": "Europe",
+    "ambassadorRole": "yes",
+    "about": "/images/about-helena.jpg"
   },
   {
     "name": "Mila Nguyen",
-    "role": "Orbital Analyst, Vietnam",
+    "designation": "Orbital Analyst",
     "image": "/images/mila.jpg",
     "short": "Tracks and models orbital debris fields.",
-    "full": "Mila’s work ensures safer satellite trajectories in low Earth orbit."
+    "country": "Vietnam",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-mila.jpg"
   },
   {
     "name": "Saanvi Reddy",
-    "role": "AI Researcher, India",
+    "designation": "AI Researcher",
     "image": "/images/saanvi.jpg",
     "short": "Builds AI models for astronomy data interpretation.",
-    "full": "Saanvi develops neural networks to detect celestial patterns from telescope images."
+    "country": "India",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-saanvi.jpg"
   },
   {
     "name": "Yara Mahmoud",
-    "role": "Astronomy Club Mentor, Jordan",
+    "designation": "Astronomy Club Mentor",
     "image": "/images/yara.jpg",
     "short": "Runs space outreach programs for students.",
-    "full": "Yara organizes community stargazing and science literacy initiatives."
+    "country": "Jordan",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-yara.jpg"
   },
   {
     "name": "Noor Hassan",
-    "role": "Astrophysics PhD, Saudi Arabia",
+    "designation": "Astrophysics PhD",
     "image": "/images/noor.jpg",
     "short": "Researches galaxy clusters and cosmic structure.",
-    "full": "Noor promotes women’s participation in astronomy research across the Arab world."
+    "country": "Saudi Arabia",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-noor.jpg"
   },
   {
     "name": "Grace Walker",
-    "role": "Space Simulation Engineer, USA",
+    "designation": "Space Simulation Engineer",
     "image": "/images/grace.jpg",
     "short": "Designs simulations for deep-space missions.",
-    "full": "Grace’s models assist NASA projects in optimizing spacecraft control algorithms."
+    "country": "USA",
+    "continent": "North America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-grace.jpg"
   },
   {
     "name": "Elif Kaya",
-    "role": "Rocket Dynamics Engineer, Turkey",
+    "designation": "Rocket Dynamics Engineer",
     "image": "/images/elif.jpg",
     "short": "Tests reusable rocket systems.",
-    "full": "Elif leads performance optimization studies for national space programs."
+    "country": "Turkey",
+    "continent": "Asia",
+    "ambassadorRole": "yes",
+    "about": "/images/about-elif.jpg"
   },
   {
     "name": "Carolina Vega",
-    "role": "Astrophysics Postdoc, Chile",
+    "designation": "Astrophysics Postdoc",
     "image": "/images/carolina.jpg",
     "short": "Researches cosmic dust in star-forming regions.",
-    "full": "Carolina collaborates with ALMA to map interstellar dust structures."
+    "country": "Chile",
+    "continent": "South America",
+    "ambassadorRole": "yes",
+    "about": "/images/about-carolina.jpg"
   }
 ]

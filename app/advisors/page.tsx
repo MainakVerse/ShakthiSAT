@@ -1,93 +1,85 @@
 "use client"
-import { SciFiInfoBox } from "@/components/scifi-info-box"
+import { useState, useEffect } from "react"
+import advisorsData from "@/data/advisors.json"
+import Image from "next/image"
 
 export default function AdvisorsPage() {
-  const advisorCategories = [
-    {
-      id: "academic",
-      title: "Academic Advisors",
-      description: "Leading professors and researchers guiding our mission with expertise and innovation.",
-      image: "/professor-scientist-academic.jpg",
-      fullDescription:
-        "Our academic advisors bring decades of combined experience from prestigious universities worldwide. They provide strategic guidance on curriculum development, research initiatives, and ensure our programs meet the highest standards of excellence in STEM education.",
-      details: [
-        "50+ leading professors and researchers",
-        "Expertise across multiple scientific disciplines",
-        "Contributors to cutting-edge research",
-        "Mentors for next-generation scientists",
-      ],
-    },
-    {
-      id: "space",
-      title: "Space Industry Experts",
-      description: "Veterans from space agencies and aerospace companies driving innovation forward.",
-      image: "/astronaut-space-engineer-spacecraft.jpg",
-      fullDescription:
-        "Our space industry experts bring real-world experience from leading space agencies and aerospace corporations. They share practical knowledge about satellite technology, mission operations, and the latest advancements in space exploration.",
-      details: [
-        "30+ aerospace and space agency veterans",
-        "Direct satellite mission experience",
-        "Advanced propulsion system expertise",
-        "Commercial space industry insight",
-      ],
-    },
-    {
-      id: "education",
-      title: "Education Specialists",
-      description: "Experts in STEM education and curriculum development for future leaders.",
-      image: "/teacher-education-classroom-learning.jpg",
-      fullDescription:
-        "Education specialists on our team focus on making complex space science concepts accessible and engaging for students at all levels. They develop innovative teaching methodologies and ensure our content is both rigorous and inspiring.",
-      details: [
-        "40+ dedicated education professionals",
-        "STEM curriculum development expertise",
-        "Online and classroom teaching experience",
-        "Educational technology specialists",
-      ],
-    },
-    {
-      id: "policy",
-      title: "Policy Advisors",
-      description: "Government officials and international relations experts shaping the future.",
-      image: "/government-policy-diplomat-international.jpg",
-      fullDescription:
-        "Policy advisors help navigate the complex landscape of international space law and government relations. They facilitate partnerships with governmental bodies and ensure compliance with international space regulations.",
-      details: [
-        "25+ policy and government experts",
-        "International space law knowledge",
-        "Government relations experience",
-        "Strategic partnership facilitators",
-      ],
-    },
-  ]
+  const [search, setSearch] = useState("")
+  const [advisors, setAdvisors] = useState<any[]>([])
+
+  useEffect(() => {
+    setAdvisors(advisorsData)
+  }, [])
+
+  const filtered = advisors.filter(a =>
+    a?.name?.toLowerCase().includes(search.toLowerCase())
+  )
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Hero Section */}
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+
+        {/* Hero */}
+        <div className="text-center mb-10">
+          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
             Our Advisors
           </h1>
-          <p className="text-xl text-[#C0C0C0] max-w-3xl mx-auto leading-relaxed">
-            World-class experts guiding ShakthiSAT's mission with their knowledge, experience, and passion for
-            empowering the next generation.
-          </p>
         </div>
 
-        {/* Sci-Fi Info Boxes Grid */}
-        <div className="grid md:grid-cols-2 gap-8">
-          {advisorCategories.map((category) => (
-            <SciFiInfoBox
-              key={category.id}
-              title={category.title}
-              description={category.description}
-              image={category.image}
-              fullDescription={category.fullDescription}
-              details={category.details}
-            />
+        {/* Search */}
+        <div className="mb-10 max-w-md mx-auto">
+          <input
+            type="text"
+            placeholder="Search advisors by name..."
+            className="w-full px-4 py-3 rounded-lg bg-[#12152e] text-white border border-[#383c6b]"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+          />
+        </div>
+
+        {/* Advisors Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          {filtered.map((advisor) => (
+            <div
+              key={advisor.name}
+              className="flex bg-[#12152e] rounded-xl p-6 shadow-lg hover:shadow-[#6A4FC8]/40 transition min-h-[220px]"
+            >
+              {/* Image (1 part) */}
+              <div className="w-1/4 relative h-40 rounded-lg overflow-hidden">
+                <Image
+                  src={advisor.image}
+                  alt={advisor.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+
+              {/* Text (3 parts) */}
+              <div className="w-3/4 pl-6 flex flex-col justify-between">
+                <div>
+                  <h3 className="text-2xl font-bold text-[#FFD700] mb-3">
+                    {advisor.name}
+                  </h3>
+                  <p className="text-sm text-[#C0C0C0] leading-relaxed">
+                    {advisor.desc}
+                  </p>
+                </div>
+
+                <div className="mt-4">
+                  <a
+                    href={advisor.poster}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-4 py-2 rounded-md bg-[#6A4FC8] text-white font-semibold hover:bg-[#8d6bff] transition"
+                  >
+                    View Poster
+                  </a>
+                </div>
+              </div>
+            </div>
           ))}
         </div>
+
       </div>
     </main>
   )

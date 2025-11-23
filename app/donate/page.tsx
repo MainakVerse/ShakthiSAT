@@ -19,13 +19,16 @@ export default function DonatePage() {
       {/* Donation Options */}
       <div className="flex flex-col sm:flex-row gap-6 mb-12">
         <Button className="bg-white text-[#0A0E27] hover:bg-[#FFD700] text-lg px-8 py-6 rounded-full shadow-lg shadow-[#6A4FC8]/40 flex items-center gap-2">
-          <Heart className="h-5 w-5 text-[#FF6EC7]" /> Donate ₹500
+          <Heart className="h-5 w-5 text-[#FF6EC7]" /> Donate ₹100
         </Button>
         <Button className="bg-white text-[#0A0E27] hover:bg-[#FFD700] text-lg px-8 py-6 rounded-full shadow-lg shadow-[#6A4FC8]/40 flex items-center gap-2">
-          <Heart className="h-5 w-5 text-[#6A4FC8]" /> Donate ₹1000
+          <Heart className="h-5 w-5 text-[#6A4FC8]" /> Donate ₹500
         </Button>
         <Button className="bg-white text-[#0A0E27] hover:bg-[#FFD700] text-lg px-8 py-6 rounded-full shadow-lg shadow-[#6A4FC8]/40 flex items-center gap-2">
-          <Heart className="h-5 w-5 text-[#FFD700]" /> Donate ₹2500
+          <Heart className="h-5 w-5 text-[#FFD700]" /> Donate ₹1000
+        </Button>
+         <Button className="bg-white text-[#0A0E27] hover:bg-[#FFD700] text-lg px-8 py-6 rounded-full shadow-lg shadow-[#6A4FC8]/40 flex items-center gap-2">
+          <Heart className="h-5 w-5 text-[#FFD700]" /> Custom (Above ₹1000 to ₹100,000)
         </Button>
       </div>
 

@@ -1,572 +1,830 @@
 [
   {
-    "name": "Aanya Patel",
-    "designation": "STEM Advocate",
-    "image": "/images/aanya.jpg",
-    "short": "Inspires young girls to pursue space tech and coding.",
-    "country": "India",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-aanya.jpg"
+    "name": "Ms. Amena Karimyan",
+    "image": "/images/Ms. Amena Karimyan - Afghanistan.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Luna Garcia",
-    "designation": "Aerospace Student",
-    "image": "/images/luna.jpg",
-    "short": "Passionate about propulsion systems and rocketry.",
-    "country": "Mexico",
-    "continent": "North America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-luna.jpg"
+    "name": "Ms. Yango Ndofula",
+    "image": "/images/Ms. Yango Ndofula - Angola.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Sarah Ahmed",
-    "designation": "Astrophysicist",
-    "image": "/images/sarah.jpg",
-    "short": "Researches exoplanets and deep-space imaging.",
-    "country": "Egypt",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-sarah.jpg"
+    "name": "Dr. Abigail Ganopol",
+    "image": "/images/Dr. Abigail Ganopol - Argentina.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Mei Tan",
-    "designation": "Robotics Engineer",
-    "image": "/images/mei.jpg",
-    "short": "Designs autonomous systems for satellite repair.",
-    "country": "Singapore",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-mei.jpg"
+    "name": "Ms. Hanna Harutyunyan",
+    "image": "/images/Ms. Hanna Harutyunyan - Armenia.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Zara Khan",
-    "designation": "Astrochemist",
-    "image": "/images/zara.jpg",
-    "short": "Studies chemical compositions of interstellar dust.",
-    "country": "Pakistan",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-zara.jpg"
+    "name": "Ms. Sukruthi Narayanan",
+    "image": "/images/Ms. Sukruti Narayanan - Australia.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Elena Rossi",
-    "designation": "Space Educator",
-    "image": "/images/elena.jpg",
-    "short": "Leads educational space initiatives across Europe.",
-    "country": "Italy",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-elena.jpg"
+    "name": "Ms. Carmen Engele",
+    "image": "/images/Ms. Carmen Engele - Austria.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Amara Johnson",
-    "designation": "Astrobiologist",
-    "image": "/images/amara.jpg",
-    "short": "Explores microbial life in extreme environments.",
-    "country": "USA",
-    "continent": "North America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-amara.jpg"
+    "name": "Dr. Jacinta M. Higgs",
+    "image": "/images/Dr. Jacinta M. Higgs - Bahamas.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Keiko Nakamura",
-    "designation": "Satellite Systems Engineer",
-    "image": "/images/keiko.jpg",
-    "short": "Specializes in CubeSat design and telemetry systems.",
-    "country": "Japan",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-keiko.jpg"
+    "name": "Ms. Chiarath Olayindé Moutairou",
+    "image": "/images/Ms. Chiarath Olayindé Moutairou - Benin.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Fatima Suleiman",
-    "designation": "Rocket Design Engineer",
-    "image": "/images/fatima.jpg",
-    "short": "Focuses on propulsion and reusable launch systems.",
-    "country": "Nigeria",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-fatima.jpg"
+    "name": "Ms. Houéfa Alexia Todan",
+    "image": "/images/Ms. Houéfa Alexia Todan - Benin.jpg",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Maria Oliveira",
-    "designation": "Planetary Scientist",
-    "image": "/images/maria.jpg",
-    "short": "Studies Martian terrain and habitability.",
-    "country": "Brazil",
-    "continent": "South America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-maria.jpg"
+    "name": "Dr. Georgina Chávez",
+    "image": "/images/Dr. Georgina Chávez  - Bolivia.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Claire Dubois",
-    "designation": "Astronomy Lecturer",
-    "image": "/images/claire.jpg",
-    "short": "Teaches stellar evolution and space science.",
-    "country": "France",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-claire.jpg"
+    "name": "Ms. Nonofo Angela Mogopodi",
+    "image": "/images/Ms. Nonofo Angela Mogopodi - Botswana.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Ingrid Larsen",
-    "designation": "Orbital Mechanics Researcher",
-    "image": "/images/ingrid.jpg",
-    "short": "Develops models for satellite trajectory optimization.",
-    "country": "Norway",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-ingrid.jpg"
+    "name": "Ms. Isadora Stefanhak Costa Arantes",
+    "image": "/images/Ms. Isadora Stefanhak Costa Arantes - Brazil .jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Rina Das",
-    "designation": "Software Engineer",
-    "image": "/images/rina.jpg",
-    "short": "Builds AI tools for space mission control systems.",
-    "country": "India",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-rina.jpg"
+    "name": "Ms. Anne Victória Rodrigues da Costa",
+    "image": "/images/Ms. Anne Victória Rodrigues da Costa - Brazil.jpg",
+    "ambassadorRole": "Tech-Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Sofia Martinez",
-    "designation": "Space Policy Analyst",
-    "image": "/images/sofia.jpg",
-    "short": "Advocates for ethical and inclusive space exploration.",
-    "country": "Spain",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-sofia.jpg"
+    "name": "Ms. Sarinah Ziziumiza",
+    "image": "/images/Ms. Sarinah Ziziumiza - Brunei.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Hannah Park",
-    "designation": "Data Scientist",
-    "image": "/images/hannah.jpg",
-    "short": "Processes satellite data for climate monitoring.",
-    "country": "South Korea",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-hannah.jpg"
+    "name": "Ms. Farida Tiemtore",
+    "image": "/images/Ms. Farida Tiemtore - Burkina Faso.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Nadia Petrova",
-    "designation": "Astrophysics PhD",
-    "image": "/images/nadia.jpg",
-    "short": "Specializes in neutron stars and cosmic radiation.",
-    "country": "Russia",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-nadia.jpg"
+    "name": "Ms. Lily R. Asongfac",
+    "image": "/images/Ms. Lily R. Asongfac - Cameroon.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Chloe Brown",
-    "designation": "Mission Operations Engineer",
-    "image": "/images/chloe.jpg",
-    "short": "Monitors and coordinates satellite flight operations.",
-    "country": "UK",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-chloe.jpg"
+    "name": "Ms. OUNGUEDOU ONANINA THÉRÈSE JOSÉPHINE",
+    "image": "/images/Ms. OUNGUEDOU ONANINA THÉRÈSE JOSÉPHINE - Cameroon.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Thandiwe Moyo",
-    "designation": "STEM Educator",
-    "image": "/images/thandiwe.jpg",
-    "short": "Brings space science to underprivileged schools.",
-    "country": "South Africa",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-thandiwe.jpg"
+    "name": "Ms. Chenkplen Sandy",
+    "image": "/images/Mrs. Chenkplen Sandy - Canada.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Leila Haddad",
-    "designation": "Aerospace Engineer",
-    "image": "/images/leila.jpg",
-    "short": "Works on satellite launch vehicle design.",
-    "country": "Morocco",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-leila.jpg"
+    "name": "Mrs. Sidoine Louisa Makanda",
+    "image": "/images/_Mrs. Sidoine Louisa Makanda - Central African Republic.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Emily Carter",
-    "designation": "Mechanical Engineer",
-    "image": "/images/emily.jpg",
-    "short": "Designs components for small-satellite missions.",
-    "country": "Canada",
-    "continent": "North America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-emily.jpg"
+    "name": "Ms. Victoria Valdivia Cerda",
+    "image": "/images/Ms. Victoria Valdivia Cerda - Chile.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Ruqayyah Al Mansoori",
-    "designation": "Space Researcher",
-    "image": "/images/ruqayyah.jpg",
-    "short": "Explores Mars and lunar mission technologies.",
-    "country": "UAE",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-ruqayyah.jpg"
+    "name": "Dr. Pilar Zamora Acevedo",
+    "image": "/images/Dr. PILAR ZAMORA ACEVEDO - Colombia .jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Adaeze Okafor",
-    "designation": "Aerospace Project Lead",
-    "image": "/images/adaeze.jpg",
-    "short": "Leads student-built satellite initiatives.",
-    "country": "Nigeria",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-adaeze.jpg"
+    "name": "Dr. Leonora de Lemos Medina",
+    "image": "/images/Dr. Leonora de Lemos Medina  - Costa Rica.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Kiana Lee",
-    "designation": "Space Systems Designer",
-    "image": "/images/kiana.jpg",
-    "short": "Focuses on nanosatellite integration and testing.",
-    "country": "Malaysia",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-kiana.jpg"
+    "name": "Ms. Aicha Gladys Traoré Née Atindekoun",
+    "image": "/images/_Ms. Aicha Gladys Traoré Née Atindekoun - Cote d’Ivoire (IVORY COAST).jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Anika Bose",
-    "designation": "AI Researcher",
-    "image": "/images/anika.jpg",
-    "short": "Applies AI to satellite image recognition.",
-    "country": "Bangladesh",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-anika.jpg"
+    "name": "Ms. Dorina Girbovan",
+    "image": "/images/Dr. Dorina Girbovan - Romania.jpg",
+    "ambassadorRole": "Ambassdor",
+    "about": "Scientist"
   },
   {
-    "name": "Isabella Cruz",
-    "designation": "Astroinformatics Expert",
-    "image": "/images/isabella.jpg",
-    "short": "Combines astronomy and data science for discovery.",
-    "country": "Chile",
-    "continent": "South America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-isabella.jpg"
+    "name": "Ms. Hoda Awny El-Megharbel",
+    "image": "/images/Ms. Hoda El-Megharbel - Egypt.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Mina Osei",
-    "designation": "Space Policy Advisor",
-    "image": "/images/mina.jpg",
-    "short": "Develops national space education strategies.",
-    "country": "Ghana",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-mina.jpg"
+    "name": "Ms. Sonia Castro",
+    "image": "/images/Ms. Sonia Castro - El Salvador.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Nora Jensen",
-    "designation": "Atmospheric Scientist",
-    "image": "/images/nora.jpg",
-    "short": "Studies Earth\u2019s upper atmosphere using satellite data.",
-    "country": "Denmark",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-nora.jpg"
+    "name": "Ms. Evangelina Nguema Ayaga",
+    "image": "/images/Ms. Evangelina Nguema Ayaga - Equatorial Guinea.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Diana Popescu",
-    "designation": "Space Robotics Researcher",
-    "image": "/images/diana.jpg",
-    "short": "Develops rover navigation algorithms.",
-    "country": "Romania",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-diana.jpg"
+    "name": "Ms. Khulile Winifred Dlamini",
+    "image": "/images/Ms. Khulile Winifred Dlamini - Eswatini.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Layla Farouk",
-    "designation": "Astrophysics Lecturer",
-    "image": "/images/layla.jpg",
-    "short": "Teaches cosmic evolution and interstellar physics.",
-    "country": "Egypt",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-layla.jpg"
+    "name": "Ms. Gelila Berhanu Biramo",
+    "image": "/images/Ms. Gelila Berhanu Biramo - Ethiopia.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Ava Thompson",
-    "designation": "Astronaut Trainee",
-    "image": "/images/ava.jpg",
-    "short": "Prepares for suborbital flight missions.",
-    "country": "USA",
-    "continent": "North America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-ava.jpg"
+    "name": "Ms. Eden Abeselom",
+    "image": "/images/Ms. Eden Abeselom - Ethiopia.jpg",
+    "ambassadorRole": "Tech-Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Riley Moore",
-    "designation": "Flight Software Developer",
-    "image": "/images/riley.jpg",
-    "short": "Programs spacecraft control systems.",
-    "country": "Australia",
-    "continent": "Australia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-riley.jpg"
+    "name": "Ms. Sharina Shanaz",
+    "image": "/images/Ms. Sharina Shanaz - Fiji.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Ivy Zhang",
-    "designation": "Aerospace Materials Scientist",
-    "image": "/images/ivy.jpg",
-    "short": "Studies ultra-lightweight composites for rockets.",
-    "country": "China",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-ivy.jpg"
+    "name": "Dr. Priyanka Das Rajkakati",
+    "image": "/images/Dr. Priyanka Das Rajkakati - France.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Tasha Mbatha",
-    "designation": "Astrophysics Student",
-    "image": "/images/tasha.jpg",
-    "short": "Works on optical telescope calibration.",
-    "country": "Kenya",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-tasha.jpg"
+    "name": "Dr. Mireille Toulekima",
+    "image": "/images/Dr. Mireille Toulekima - Gabon.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Julia Novak",
-    "designation": "Cosmologist",
-    "image": "/images/julia.jpg",
-    "short": "Researches dark energy and the early universe.",
-    "country": "Poland",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-julia.jpg"
+    "name": "Ms. Carmen M. Nzamba",
+    "image": "/images/Ms. Carmen Engele - AUSTRIA.jpg",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Olivia Hughes",
-    "designation": "Space Communications Engineer",
-    "image": "/images/olivia.jpg",
-    "short": "Designs antenna systems for satellites.",
-    "country": "UK",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-olivia.jpg"
+    "name": "Ms. Fatoumatta Jawara",
+    "image": "/images/Ms. Fatoumatta Jawara - Gambia.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Emma Lopez",
-    "designation": "Astronomy Researcher",
-    "image": "/images/emma.jpg",
-    "short": "Studies binary star systems and their dynamics.",
-    "country": "Argentina",
-    "continent": "South America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-emma.jpg"
+    "name": "Ms. Binta Sanyang",
+    "image": "/images/Ms. Binta Sanyang - Gambia.jpg",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Priya Menon",
-    "designation": "Quantum Computing Specialist",
-    "image": "/images/priya.jpg",
-    "short": "Explores quantum algorithms for space simulations.",
-    "country": "India",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-priya.jpg"
+    "name": "Dr Diana Amoni",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Nadia Torres",
-    "designation": "Aerospace Analyst",
-    "image": "/images/nadia_t.jpg",
-    "short": "Focuses on sustainable space mission design.",
-    "country": "Colombia",
-    "continent": "South America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-nadia_t.jpg"
+    "name": "Prof. Dr. Rania Lampou",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Amira Said",
-    "designation": "Rocket Propulsion Scientist",
-    "image": "/images/amira.jpg",
-    "short": "Develops clean fuel alternatives for rockets.",
-    "country": "Egypt",
-    "continent": "Africa",
-    "ambassadorRole": "yes",
-    "about": "/images/about-amira.jpg"
+    "name": "Ms. Marita Georganta",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Selene Costa",
-    "designation": "Planetary Geologist",
-    "image": "/images/selene.jpg",
-    "short": "Analyzes lunar and Martian surface samples.",
-    "country": "Portugal",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-selene.jpg"
+    "name": "Ms. Tamara Savoury",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Aria Chen",
-    "designation": "Optical Engineer",
-    "image": "/images/aria.jpg",
-    "short": "Designs high-resolution imaging sensors for telescopes.",
-    "country": "Taiwan",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-aria.jpg"
+    "name": "Ms. Katia Sofía Samayoa Artiga",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Tara O'Neill",
-    "designation": "Astrophysics Lecturer",
-    "image": "/images/tara.jpg",
-    "short": "Lectures on stellar formation and galactic dynamics.",
-    "country": "Ireland",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-tara.jpg"
+    "name": "Ms. Sarah Foucauld",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Sasha Ivanova",
-    "designation": "Aerospace Technician",
-    "image": "/images/sasha.jpg",
-    "short": "Assembles small-satellite propulsion systems.",
-    "country": "Ukraine",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-sasha.jpg"
+    "name": "Ms. Ana Thompson",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Kiara Ali",
-    "designation": "STEM Coordinator",
-    "image": "/images/kiara.jpg",
-    "short": "Organizes youth STEM events across the Middle East.",
-    "country": "UAE",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-kiara.jpg"
+    "name": "Ms. Zsuzsanna Benyo",
+    "image": "",
+    "ambassadorRole": "Ambassdor",
+    "about": "Scientist"
   },
   {
-    "name": "Lina Svensson",
-    "designation": "Data Engineer",
-    "image": "/images/lina.jpg",
-    "short": "Processes cosmic ray data for research teams.",
-    "country": "Sweden",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-lina.jpg"
+    "name": "Ms.  Margot Issertine",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Freya M\u00fcller",
-    "designation": "Astrophotographer",
-    "image": "/images/freya.jpg",
-    "short": "Captures breathtaking images of deep space.",
-    "country": "Germany",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-freya.jpg"
+    "name": "Ms. Jaya Tare",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Ayaka Mori",
-    "designation": "Space Medicine Researcher",
-    "image": "/images/ayaka.jpg",
-    "short": "Studies astronaut health in microgravity.",
-    "country": "Japan",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-ayaka.jpg"
+    "name": "Ms. Mamonaheng Koenane",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Bella Russo",
-    "designation": "Materials Engineer",
-    "image": "/images/bella.jpg",
-    "short": "Develops radiation-resistant spacecraft materials.",
-    "country": "Italy",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-bella.jpg"
+    "name": "Ms. Nicole Zinna",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Jasmine Clark",
-    "designation": "AI Engineer",
-    "image": "/images/jasmine.jpg",
-    "short": "Designs AI navigation for space rovers.",
-    "country": "USA",
-    "continent": "North America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-jasmine.jpg"
+    "name": "Ms. Dominique Campbell",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Helena Petrovi\u0107",
-    "designation": "Space Law Researcher",
-    "image": "/images/helena.jpg",
-    "short": "Advocates for responsible space resource use.",
-    "country": "Croatia",
-    "continent": "Europe",
-    "ambassadorRole": "yes",
-    "about": "/images/about-helena.jpg"
+    "name": "Ms. Lana Abukhader",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Mila Nguyen",
-    "designation": "Orbital Analyst",
-    "image": "/images/mila.jpg",
-    "short": "Tracks and models orbital debris fields.",
-    "country": "Vietnam",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-mila.jpg"
+    "name": "Ms. Olyvia Gatwiri",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Saanvi Reddy",
-    "designation": "AI Researcher",
-    "image": "/images/saanvi.jpg",
-    "short": "Builds AI models for astronomy data interpretation.",
-    "country": "India",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-saanvi.jpg"
+    "name": "Ms. Saltanat Mambetisaeva",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Yara Mahmoud",
-    "designation": "Astronomy Club Mentor",
-    "image": "/images/yara.jpg",
-    "short": "Runs space outreach programs for students.",
-    "country": "Jordan",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-yara.jpg"
+    "name": "Ms. Samanta Kelmere",
+    "image": "",
+    "ambassadorRole": "Ambassdor",
+    "about": "Scientist"
   },
   {
-    "name": "Noor Hassan",
-    "designation": "Astrophysics PhD",
-    "image": "/images/noor.jpg",
-    "short": "Researches galaxy clusters and cosmic structure.",
-    "country": "Saudi Arabia",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-noor.jpg"
+    "name": "Ms. Puseletso Thubela",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Grace Walker",
-    "designation": "Space Simulation Engineer",
-    "image": "/images/grace.jpg",
-    "short": "Designs simulations for deep-space missions.",
-    "country": "USA",
-    "continent": "North America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-grace.jpg"
+    "name": "Ms. Mathele Mpiko",
+    "image": "",
+    "ambassadorRole": "Tech-Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Elif Kaya",
-    "designation": "Rocket Dynamics Engineer",
-    "image": "/images/elif.jpg",
-    "short": "Tests reusable rocket systems.",
-    "country": "Turkey",
-    "continent": "Asia",
-    "ambassadorRole": "yes",
-    "about": "/images/about-elif.jpg"
+    "name": "Ms. Welleh Joy Won",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   },
   {
-    "name": "Carolina Vega",
-    "designation": "Astrophysics Postdoc",
-    "image": "/images/carolina.jpg",
-    "short": "Researches cosmic dust in star-forming regions.",
-    "country": "Chile",
-    "continent": "South America",
-    "ambassadorRole": "yes",
-    "about": "/images/about-carolina.jpg"
+    "name": "Ms. Deena Cooper-Morgan",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms.  Alexandra Tsyliya",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Martina Dimoska",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Miora Randrianasy",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Kumbutso Takomana",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Tamandah Kandodo",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Amb. Prof. Dr. Esther Mala",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Anu R I",
+    "image": "",
+    "ambassadorRole": "Ambassdor",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Dafne Pimentel",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Steliana Burlacu",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Anna Talgat",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Nina Drakulic",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Izza Rym",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Rachida Aligy Ussen Mamade",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms.  Odete Frederico Xavier Namuera",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms.  Sónia Cintura",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Hon. Ms. Pwint Mar Han",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Smita Francis",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Ira Sharma",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Pragya JaIn",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Jess Covich",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Felicia Oluwatoyin Ajayi",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Uroi N Salii",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. María Heller",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Loretta Tunim",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Katherine Neal",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Hebe Luisa Romero Talavera",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Sofia Bouby",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Nicfreida Marie Guadalupe M. Gomez",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Eng. Agnieszka Elwertowska",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Rita Liliana Dias Barbosa",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Cailin Rugema",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Jasmine Koria",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Nora Almohizai",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Seynabou Diouf",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr Monika Jurkovic",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Nichola Abrams",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Aminata Matturie",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Diana Fernandes",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Casie Millhouse",
+    "image": "",
+    "ambassadorRole": "Tech-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Vanja Angjelovikj",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Nasiphi Ngcoliso",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Rocío García",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Joy Karunya Mahendiran",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Anya James",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Sémonique K Harry",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Kenesha Foster",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Asinta Ntinda Manyele",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Piyaporn Singhathum",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Shalmalee",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Hadidjatou Yaya",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Donna Scoon Moses",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Laura",
+    "image": "",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Soulaima Dhieb",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms.  Temitope Adeniyi",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Maral Rejepova",
+    "image": "",
+    "ambassadorRole": "Ambassdor",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Marwa Amarah",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Victoria Olabisi Hughes",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Sheeba Niwensiima",
+    "image": "",
+    "ambassadorRole": "Tech-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Kinjal Dave",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Mariana García",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Mohina Rustamova",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Tran Hang",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Bertha",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Electdom Matandirotya",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Primerose Bomokayi",
+    "image": "",
+    "ambassadorRole": "Co - Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Melody",
+    "image": "",
+    "ambassadorRole": "Co - Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Jasmine Koria",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Priscilla Tagutanazvo",
+    "image": "",
+    "ambassadorRole": "Co-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "MS. Marianne Pachany",
+    "image": "",
+    "ambassadorRole": "Co-ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Nikita Anilkumar",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Thanh Nguyen",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Carmen M. Nzamba",
+    "image": "",
+    "ambassadorRole": "Co-ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Natasha Lumpa",
+    "image": "",
+    "ambassadorRole": "Co-ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Charmaine Mangion",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Wanjiku Chebet Kanjumba",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Devica Kamini Uditram",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Jessica Golding",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Nongbzanga Ariane Fabiola Ouedraogo",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Ketra Polydore",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Fiorella Arias-Bonilla",
+    "image": "",
+    "ambassadorRole": "Co-ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Daniela Jovic",
+    "image": "",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
   }
 ]

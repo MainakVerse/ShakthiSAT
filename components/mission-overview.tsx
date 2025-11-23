@@ -77,11 +77,15 @@ export function MissionOverview() {
                 <span className="absolute bottom-0 right-0 w-6 h-[2px] bg-white"></span>
                 <span className="absolute bottom-0 right-0 h-6 w-[2px] bg-white"></span>
 
-                <iframe
-                  className="w-full h-full"
-                  src="https://www.youtube.com/embed/VIDEO_ID?autoplay=0&mute=1"
-                  allowFullScreen
-                />
+                <iframe width="560" height="315"
+  src="https://www.youtube.com/embed/vU6PDFdgf8k?autoplay=1&mute=1&si=T8AkEWZ-NrmTzEZa"
+  title="YouTube video player"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  referrerPolicy="strict-origin-when-cross-origin"
+  allowFullScreen>
+</iframe>
+
               </div>
             </div>
 

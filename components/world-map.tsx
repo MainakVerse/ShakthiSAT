@@ -5,109 +5,115 @@ import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "re
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
 
-// Sample participating countries with coordinates
-const participatingCountries = [
-  { name: "India", coordinates: [78.9629, 20.5937], color: "#FFD700" },
-  { name: "United States", coordinates: [-95.7129, 37.0902], color: "#E26EE5" },
-  { name: "United Kingdom", coordinates: [-3.436, 55.3781], color: "#6A4FC8" },
-  { name: "Japan", coordinates: [138.2529, 36.2048], color: "#FFD700" },
-  { name: "Brazil", coordinates: [-51.9253, -14.235], color: "#E26EE5" },
-  { name: "Australia", coordinates: [133.7751, -25.2744], color: "#6A4FC8" },
-  { name: "South Africa", coordinates: [22.9375, -30.5595], color: "#FFD700" },
-  { name: "Canada", coordinates: [-106.3468, 56.1304], color: "#E26EE5" },
-  { name: "Germany", coordinates: [10.4515, 51.1657], color: "#6A4FC8" },
-  { name: "France", coordinates: [2.2137, 46.2276], color: "#FFD700" },
-  { name: "China", coordinates: [104.1954, 35.8617], color: "#E26EE5" },
-  { name: "Mexico", coordinates: [-102.5528, 23.6345], color: "#6A4FC8" },
-  { name: "Argentina", coordinates: [-63.6167, -38.4161], color: "#FFD700" },
-  { name: "Egypt", coordinates: [30.8025, 26.8206], color: "#E26EE5" },
-  { name: "Nigeria", coordinates: [8.6753, 9.082], color: "#6A4FC8" },
-  { name: "Kenya", coordinates: [37.9062, -0.0236], color: "#FFD700" },
-  { name: "Indonesia", coordinates: [113.9213, -0.7893], color: "#E26EE5" },
-  { name: "Thailand", coordinates: [100.9925, 15.87], color: "#6A4FC8" },
-  { name: "South Korea", coordinates: [127.7669, 35.9078], color: "#FFD700" },
-  { name: "Italy", coordinates: [12.5674, 41.8719], color: "#E26EE5" },
-]
+// ✅ SAME countryCodes used in CountriesPage
+const countryCodes: Record<string, string> = {
+  India: "IN", USA: "US", UK: "GB", Canada: "CA", France: "FR", Germany: "DE",
+  Brazil: "BR", Japan: "JP", Australia: "AU", "South Korea": "KR", Italy: "IT",
+  Spain: "ES", Russia: "RU", Mexico: "MX", "South Africa": "ZA", Argentina: "AR",
+  Netherlands: "NL", Sweden: "SE", Norway: "NO", Finland: "FI", Denmark: "DK",
+  Poland: "PL", Turkey: "TR", Singapore: "SG", Malaysia: "MY", Thailand: "TH",
+  Vietnam: "VN", Indonesia: "ID", Philippines: "PH", Bangladesh: "BD",
+  Nepal: "NP", "Sri Lanka": "LK", UAE: "AE", "Saudi Arabia": "SA", Egypt: "EG",
+  Kenya: "KE", Nigeria: "NG", Ghana: "GH", Ethiopia: "ET", Morocco: "MA",
+  Chile: "CL", Peru: "PE", Colombia: "CO", Venezuela: "VE", "New Zealand": "NZ",
+  Israel: "IL", Portugal: "PT", Greece: "GR", Switzerland: "CH", Austria: "AT",
+  Belgium: "BE", "Czech Republic": "CZ", Hungary: "HU", Romania: "RO",
+  Croatia: "HR", Ireland: "IE", Iceland: "IS", Luxembourg: "LU", Qatar: "QA",
+  Oman: "OM", Kuwait: "KW", Jordan: "JO", Lebanon: "LB", Pakistan: "PK",
+  Uzbekistan: "UZ", Kazakhstan: "KZ", Mongolia: "MN", Cambodia: "KH", Laos: "LA",
+  Myanmar: "MM", Tanzania: "TZ", Uganda: "UG", Zimbabwe: "ZW", Zambia: "ZM",
+  Algeria: "DZ", Tunisia: "TN", Paraguay: "PY", Bolivia: "BO", Ecuador: "EC",
+  Panama: "PA", "Costa Rica": "CR", Honduras: "HN", "El Salvador": "SV",
+  Guatemala: "GT", Cuba: "CU", Jamaica: "JM", "Dominican Republic": "DO",
+  Haiti: "HT", "Trinidad and Tobago": "TT", Fiji: "FJ", "Papua New Guinea": "PG",
+  Maldives: "MV", Bhutan: "BT", Rwanda: "RW", Namibia: "NA", Botswana: "BW",
+  Mozambique: "MZ", Madagascar: "MG", Mauritius: "MU", Brunei: "BN",
+  Seychelles: "SC", Malawi: "MW", Burundi: "BI", Georgia: "GE", Armenia: "AM",
+  Moldova: "MD", Ukraine: "UA", "North Macedonia": "MK"
+}
+
+// ✅ Pull same onboard distribution
+const onboardedCountries = Object.keys(countryCodes).slice(0, 80)
+const toBeOnboardedCountries = Object.keys(countryCodes).slice(80, 108)
+
+// ✅ Fast lookup sets
+const onboardedSet = new Set(onboardedCountries)
+const toBeOnboardedSet = new Set(toBeOnboardedCountries)
+
+// ✅ Generate approximate marker coordinates using placeholders
+const markers = onboardedCountries.map(name => ({
+  name,
+  coordinates: [0, 0] // optional: replace with real coords later
+}))
 
 export function WorldMap() {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null)
 
   return (
     <div className="relative w-full h-full">
-      <ComposableMap
-        projection="geoMercator"
-        projectionConfig={{
-          scale: 147,
-        }}
-        className="w-full h-full"
-      >
+      <ComposableMap projection="geoMercator" projectionConfig={{ scale: 147 }} className="w-full h-full">
         <ZoomableGroup center={[0, 20]} zoom={1}>
+
           <Geographies geography={geoUrl}>
             {({ geographies }) =>
-              geographies.map((geo) => (
-                <Geography
-                  key={geo.rsmKey}
-                  geography={geo}
-                  fill="#6A4FC8"
-                  stroke="#0B0C2A"
-                  strokeWidth={0.5}
-                  style={{
-                    default: { fill: "#6A4FC8", opacity: 0.2, outline: "none" },
-                    hover: { fill: "#E26EE5", opacity: 0.4, outline: "none" },
-                    pressed: { fill: "#FFD700", opacity: 0.5, outline: "none" },
-                  }}
-                />
-              ))
+              geographies.map((geo) => {
+                const countryName = geo.properties.name
+
+                const fillColor =
+                  onboardedSet.has(countryName)
+                    ? "#FFD700"        // onboarded yellow
+                    : toBeOnboardedSet.has(countryName)
+                      ? "#E26EE5"      // not onboarded pink
+                      : "#3B2A5A"      // countries not in list at all
+
+                return (
+                  <Geography
+                    key={geo.rsmKey}
+                    geography={geo}
+                    fill={fillColor}
+                    stroke="#0B0C2A"
+                    strokeWidth={0.4}
+                    style={{
+                      default: { opacity: 0.55, outline: "none" },
+                      hover: { opacity: 0.85, outline: "none" },
+                      pressed: { opacity: 1, outline: "none" }
+                    }}
+                  />
+                )
+              })
             }
           </Geographies>
 
-          {/* Markers for participating countries */}
-          {participatingCountries.map((country) => (
+          {/* ✅ Markers only on onboarded countries */}
+          {markers.map((country) => (
             <Marker
               key={country.name}
               coordinates={country.coordinates as [number, number]}
               onMouseEnter={() => setHoveredCountry(country.name)}
               onMouseLeave={() => setHoveredCountry(null)}
             >
-              <circle
-                r={4}
-                fill={country.color}
-                stroke="#fff"
-                strokeWidth={1}
-                className="cursor-pointer transition-all duration-300 hover:r-6"
-                style={{
-                  animation: "pulse 2s ease-in-out infinite",
-                }}
-              />
+              <circle r={3.5} fill="#fff" stroke="#000" strokeWidth={1} />
               {hoveredCountry === country.name && (
-                <text
-                  textAnchor="middle"
-                  y={-10}
-                  className="text-xs font-semibold fill-white"
-                  style={{
-                    pointerEvents: "none",
-                    textShadow: "0 0 4px rgba(0,0,0,0.8)",
-                  }}
-                >
+                <text textAnchor="middle" y={-10} className="text-xs font-semibold fill-white">
                   {country.name}
                 </text>
               )}
             </Marker>
           ))}
+
         </ZoomableGroup>
       </ComposableMap>
 
-      {/* Legend */}
       <div className="absolute bottom-4 left-4 bg-[#0B0C2A]/80 backdrop-blur-sm border border-[#6A4FC8]/30 rounded-lg p-4">
-        <p className="text-sm font-semibold text-[#C0C0C0] mb-2">Participating Countries</p>
+        <p className="text-sm font-semibold text-[#C0C0C0] mb-2">Country Status</p>
         <div className="flex flex-col gap-1 text-xs text-[#C0C0C0]">
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-[#FFD700]" />
-            <span>20+ shown of 108 nations</span>
+            <span>Onboarded ({onboardedCountries.length})</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-3 h-3 rounded-full bg-[#E26EE5]" />
-            <span>Hover to see country names</span>
+            <span>To Be Onboarded ({toBeOnboardedCountries.length})</span>
           </div>
         </div>
       </div>

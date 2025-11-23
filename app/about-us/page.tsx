@@ -5,9 +5,31 @@ import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function AboutUsPage() {
-  const teamMembers = Array.from({ length: 11 }, (_, i) => i + 1)
+  
+  // ✅ Team members with names & roles (edit freely)
+  const teamMembers = [
+  { name: "Dr. Srimathy Kesan", role: "Mission Director", image: "/team/member1.jpg" },
+  { name: "Mr. Gobinath", role: "Academic Director", image: "/team/member2.jpg" },
+  { name: "Ms. Yara Fernandes", role: "International Director for Space, Quantum and Economic Innovation", image: "/team/member3.jpg" },
+  { name: "Ms. Sukruti Narayanan", role: "Head of Global Partnerships", image: "/team/member4.jpg" },
+  { name: "Ms. Rocío Caparrós del Moral", role: "International Relations and Strategy Advisor", image: "/team/member5.jpg" },
+  { name: "Mr. Gokul V.", role: "Lead - Mechanical Unit", image: "/team/member6.jpg" },
+  { name: "Ms. Haashika Raj", role: "Global Alliances & Outreach Manager", image: "/team/member7.jpg" },
+  { name: "Mr. Sriram Ramakrishnan", role: "Technology Team Coordinator", image: "/team/member8.jpg" },
+  { name: "Mr. Srikanth R", role: "Operations Manager", image: "/team/member9.jpg" },
+  { name: "Mr. Iruthayaraj M", role: "Administrative Manager", image: "/team/member10.jpg" },
+  { name: "Mr. Shantha Kumar. B", role: "Science Communicator & SME", image: "/team/member11.jpg" },
+  { name: "Ms. Saitanya Kesan", role: "Advocate", image: "/team/member12.jpg" },
+]
 
-  const galleryImages = Array.from({ length: 6 }, (_, i) => i + 1)
+  const galleryImages = [
+  { image: "/gallery/img1.jpeg" },
+  { image: "/gallery/img2.jpeg" },
+  { image: "/gallery/img3.jpeg" },
+  { image: "/gallery/img4.jpeg" },
+  { image: "/gallery/img5.jpeg" },
+  { image: "/gallery/img6.jpeg" },
+]
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16">
@@ -23,7 +45,7 @@ export default function AboutUsPage() {
           </p>
         </div>
 
-        {/* Mission Statement */}
+        {/* Mission */}
         <Card className="bg-gradient-to-br from-[#6A4FC8]/20 to-[#FF6EC7]/20 border-[#FFD700]/30 mb-12">
           <CardHeader>
             <CardTitle className="text-3xl text-white text-center">Our Mission</CardTitle>
@@ -36,7 +58,7 @@ export default function AboutUsPage() {
           </CardContent>
         </Card>
 
-        {/* Story + Vision */}
+        {/* Story & Vision */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <Card className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30">
             <CardHeader>
@@ -45,11 +67,10 @@ export default function AboutUsPage() {
             </CardHeader>
             <CardContent className="text-[#C0C0C0] space-y-3">
               <p>
-                ShakthiSAT was born from the success of AzaadiSAT, India's first satellite built entirely by girl students.
+                ShakthiSAT began as a continuation of AzaadiSAT, India’s first satellite built entirely by girl students.
               </p>
               <p>
-                Today, we unite 108 countries in a shared mission to break barriers and create opportunities for girls in
-                space science and technology.
+                Today, 108 countries unite to break barriers and expand opportunities for girls in space science.
               </p>
             </CardContent>
           </Card>
@@ -61,9 +82,11 @@ export default function AboutUsPage() {
             </CardHeader>
             <CardContent className="text-[#C0C0C0] space-y-3">
               <p>
-                We envision a future where women lead humanity's exploration of space and where diversity drives innovation.
+                A world where women lead humanity’s exploration beyond Earth.
               </p>
-              <p>Through ShakthiSAT, we're not just building satellites—we're building futures.</p>
+              <p>
+                Through ShakthiSAT, we’re not just building satellites—we’re building futures.
+              </p>
             </CardContent>
           </Card>
         </div>
@@ -94,26 +117,26 @@ export default function AboutUsPage() {
           </CardContent>
         </Card>
 
-        {/* ✅ Teams Section (11 Members) */}
+        {/* ✅ Team Section */}
         <section className="mb-24">
           <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
             Meet Our Team
           </h2>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-10">
-            {teamMembers.map((member) => (
-              <Card key={member} className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 text-center p-6">
+            {teamMembers.map((member, index) => (
+              <Card key={index} className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 text-center p-6">
                 <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border border-[#FFD700]/40">
                   <Image
-                    src={`/team/member${member}.jpg`}
-                    alt={`Team Member ${member}`}
+                    src={`/teams/${index + 1}.jpg`}
+                    alt={member.name}
                     width={200}
                     height={200}
                     className="object-cover"
                   />
                 </div>
-                <h3 className="text-white text-lg font-semibold">Team Member {member}</h3>
-                <p className="text-[#C0C0C0] text-sm mt-2">Role / Contribution</p>
+                <h3 className="text-white text-lg font-semibold">{member.name}</h3>
+                <p className="text-[#C0C0C0] text-sm mt-2">{member.role}</p>
               </Card>
             ))}
           </div>
@@ -121,24 +144,28 @@ export default function AboutUsPage() {
 
         {/* ✅ Gallery Section */}
         <section>
-          <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
-            Gallery
-          </h2>
+  <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+    Gallery
+  </h2>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {galleryImages.map((img) => (
-              <div key={img} className="rounded-lg overflow-hidden border border-[#6A4FC8]/30 hover:scale-105 transition-transform duration-300">
-                <Image
-                  src={`/gallery/img${img}.jpg`}
-                  alt="Event Photo"
-                  width={500}
-                  height={350}
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {galleryImages.map((item, index) => (
+      <div
+        key={index}
+        className="rounded-lg overflow-hidden border border-[#6A4FC8]/30 hover:scale-105 transition-transform duration-300"
+      >
+        <Image
+          src={`/gallery/${index + 1}.jpeg`}
+          alt={`Gallery Image ${index + 1}`}
+          width={500}
+          height={350}
+          className="object-cover"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
 
       </div>
     </main>

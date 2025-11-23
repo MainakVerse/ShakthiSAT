@@ -5,6 +5,7 @@ import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import { X } from "lucide-react"
 import ambassadorsData from "@/data/ambassadors.json"
+import { ContactFooter } from "@/components/contact-footer"
 
 // ✅ Country name → ISO code mapping (SMALL FLAG SIZE)
 const countryCodes: Record<string, string> = {
@@ -209,6 +210,7 @@ export default function AmbassadorsPage() {
           </motion.div>
         )}
       </AnimatePresence>
+      <ContactFooter />
     </main>
   )
 }

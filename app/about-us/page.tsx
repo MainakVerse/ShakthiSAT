@@ -3,6 +3,7 @@
 import { Rocket, Heart, Users, Target } from "lucide-react"
 import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { ContactFooter } from "@/components/contact-footer"
 
 export default function AboutUsPage() {
   
@@ -168,6 +169,7 @@ export default function AboutUsPage() {
 
 
       </div>
+      <ContactFooter />
     </main>
   )
 }

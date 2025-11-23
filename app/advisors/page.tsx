@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react"
 import advisorsData from "@/data/advisors.json"
 import Image from "next/image"
+import { ContactFooter } from "@/components/contact-footer"
 
 export default function AdvisorsPage() {
   const [search, setSearch] = useState("")
@@ -81,6 +82,7 @@ export default function AdvisorsPage() {
         </div>
 
       </div>
+      <ContactFooter  />
     </main>
   )
 }

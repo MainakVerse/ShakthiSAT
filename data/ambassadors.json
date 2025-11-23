@@ -6,6 +6,13 @@
     "about": "Scientist"
   },
   {
+    "name": "​Ms. Alba Mustafaj",
+    "image": "/images/​Ms. Alba Mustafaj.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  
+  {
     "name": "Ms. Yango Ndofula",
     "image": "/images/Ms. Yango Ndofula - Angola.jpg",
     "ambassadorRole": "Ambassador",
@@ -20,6 +27,12 @@
   {
     "name": "Ms. Hanna Harutyunyan",
     "image": "/images/Ms. Hanna Harutyunyan - Armenia.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Marie-Nathalie Jauffret",
+    "image": "/images/Dr_  Marie-Nathalie Jauffret Monaco Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
@@ -48,8 +61,38 @@
     "about": "Scientist"
   },
   {
+    "name": "Ms. Sanjana Subramaniam",
+    "image": "/images/Ms_ Sanjana Subramaniam Malaysia Co-Ambassador - Mission ShakthiSAT.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
     "name": "Ms. Houéfa Alexia Todan",
-    "image": "/images/Ms. Houéfa Alexia Todan - Benin.jpg",
+    "image": "/images/Ms_ Houéfa Alexia Todan Benin Co-ambassador.jpg",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Meryn Zumbo Willetts",
+    "image": "/images/Ms_ Meryn Zumbo Willetts Norway Ambassador - Mission ShakthiSAT.jpg",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Achillia Giasmin Machfount Georgakopoulou",
+    "image": "/images/Ms_ Achillia Giasmin Machfount Georgakopoulou Greece Co-Ambassador - Mission ShakthiSAT.jpg",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Hana Aouinet",
+    "image": "/images/Dr_ Hana Aouinet France Co-Ambassador - Mission ShakthiSAT.jpg",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Ariadna Celeste Pillaca Llanos",
+    "image": "/images/Ms_ Ariadna Celeste Pillaca Llanos Special Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Co Ambassador",
     "about": "Scientist"
   },
@@ -71,12 +114,7 @@
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
-  {
-    "name": "Ms. Anne Victória Rodrigues da Costa",
-    "image": "/images/Ms. Anne Victória Rodrigues da Costa - Brazil.jpg",
-    "ambassadorRole": "Tech-Ambassador",
-    "about": "Scientist"
-  },
+  
   {
     "name": "Ms. Sarinah Ziziumiza",
     "image": "/images/Ms. Sarinah Ziziumiza - Brunei.jpg",
@@ -175,7 +213,13 @@
   },
   {
     "name": "Ms. Eden Abeselom",
-    "image": "/images/Ms. Eden Abeselom - Ethiopia.jpg",
+    "image": "/images/Ms_ Eden Abeselom Ethiopia Tech Ambassador - Mission ShakthiSAT.jpg",
+    "ambassadorRole": "Tech-Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Mujgan Tahery",
+    "image": "/images/Ms_ Mujgan Tahery - Afganistan Co-Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Tech-Ambassador",
     "about": "Scientist"
   },
@@ -187,13 +231,13 @@
   },
   {
     "name": "Dr. Priyanka Das Rajkakati",
-    "image": "/images/Dr. Priyanka Das Rajkakati - France.jpg",
+    "image": "/images/Dr_ Priyanka Das Rajkakati France Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr. Mireille Toulekima",
-    "image": "/images/Dr. Mireille Toulekima - Gabon.jpg",
+    "image": "/images/Mireille Toulekima.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
@@ -205,625 +249,599 @@
   },
   {
     "name": "Ms. Fatoumatta Jawara",
-    "image": "/images/Ms. Fatoumatta Jawara - Gambia.jpg",
+    "image": "/images/Ms_ Fatuamatta Jawara Gambia.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Binta Sanyang",
-    "image": "/images/Ms. Binta Sanyang - Gambia.jpg",
+    "image": "/images/Ms_ Binta Sanyang Gambia co devi.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr Diana Amoni",
-    "image": "",
+    "image": "/images/Dr_ Diana Amoni Ntewusu Ghana Ambasador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Prof. Dr. Rania Lampou",
-    "image": "",
+    "image": "/images/Prof_ Dr_ Rania Lampou Greece Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
-  {
-    "name": "Ms. Marita Georganta",
-    "image": "",
-    "ambassadorRole": "Ambassador",
-    "about": "Scientist"
-  },
+  
   {
     "name": "Ms. Tamara Savoury",
-    "image": "",
+    "image": "/images/Ms_ Tamara Savoury Grenada Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Katia Sofía Samayoa Artiga",
-    "image": "",
+    "image": "/images/Ms_ Katia Sofía Samayoa Artiga Guatemala Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Sarah Foucauld",
-    "image": "",
+    "image": "/images/Ms_ Sarah Foucauld Haiti Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Ana Thompson",
-    "image": "",
+    "image": "/images/Ms_ Ana Thompson Honduras Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Zsuzsanna Benyo",
-    "image": "",
-    "ambassadorRole": "Ambassdor",
-    "about": "Scientist"
-  },
-  {
-    "name": "Ms.  Margot Issertine",
-    "image": "",
+    "image": "/images/Ms_ Zsuzsanna Benyo Hungary Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
+  
   {
     "name": "Ms. Jaya Tare",
-    "image": "",
+    "image": "/images/Jaya Tare.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Mamonaheng Koenane",
-    "image": "",
+    "image": "/images/Ms_ Mamonaheng Koenane Ireland Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Nicole Zinna",
-    "image": "",
+    "image": "/images/Ms_ Nicole Zinna Italy Ambassador - Mission ShathiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Dominique Campbell",
-    "image": "",
+    "image": "/images/Ms_ Dominique Campbell Jamaica Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Lana Abukhader",
-    "image": "",
+    "image": "/images/Ms_ Lana Abukhader Jordan Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Olyvia Gatwiri",
-    "image": "",
+    "image": "/images/Ms_ Olyvia Gatwiri Aerospace Engineer.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Saltanat Mambetisaeva",
-    "image": "",
+    "image": "/images/Ms_ Saltanat Mambetisaeva Kyrgyzstan -  Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Samanta Kelmere",
-    "image": "",
-    "ambassadorRole": "Ambassdor",
+    "image": "/images/Ms_ Samanta Kelmere Latvia Ambassador - Mission ShakthiSAT.jpg",
+    "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Puseletso Thubela",
-    "image": "",
+    "image": "/images/Ms_ Puseletso Thubela Lesotho Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Mathele Mpiko",
-    "image": "",
+    "image": "/images/Ms_ Mathele Mpiko Lesotho Tech-Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Tech-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Welleh Joy Won",
-    "image": "",
+    "image": "/images/Ms_ Welleh Joy Won Liberia Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Deena Cooper-Morgan",
-    "image": "",
+    "image": "/images/Ms_ Deena Cooper-Morgan Liberia Co-Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms.  Alexandra Tsyliya",
-    "image": "",
+    "image": "/images/Luxembourg.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Martina Dimoska",
-    "image": "",
+    "image": "/images/bd774b_83d37e0ab9bb4aaaa39a0bb33778fb01~mv2.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Miora Randrianasy",
-    "image": "",
+    "image": "/images/Ms_ Miora Randrianasy Madagaskar Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Kumbutso Takomana",
-    "image": "",
+    "image": "/images/Ms_ Kumbutso Takomana Malawi Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Tamandah Kandodo",
-    "image": "",
+    "image": "/images/Ms_ Tamandah Kandodo Malawi coD.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Amb. Prof. Dr. Esther Mala",
-    "image": "",
+    "image": "/images/Amb_ Prof_ Dr_ Esther Mala Malaysia.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr. Anu R I",
-    "image": "",
+    "image": "/images/Dr_ Anu R I Malta Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassdor",
     "about": "Scientist"
   },
   {
     "name": "Ms. Dafne Pimentel",
-    "image": "",
+    "image": "/images/Ms_ Dafne Pimentel  Mexico Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Steliana Burlacu",
-    "image": "",
+    "image": "/images/Ms_ Steliana Burlacu Moldova Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr. Anna Talgat",
-    "image": "",
+    "image": "/images/Dr_ Anna Talgat Mangolia Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Nina Drakulic",
-    "image": "",
+    "image": "/images/Ms_ Nina Drakulic Montenegro Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Izza Rym",
-    "image": "",
+    "image": "/images/Ms_ Izza Rym Moracco Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Rachida Aligy Ussen Mamade",
-    "image": "",
+    "image": "/images/Mozambique.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
-    "name": "Ms.  Odete Frederico Xavier Namuera",
-    "image": "",
+    "name": "Ms. Odete Frederico Xavier Namuera",
+    "image": "/images/Ms_  Odete Frederico Xavier Namuera Mozambique Ambassador.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
-    "name": "Ms.  Sónia Cintura",
-    "image": "",
+    "name": "Ms. Sónia Cintura",
+    "image": "/images/Ms_  Sónia Cintura Ambassador Mozambique.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Hon. Ms. Pwint Mar Han",
-    "image": "",
+    "image": "/images/Hon_ Ms_ Pwint Mar Han Myanmar Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr. Smita Francis",
-    "image": "",
+    "image": "/images/Dr_ Smita Francis Namibia Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Ira Sharma",
-    "image": "",
+    "image": "/images/Ms_ Ira Sharma Nepal Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Pragya JaIn",
-    "image": "",
+    "image": "/images/Ms_ Pragya Jain Netherlands Ambassador - Mission Shakthisat.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Jess Covich",
-    "image": "",
+    "image": "/images/Ms_ Jess Covich New Zealand Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Felicia Oluwatoyin Ajayi",
-    "image": "",
+    "image": "/images/Ms_ Felicia Oluwatoyin Ajayi  Nigeria Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Uroi N Salii",
-    "image": "",
+    "image": "/images/Ms_ Uroi N Salii Palau Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr. María Heller",
-    "image": "",
+    "image": "/images/Dr_ María Heller Panama Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Loretta Tunim",
-    "image": "",
+    "image": "/images/Ms_ Loretta Tunim Papau New Guinea Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
-  {
-    "name": "Ms. Katherine Neal",
-    "image": "",
-    "ambassadorRole": "Ambassador",
-    "about": "Scientist"
-  },
+  
   {
     "name": "Ms. Hebe Luisa Romero Talavera",
-    "image": "",
+    "image": "/images/Ms_ Hebe Luisa Romero Talavera Paraguay Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Sofia Bouby",
-    "image": "",
+    "image": "/images/Ms_ Sofia Bouby  Peru Ambassador - Mission Shakthisat.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Nicfreida Marie Guadalupe M. Gomez",
-    "image": "",
+    "image": "/images/Ms_ Nicfreida Marie Guadalupe M_ Gomez Phillipines.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Eng. Agnieszka Elwertowska",
-    "image": "",
+    "image": "/images/Eng_ Agnieszka Elwertowska Ambassador Poland.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Rita Liliana Dias Barbosa",
-    "image": "",
+    "image": "/images/Ms_ Rita Liliana Dias Barbosa Portugal Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Cailin Rugema",
-    "image": "",
+    "image": "/images/Ms_ Cailin Rugema Rwanda Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Jasmine Koria",
-    "image": "",
+    "image": "/images/Ms_ Jasmine Koria Samoa Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Nora Almohizai",
-    "image": "",
+    "image": "/images/Ms_ Nora Almohizai Saudi Arabia Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Seynabou Diouf",
-    "image": "",
+    "image": "/images/Ms_ Seynabou Diouf Senegal Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr Monika Jurkovic",
-    "image": "",
+    "image": "/images/Dr_ Monika I_ Jurkovic Serbia Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Nichola Abrams",
-    "image": "",
+    "image": "/images/Ms_ Nichola Abrahms Sychelles.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Aminata Matturie",
-    "image": "",
+    "image": "/images/Ms_ Aminata Matturie Sierra Leone Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Diana Fernandes",
-    "image": "",
+    "image": "/images/Dr_ Diana Amoni Ntewusu Ghana Ambasador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
-  {
-    "name": "Ms. Casie Millhouse",
-    "image": "",
-    "ambassadorRole": "Tech-Ambassador",
-    "about": "Scientist"
-  },
-  {
+    {
     "name": "Ms. Vanja Angjelovikj",
-    "image": "",
+    "image": "/images/Ms_ Vanja Angjelovikj Slovenia Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Nasiphi Ngcoliso",
-    "image": "",
+    "image": "/images/Ms_ Nasiphi Ngcoliso South Africa - Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Rocío García",
-    "image": "",
+    "image": "/images/Ms_ Rocío García Spain Ambassador - Mission Shakthisat.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Joy Karunya Mahendiran",
-    "image": "",
+    "image": "/images/Ms_ Joy Karunya Mahendiran Srilanka.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Anya James",
-    "image": "",
+    "image": "/images/Ms_ Anya James St Lucia Ambassador - Mission Shakthisat.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Sémonique K Harry",
-    "image": "",
+    "image": "/images/Ms_ Sémonique K Harry St vincent and the grenadines Ambassador - Mission Shakthisat.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Kenesha Foster",
-    "image": "",
+    "image": "/images/Ms_ Kenesha Foster from St_ Kitts and Nevis Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr. Asinta Ntinda Manyele",
-    "image": "",
+    "image": "/images/Dr_ Asinta Ntinda Manyele Tanzania.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Piyaporn Singhathum",
-    "image": "",
+    "image": "/images/Ms_ Piyaporn Singhathum Ambassadorhailand.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Shalmalee",
-    "image": "",
+    "image": "/images/Ms_ Shalmalee Solomon Islands Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Hadidjatou Yaya",
-    "image": "",
+    "image": "/images/Ms_ Hadidjatou Yaya Togo Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Donna Scoon Moses",
-    "image": "",
+    "image": "/images/Ms_ Donna Scoon Moses Trinidad and Tobago Co Devi Ambassador - Mission Shakthisat.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Laura",
-    "image": "",
+    "image": "/images/Ms_ Laura Rambaran-Seepersad - Trinidad and Tobago Co-ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Co Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Soulaima Dhieb",
-    "image": "",
+    "image": "/images/Ms_  Soulaima Dhieb Tunisa Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms.  Temitope Adeniyi",
-    "image": "",
+    "image": "/images/Mrs_  Temitope Adeniyi Nigeria Ambassador.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Maral Rejepova",
-    "image": "",
+    "image": "/images/Ms_ Maral Rejepova Turkmenistan Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassdor",
     "about": "Scientist"
   },
   {
     "name": "Dr. Marwa Amarah",
-    "image": "",
+    "image": "/images/Dr_ Marwa Amarah UAE Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Victoria Olabisi Hughes",
-    "image": "",
+    "image": "/images/Ms_ Victoria Olabisi Hughes Uganda.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Sheeba Niwensiima",
-    "image": "",
+    "image": "/images/Ms_ Sheeba Niwensiima Uganda Ambassador.jpg",
     "ambassadorRole": "Tech-Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Kinjal Dave",
-    "image": "",
+    "image": "/images/Ms_ Kinjal Dave UK Devi Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr. Mariana García",
-    "image": "",
+    "image": "/images/Dr_ Mariana García Uruguay Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Mohina Rustamova",
-    "image": "",
+    "image": "/images/Ms_ Mohina Rustamova Uzbegistan Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Tran Hang",
-    "image": "",
+    "image": "/images/Ms_ Trần Thị Hằng Vietnam Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Bertha",
-    "image": "",
+    "image": "/images/Ms_ Birtha Zambia Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Dr. Electdom Matandirotya",
-    "image": "",
+    "image": "/images/Ms_ Primerose Bomokayi Zimbabwe Ambassador - Mission Shakthisat.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Primerose Bomokayi",
-    "image": "",
+    "image": "/images/Ms_ Primerose Bomokayi Zimbabwe Ambassador - Mission Shakthisat.jpg",
     "ambassadorRole": "Co - Ambassador",
     "about": "Scientist"
   },
   {
-    "name": "Ms. Melody",
-    "image": "",
+    "name": "Ms. Melody Marasha",
+    "image": "/images/Ms_ Melody Marasha Zimbabway Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Co - Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Jasmine Koria",
-    "image": "",
+    "image": "/images/Ms_ Jasmine Koria Samoa Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Priscilla Tagutanazvo",
-    "image": "",
+    "image": "/images/Ms_ Priscilla Tagutanazvo Zimbabwe Ambassador Poster.jpg",
     "ambassadorRole": "Co-Ambassador",
     "about": "Scientist"
   },
-  {
-    "name": "MS. Marianne Pachany",
-    "image": "",
-    "ambassadorRole": "Co-ambassador",
-    "about": "Scientist"
-  },
+  
   {
     "name": "Ms. Nikita Anilkumar",
-    "image": "",
+    "image": "/images/Ms_ Nikita Anilkumar Canada Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Thanh Nguyen",
-    "image": "",
+    "image": "/images/Ms_ Thanh Nguyen Vietnam Ambassador Poster.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Carmen M. Nzamba",
-    "image": "",
+    "image": "/images/Ms_ Carmen M_ Nzamba Ambassador of Republic of Gabon.jpg",
     "ambassadorRole": "Co-ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Natasha Lumpa",
-    "image": "",
+    "image": "/images/Ms_ Natasha Lumpa Zambia Co-Ambassador.jpg",
     "ambassadorRole": "Co-ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Charmaine Mangion",
-    "image": "",
+    "image": "/images/Ms_ Charmaine Mangion Malta Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Wanjiku Chebet Kanjumba",
-    "image": "",
+    "image": "/images/Ms_ Wanjiku Chebet Kanjumba Kenya Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Devica Kamini Uditram",
-    "image": "",
+    "image": "/images/Ms_ Devica Kamini Uditram Guyana Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Jessica Golding",
-    "image": "",
+    "image": "/images/Ms_ Jessica Golding Jamaica Co-Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Nongbzanga Ariane Fabiola Ouedraogo",
-    "image": "",
+    "image": "/images/Ms_ Nongbzanga Ariane Fabiola Ouedraogo Ambassador Poster.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Ketra Polydore",
-    "image": "",
+    "image": "/images/Ms_ KETRA POLYDORE Dominica Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Fiorella Arias-Bonilla",
-    "image": "",
+    "image": "/images/Fiorella Arias-Bonilla - Costa Rica Co-Ambassador.jpg",
     "ambassadorRole": "Co-ambassador",
     "about": "Scientist"
   },
   {
     "name": "Ms. Daniela Jovic",
-    "image": "",
+    "image": "/images/Ms_ Daniela Jovic Ambassador Croatia.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   }

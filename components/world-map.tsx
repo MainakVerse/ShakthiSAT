@@ -1,11 +1,16 @@
 "use client"
 
 import { useState } from "react"
-import { ComposableMap, Geographies, Geography, Marker, ZoomableGroup } from "react-simple-maps"
+import {
+  ComposableMap,
+  Geographies,
+  Geography,
+  Marker,
+  ZoomableGroup
+} from "react-simple-maps"
 
 const geoUrl = "https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json"
 
-// ✅ SAME countryCodes used in CountriesPage
 const countryCodes: Record<string, string> = {
   India: "IN", USA: "US", UK: "GB", Canada: "CA", France: "FR", Germany: "DE",
   Brazil: "BR", Japan: "JP", Australia: "AU", "South Korea": "KR", Italy: "IT",
@@ -32,22 +37,25 @@ const countryCodes: Record<string, string> = {
   Moldova: "MD", Ukraine: "UA", "North Macedonia": "MK"
 }
 
-// ✅ Pull same onboard distribution
 const onboardedCountries = Object.keys(countryCodes).slice(0, 80)
 const toBeOnboardedCountries = Object.keys(countryCodes).slice(80, 108)
 
-// ✅ Fast lookup sets
 const onboardedSet = new Set(onboardedCountries)
 const toBeOnboardedSet = new Set(toBeOnboardedCountries)
 
-// ✅ Generate approximate marker coordinates using placeholders
 const markers = onboardedCountries.map(name => ({
   name,
-  coordinates: [0, 0] // optional: replace with real coords later
+  coordinates: [0, 0]
 }))
 
 export function WorldMap() {
-  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null)
+  const [hoverInfo, setHoverInfo] = useState<{
+    name: string
+    code: string
+    value: number
+    x: number
+    y: number
+  } | null>(null)
 
   return (
     <div className="relative w-full h-full">
@@ -55,16 +63,16 @@ export function WorldMap() {
         <ZoomableGroup center={[0, 20]} zoom={1}>
 
           <Geographies geography={geoUrl}>
-            {({ geographies }) =>
+            {({ geographies }: { geographies: any[] }) =>
               geographies.map((geo) => {
                 const countryName = geo.properties.name
 
                 const fillColor =
                   onboardedSet.has(countryName)
-                    ? "#FFD700"        // onboarded yellow
+                    ? "#FFD700"
                     : toBeOnboardedSet.has(countryName)
-                      ? "#E26EE5"      // not onboarded pink
-                      : "#3B2A5A"      // countries not in list at all
+                      ? "#E26EE5"
+                      : "#3B2A5A"
 
                 return (
                   <Geography
@@ -84,25 +92,44 @@ export function WorldMap() {
             }
           </Geographies>
 
-          {/* ✅ Markers only on onboarded countries */}
           {markers.map((country) => (
             <Marker
               key={country.name}
               coordinates={country.coordinates as [number, number]}
-              onMouseEnter={() => setHoveredCountry(country.name)}
-              onMouseLeave={() => setHoveredCountry(null)}
+              onMouseEnter={(e: { clientX: any; clientY: any }) => {
+                const code = countryCodes[country.name]
+                setHoverInfo({
+                  name: country.name,
+                  code,
+                  value: Math.floor(Math.random() * 3) + 1,
+                  x: e.clientX,
+                  y: e.clientY
+                })
+              }}
+              onMouseLeave={() => {
+                setHoverInfo(null)
+              }}
             >
               <circle r={3.5} fill="#fff" stroke="#000" strokeWidth={1} />
-              {hoveredCountry === country.name && (
-                <text textAnchor="middle" y={-10} className="text-xs font-semibold fill-white">
-                  {country.name}
-                </text>
-              )}
             </Marker>
           ))}
 
         </ZoomableGroup>
       </ComposableMap>
+
+      {hoverInfo && (
+        <div
+          className="absolute z-50 flex items-center gap-2 px-3 py-1 rounded-md bg-[#0B0C2A]/85 border border-[#6A4FC8]/40 text-white text-xs pointer-events-none"
+          style={{ top: hoverInfo.y - 40, left: hoverInfo.x + 10 }}
+        >
+          <img
+            src={`https://flagcdn.com/w40/${hoverInfo.code.toLowerCase()}.png`}
+            alt={hoverInfo.name}
+            className="w-6 h-4 object-cover"
+          />
+          <span>{hoverInfo.value}</span>
+        </div>
+      )}
 
       <div className="absolute bottom-4 left-4 bg-[#0B0C2A]/80 backdrop-blur-sm border border-[#6A4FC8]/30 rounded-lg p-4">
         <p className="text-sm font-semibold text-[#C0C0C0] mb-2">Country Status</p>

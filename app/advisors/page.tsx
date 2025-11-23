@@ -65,7 +65,7 @@ export default function AdvisorsPage() {
                   </p>
                 </div>
 
-                <div className="mt-4">
+                {/* <div className="mt-4">
                   <a
                     href={advisor.poster}
                     target="_blank"
@@ -74,7 +74,7 @@ export default function AdvisorsPage() {
                   >
                     View Poster
                   </a>
-                </div>
+                </div> */}
               </div>
             </div>
           ))}

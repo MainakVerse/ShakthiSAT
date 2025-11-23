@@ -1,10 +1,18 @@
+"use client"
+
 import { Rocket, Heart, Users, Target } from "lucide-react"
+import Image from "next/image"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 export default function AboutUsPage() {
+  const teamMembers = Array.from({ length: 11 }, (_, i) => i + 1)
+
+  const galleryImages = Array.from({ length: 6 }, (_, i) => i + 1)
+
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
@@ -22,14 +30,13 @@ export default function AboutUsPage() {
           </CardHeader>
           <CardContent>
             <p className="text-lg text-[#C0C0C0] text-center leading-relaxed mb-6">
-              ShakthiSAT is a groundbreaking initiative that empowers 12,000+ girls across 108 nations through hands-on
-              space science education and satellite technology. Building on the legacy of AzaadiSAT, we're creating the
-              next generation of women leaders in STEM.
+              ShakthiSAT empowers 12,000+ girls across 108 nations through hands-on space science education and satellite
+              technology, building the next generation of women leaders in STEM.
             </p>
           </CardContent>
         </Card>
 
-        {/* Story Section */}
+        {/* Story + Vision */}
         <div className="grid md:grid-cols-2 gap-6 mb-12">
           <Card className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30">
             <CardHeader>
@@ -38,12 +45,11 @@ export default function AboutUsPage() {
             </CardHeader>
             <CardContent className="text-[#C0C0C0] space-y-3">
               <p>
-                ShakthiSAT was born from the success of AzaadiSAT, India's first satellite built entirely by girl
-                students. Inspired by this achievement, we expanded our vision to create a global movement.
+                ShakthiSAT was born from the success of AzaadiSAT, India's first satellite built entirely by girl students.
               </p>
               <p>
-                Today, we unite 108 countries in a shared mission to break barriers and create opportunities for girls
-                in space science and technology.
+                Today, we unite 108 countries in a shared mission to break barriers and create opportunities for girls in
+                space science and technology.
               </p>
             </CardContent>
           </Card>
@@ -55,16 +61,15 @@ export default function AboutUsPage() {
             </CardHeader>
             <CardContent className="text-[#C0C0C0] space-y-3">
               <p>
-                We envision a future where women lead humanity's exploration of space, where every girl has access to
-                quality STEM education, and where diversity drives innovation.
+                We envision a future where women lead humanity's exploration of space and where diversity drives innovation.
               </p>
-              <p>Through ShakthiSAT, we're not just building satellites—we're building futures, one girl at a time.</p>
+              <p>Through ShakthiSAT, we're not just building satellites—we're building futures.</p>
             </CardContent>
           </Card>
         </div>
 
         {/* Values */}
-        <Card className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30">
+        <Card className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 mb-20">
           <CardHeader>
             <CardTitle className="text-2xl text-white">Our Values</CardTitle>
           </CardHeader>
@@ -88,6 +93,53 @@ export default function AboutUsPage() {
             </div>
           </CardContent>
         </Card>
+
+        {/* ✅ Teams Section (11 Members) */}
+        <section className="mb-24">
+          <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+            Meet Our Team
+          </h2>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-10">
+            {teamMembers.map((member) => (
+              <Card key={member} className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 text-center p-6">
+                <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border border-[#FFD700]/40">
+                  <Image
+                    src={`/team/member${member}.jpg`}
+                    alt={`Team Member ${member}`}
+                    width={200}
+                    height={200}
+                    className="object-cover"
+                  />
+                </div>
+                <h3 className="text-white text-lg font-semibold">Team Member {member}</h3>
+                <p className="text-[#C0C0C0] text-sm mt-2">Role / Contribution</p>
+              </Card>
+            ))}
+          </div>
+        </section>
+
+        {/* ✅ Gallery Section */}
+        <section>
+          <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+            Gallery
+          </h2>
+
+          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {galleryImages.map((img) => (
+              <div key={img} className="rounded-lg overflow-hidden border border-[#6A4FC8]/30 hover:scale-105 transition-transform duration-300">
+                <Image
+                  src={`/gallery/img${img}.jpg`}
+                  alt="Event Photo"
+                  width={500}
+                  height={350}
+                  className="object-cover"
+                />
+              </div>
+            ))}
+          </div>
+        </section>
+
       </div>
     </main>
   )

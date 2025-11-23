@@ -42,27 +42,12 @@ export default function AmbassadorsPage() {
 
   const perPage = 6
 
-  // ✅ Continent Filter State
-  const [continentFilter, setContinentFilter] = useState("All")
+  // ✅ search-only filtering
+  const filtered = ambassadors.filter((a) =>
+    a.name.toLowerCase().includes(search.toLowerCase())
+  )
 
-  const continents = [
-    "All",
-    "Asia",
-    "Europe",
-    "Africa",
-    "North America",
-    "South America",
-    "Oceania"
-  ]
-
-  // ✅ Combined Filtering (search + continent)
-  const filtered = ambassadors.filter((a) => {
-    const matchesName = a.name.toLowerCase().includes(search.toLowerCase())
-    const matchesContinent = continentFilter === "All" || a.continent === continentFilter
-    return matchesName && matchesContinent
-  })
-
-  // ✅ Pagination applied AFTER filtering
+  // ✅ Pagination AFTER filtering
   const totalPages = Math.ceil(filtered.length / perPage)
   const paginated = filtered.slice((page - 1) * perPage, page * perPage)
 
@@ -81,7 +66,7 @@ export default function AmbassadorsPage() {
         </div>
 
         {/* Search */}
-        <div className="flex justify-center mb-6">
+        <div className="flex justify-center mb-10">
           <input
             type="text"
             value={search}
@@ -94,24 +79,6 @@ export default function AmbassadorsPage() {
           />
         </div>
 
-        {/* ✅ Continent Filter Dropdown */}
-        <div className="flex justify-center mb-10">
-          <select
-            value={continentFilter}
-            onChange={(e) => {
-              setContinentFilter(e.target.value)
-              setPage(1)
-            }}
-            className="px-4 py-2 rounded-full bg-[#1a1f3a] border border-[#6A4FC8] text-white focus:border-[#00FFFF] cursor-pointer"
-          >
-            {continents.map((c) => (
-              <option key={c} value={c}>
-                {c}
-              </option>
-            ))}
-          </select>
-        </div>
-
         {/* Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {paginated.map((person, i) => (
@@ -120,45 +87,31 @@ export default function AmbassadorsPage() {
               whileHover={{ scale: 1.02 }}
               className="relative bg-[#1a1f3a]/70 p-6 rounded-2xl border border-[#6A4FC8]/40 shadow-lg"
             >
-              {/* ✅ REAL FLAG (SMALL SIZE) */}
-              {countryCodes[person.country] && (
-                <Image
-                  src={`https://flagcdn.com/w40/${countryCodes[
-                    person.country
-                  ].toLowerCase()}.png`}
-                  alt={person.country}
-                  width={28}
-                  height={20}
-                  className="absolute top-3 right-3 rounded-sm shadow-md"
-                />
-              )}
+             
 
-              {/* Image Container */}
+              {/* ✅ SAFE IMAGE BLOCK */}
               <div className="relative mx-auto w-48 h-48 rounded-3xl border-2 border-[#00FFFF] overflow-hidden bg-black">
-                <Image
-                  src={person.image}
-                  alt={person.name}
-                  fill
-                  className="object-cover"
-                />
-
-                {/* Ribbon Label */}
+                {person.image ? (
+                  <Image
+                    src={person.image}
+                    alt={person.name}
+                    fill
+                    className="object-cover"
+                  />
+                ) : (
+                  <div className="w-full h-full flex items-center justify-center text-xs text-gray-400">
+                    No Image
+                  </div>
+                )}
                 <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#9D4EDD] text-white text-xs font-bold px-4 py-1 rounded-md shadow-md">
                   {person.name.split(" ")[0].toUpperCase()}
                 </div>
               </div>
 
-              {/* Name */}
               <h3 className="mt-10 text-xl font-semibold text-center">
                 {person.name}
               </h3>
 
-              {/* Short */}
-              <p className="text-[#C0C0C0] text-center text-sm mt-2">
-                {person.short}
-              </p>
-
-              {/* Button */}
               <div className="flex justify-center mt-6">
                 <button
                   onClick={() => setSelected(person)}
@@ -215,43 +168,42 @@ export default function AmbassadorsPage() {
                 <X className="h-6 w-6" />
               </button>
 
-              {/* Modal Header */}
               <div className="flex items-center gap-4 mb-4">
                 <div className="w-24 h-24 rounded-xl overflow-hidden border-2 border-[#9D4EDD] relative">
-                  <Image
-                    src={selected.image}
-                    alt={selected.name}
-                    width={100}
-                    height={100}
-                    className="object-cover w-full h-full"
-                  />
+                  {selected.image ? (
+                    <Image
+                      src={selected.image}
+                      alt={selected.name}
+                      width={100}
+                      height={100}
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <div className="w-full h-full flex items-center justify-center text-xs text-gray-500">
+                      No Image
+                    </div>
+                  )}
                 </div>
 
                 <div>
                   <h2 className="text-2xl font-bold">{selected.name}</h2>
 
-                  <div className="flex items-center gap-2">
-                    <p className="text-gray-700">{selected.designation}</p>
-
-                    {/* ✅ REAL FLAG IN MODAL (SMALL SIZE) */}
-                    {countryCodes[selected.country] && (
-                      <Image
-                        src={`https://flagcdn.com/w40/${countryCodes[
-                          selected.country
-                        ].toLowerCase()}.png`}
-                        alt={selected.country}
-                        width={28}
-                        height={20}
-                        className="rounded-sm border border-black/20 shadow-sm"
-                      />
-                    )}
-                  </div>
+                  {countryCodes[selected.country] && (
+                    <Image
+                      src={`https://flagcdn.com/w40/${countryCodes[
+                        selected.country
+                      ].toLowerCase()}.png`}
+                      alt={selected.country}
+                      width={28}
+                      height={20}
+                      className="rounded-sm border border-black/20 shadow-sm"
+                    />
+                  )}
                 </div>
               </div>
 
-              {/* Short */}
               <p className="text-gray-800 leading-relaxed">
-                {selected.short}
+                {selected.about}
               </p>
             </motion.div>
           </motion.div>

@@ -85,6 +85,18 @@
     "about": "Scientist"
   },
   {
+    "name": "Mrs. Madhuri Moyde",
+    "image": "/images/Mrs_ Madhuri Moyde - Regional Communicator - Northern India.jpg",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Dr. Sunita",
+    "image": "/images/DR_ SUNITA COO (Non Tech) - Mission ShakthiSAT.jpg",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
+  },
+  {
     "name": "Dr. Hana Aouinet",
     "image": "/images/Dr_ Hana Aouinet France Co-Ambassador - Mission ShakthiSAT.jpg",
     "ambassadorRole": "Co Ambassador",
@@ -97,8 +109,26 @@
     "about": "Scientist"
   },
   {
+    "name": "Dr. Kanchi Das",
+    "image": "/images/Dr_ Kanchi Das Ambassador UAE, Qatar, Jordan, Oman, Egypt, Saudi, Bharain, Kuwait.jpg",
+    "ambassadorRole": "Co Ambassador",
+    "about": "Scientist"
+  },
+  {
     "name": "Dr. Georgina Chávez",
     "image": "/images/Dr. Georgina Chávez  - Bolivia.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Beatrice Keneh",
+    "image": "/images/Ms_ Beatrice Keneh Ambassador Ghana.jpg",
+    "ambassadorRole": "Ambassador",
+    "about": "Scientist"
+  },
+  {
+    "name": "Ms. Marianne Fiona Pachanya",
+    "image": "/images/Ms_ Marianne Fiona Pachanya Malawi Co-Ambassador.jpg",
     "ambassadorRole": "Ambassador",
     "about": "Scientist"
   },

@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { GlobalParticipation } from "@/components/global-participation";
+import { ContactFooter } from "@/components/contact-footer";
 
 export default function CountriesPage() {
   const [showOnboarded, setShowOnboarded] = useState(false);
@@ -144,6 +145,7 @@ export default function CountriesPage() {
       {/* Modals */}
       {showOnboarded && renderModal("Onboarded Countries", onboardedCountries, () => setShowOnboarded(false))}
       {showToBeOnboarded && renderModal("To Be Onboarded Countries", toBeOnboardedCountries, () => setShowToBeOnboarded(false))}
+      <ContactFooter  />
     </main>
   );
 }

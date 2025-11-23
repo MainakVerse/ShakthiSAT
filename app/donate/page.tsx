@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Heart } from "lucide-react"
+import { ContactFooter } from "@/components/contact-footer"
 
 export default function DonatePage() {
   return (
@@ -39,5 +40,6 @@ export default function DonatePage() {
         </Link>
       </div>
     </section>
+    
   )
 }

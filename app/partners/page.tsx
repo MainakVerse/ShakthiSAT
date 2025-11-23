@@ -1,3 +1,5 @@
+import { ContactFooter } from "@/components/contact-footer"
+
 export default function PartnersPage() {
   const partners = [
     { id: 1, name: "ISRO", logo: "/partners/isro-indian-space-research-organisation-logo.jpg" },
@@ -47,6 +49,7 @@ export default function PartnersPage() {
           ))}
         </div>
       </div>
+      <ContactFooter  />
     </main>
   )
 }

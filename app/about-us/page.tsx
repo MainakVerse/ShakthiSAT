@@ -22,9 +22,14 @@ export default function AboutUsPage() {
   { name: "Ms. Saitanya Kesan", role: "Advocate", image: "/team/member12.jpg" },
 ]
 
-  
-
-  const galleryImages = Array.from({ length: 6 }, (_, i) => i + 1)
+  const galleryImages = [
+  { image: "/gallery/img1.jpeg" },
+  { image: "/gallery/img2.jpeg" },
+  { image: "/gallery/img3.jpeg" },
+  { image: "/gallery/img4.jpeg" },
+  { image: "/gallery/img5.jpeg" },
+  { image: "/gallery/img6.jpeg" },
+]
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16">
@@ -139,24 +144,28 @@ export default function AboutUsPage() {
 
         {/* ✅ Gallery Section */}
         <section>
-          <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
-            Gallery
-          </h2>
+  <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+    Gallery
+  </h2>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {galleryImages.map((img) => (
-              <div key={img} className="rounded-lg overflow-hidden border border-[#6A4FC8]/30 hover:scale-105 transition-transform duration-300">
-                <Image
-                  src={`/gallery/img${img}.jpg`}
-                  alt="Event Photo"
-                  width={500}
-                  height={350}
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+  <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+    {galleryImages.map((item, index) => (
+      <div
+        key={index}
+        className="rounded-lg overflow-hidden border border-[#6A4FC8]/30 hover:scale-105 transition-transform duration-300"
+      >
+        <Image
+          src={`/gallery/${index + 1}.jpeg`}
+          alt={`Gallery Image ${index + 1}`}
+          width={500}
+          height={350}
+          className="object-cover"
+        />
+      </div>
+    ))}
+  </div>
+</section>
+
 
       </div>
     </main>

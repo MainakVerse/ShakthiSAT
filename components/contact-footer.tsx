@@ -29,47 +29,58 @@ export function ContactFooter() {
           <span className="absolute bottom-0 right-0 h-8 sm:h-10 w-[2px] bg-white"></span>
 
           {/* GRID */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 sm:gap-10 mb-12">
+          {/* GRID */}
+<div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 mb-12">
 
-            {/* ShakthiSAT Info */}
-            <div>
-              <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">ShakthiSAT</h3>
-              <p className="text-sm sm:text-lg text-[#C0C0C0] mb-4 sm:mb-6 leading-relaxed">
-                Empowering 12,000 girls from 108 nations through space education and satellite technology.
-              </p>
-             
-            </div>
+  {/* ShakthiSAT Info */}
+  <div>
+    <h3 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6">ShakthiSAT</h3>
+    <p className="text-sm sm:text-lg text-[#C0C0C0] mb-4 sm:mb-6 leading-relaxed">
+      Empowering 12,000 girls from 108 nations through space education and satellite technology.
+    </p>
+  </div>
 
-            {/* Partners */}
-            <div>
-              <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Partners</h4>
-              <div className="space-y-2 sm:space-y-3 text-[#C0C0C0]">
-                <p className="text-sm sm:text-base">Space Kidz India</p>
-                <p className="text-sm sm:text-base">SKI Star Foundation</p>
-                <p className="text-xs sm:text-sm italic">+ 108 Nations Worldwide</p>
-              </div>
-            </div>
+  {/* Partners */}
+  <div>
+    <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Partners</h4>
+    <div className="space-y-2 sm:space-y-3 text-[#C0C0C0]">
+      <p className="text-sm sm:text-base">Space Kidz India</p>
+      <p className="text-sm sm:text-base">SKI Star Foundation</p>
+      <p className="text-xs sm:text-sm italic">+ 108 Nations Worldwide</p>
+    </div>
+  </div>
 
-            {/* Contact */}
-            <div>
-              <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Contact</h4>
-              <div className="space-y-2 sm:space-y-3 text-[#C0C0C0] break-words">
-                <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-[#FFD700]" />
-                  <a href="mailto:shakthisat@spacekidzindia.in" className="hover:text-[#FFD700] transition-colors text-sm sm:text-base">
-                    shakthisat@spacekidzindia.in
-                  </a>
-                </div>
-                
-                <div className="flex items-center gap-2">
-                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-[#FFD700]" />
-                  <span className="text-sm sm:text-base">+91 81224 12261</span>
-                </div>
-                
-              </div>
-            </div>
+  {/* Contact */}
+  <div>
+    <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Contact</h4>
+    <div className="space-y-2 sm:space-y-3 text-[#C0C0C0] break-words">
+      <div className="flex items-center gap-2">
+        <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-[#FFD700]" />
+        <a href="mailto:shakthisat@spacekidzindia.in" className="hover:text-[#FFD700] transition-colors text-sm sm:text-base">
+          shakthisat@spacekidzindia.in
+        </a>
+      </div>
 
-          </div>
+      <div className="flex items-center gap-2">
+        <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-[#FFD700]" />
+        <span className="text-sm sm:text-base">+91 81224 12261</span>
+      </div>
+    </div>
+  </div>
+
+  {/* Address — NEW COLUMN */}
+  <div>
+    <h4 className="text-lg sm:text-xl font-semibold mb-4 sm:mb-6">Address</h4>
+    <p className="text-sm sm:text-base text-[#C0C0C0] leading-relaxed whitespace-pre-line">
+      Shambala Facility, Ispahani Centre,
+      {"\n"}123, 124, Nungambakkam High Rd,
+      {"\n"}Thousand Lights West, Thousand Lights,
+      {"\n"}Chennai, Tamil Nadu 600034
+    </p>
+  </div>
+
+</div>
+
 
           {/* FOOTER BOTTOM */}
           <div className="border-t border-[#6A4FC8]/30 pt-6 sm:pt-8">

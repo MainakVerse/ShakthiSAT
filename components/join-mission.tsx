@@ -4,10 +4,11 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { UserPlus, Building2, MapPin } from "lucide-react"
+import { UserPlus, Building2, HeartHandshake } from "lucide-react"
 
 export function JoinMission() {
-  const [formType, setFormType] = useState<"partner" | "student" | null>(null)
+  const [formType, setFormType] =
+    useState<"partner" | "student" | "volunteer" | null>(null)
 
   return (
     <section
@@ -16,21 +17,7 @@ export function JoinMission() {
     >
       <div className="max-w-6xl mx-auto">
 
-        {/* CUT-CORNER BOX */}
         <div className="relative w-full border border-white/40 overflow-hidden p-6 sm:p-8 md:p-10 mx-auto">
-
-          {/* Corner accents */}
-          <span className="absolute top-0 left-0 w-8 sm:w-10 h-[2px] bg-white"></span>
-          <span className="absolute top-0 left-0 h-8 sm:h-10 w-[2px] bg-white"></span>
-
-          <span className="absolute top-0 right-0 w-8 sm:w-10 h-[2px] bg-white"></span>
-          <span className="absolute top-0 right-0 h-8 sm:h-10 w-[2px] bg-white"></span>
-
-          <span className="absolute bottom-0 left-0 w-8 sm:w-10 h-[2px] bg-white"></span>
-          <span className="absolute bottom-0 left-0 h-8 sm:h-10 w-[2px] bg-white"></span>
-
-          <span className="absolute bottom-0 right-0 w-8 sm:w-10 h-[2px] bg-white"></span>
-          <span className="absolute bottom-0 right-0 h-8 sm:h-10 w-[2px] bg-white"></span>
 
           {/* TITLE */}
           <div className="text-center mb-12 sm:mb-16">
@@ -42,7 +29,7 @@ export function JoinMission() {
             </p>
           </div>
 
-          {/* OPTION SELECT OR FORM */}
+          {/* OPTION SELECT */}
           {!formType ? (
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
 
@@ -70,73 +57,135 @@ export function JoinMission() {
                 </p>
               </button>
 
-              {/* Address */}
-              <div className="p-6 sm:p-8 bg-[#0B0C2A]/30 border-2 border-[#6A4FC8]/30 rounded-lg backdrop-blur-sm">
-                <div className="flex items-center justify-center mb-4">
-                  <MapPin className="h-10 w-10 text-[#FFD700]" />
-                </div>
-                <h3 className="text-lg sm:text-2xl font-semibold mb-3 text-white text-center">Address</h3>
-                <p className="text-xs sm:text-sm text-[#C0C0C0] leading-relaxed text-center break-words">
-                  Shambala Facility, Ispahani Centre,<br />
-                  123, 124, Nungambakkam High Rd,<br />
-                  Thousand Lights West, Thousand Lights,<br />
-                  Chennai, Tamil Nadu 600034
+              {/* Volunteer */}
+              <button
+                onClick={() => setFormType("volunteer")}
+                className="group p-6 sm:p-8 bg-[#0B0C2A]/30 border-2 border-[#6A4FC8]/30 rounded-lg backdrop-blur-sm hover:border-[#FFD700] transition-all"
+              >
+                <HeartHandshake className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 text-[#FFD700] transition-colors" />
+                <h3 className="text-lg sm:text-2xl font-semibold mb-2 sm:mb-3 text-center text-white">
+                  Become a Volunteer
+                </h3>
+                <p className="text-sm sm:text-lg text-[#C0C0C0] text-center">
+                  Contribute skills, time, and passion
                 </p>
-              </div>
+              </button>
+
             </div>
           ) : (
             <div className="bg-[#6A4FC8]/10 border border-[#6A4FC8]/30 rounded-lg p-6 sm:p-8 backdrop-blur-sm">
 
+              {/* FORM HEADER */}
               <div className="flex items-center justify-between mb-6 sm:mb-8">
                 <h3 className="text-lg sm:text-2xl font-semibold">
-                  {formType === "partner" ? "Partner Application" : "Student Nomination"}
+                  {formType === "partner"
+                    ? "Partner Application"
+                    : formType === "student"
+                    ? "Student Nomination"
+                    : "Volunteer Application"}
                 </h3>
                 <Button
                   variant="ghost"
                   onClick={() => setFormType(null)}
-                  className="text-[#C0C0C0] hover:text-white"
+                  className="bg-yellow-600 text-black hover:text-white hover:bg-red-700"
                 >
                   Back
                 </Button>
               </div>
 
+              {/* FORM CONTENT */}
               <form className="space-y-5 sm:space-y-6">
-                <div>
-                  <label className="block text-xs sm:text-sm font-medium mb-2">Name *</label>
-                  <Input className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" required />
-                </div>
 
-                <div>
-                  <label className="block text-xs sm:text-sm font-medium mb-2">Email *</label>
-                  <Input type="email" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" required />
-                </div>
+                {/* Shared Fields */}
+                <Input placeholder="Full Name *" required className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
+                <Input placeholder="Email *" type="email" required className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
 
-                <div>
-                  <label className="block text-xs sm:text-sm font-medium mb-2">Country *</label>
-                  <Input className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" required />
-                </div>
+                {/* VOLUNTEER FULL FORM */}
+                {formType === "volunteer" && (
+                  <>
 
-                <div>
-                  <label className="block text-xs sm:text-sm font-medium mb-2">Message *</label>
-                  <Textarea
-                    rows={5}
-                    className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white resize-none"
-                    required
-                    placeholder={
-                      formType === "partner"
-                        ? "Tell us about your organization and how you'd like to partner..."
-                        : "Tell us about the student you're nominating..."
-                    }
-                  />
-                </div>
+                    {/* Section: Personal */}
+                    <h4 className="text-xl sm:text-2xl font-bold text-white mt-6">Personal Details</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <Input placeholder="Age" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
+                      <Input placeholder="Phone Number" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
+                      <Input placeholder="Village / City / State / Country" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white sm:col-span-2" />
+                    </div>
+
+                    {/* Section: Education */}
+                    <h4 className="text-xl sm:text-2xl font-bold text-white mt-6">Education & Work</h4>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                      <Input placeholder="Current Occupation" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
+                      <Input placeholder="Current Organization" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
+                      <Input placeholder="Educational Qualifications" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white sm:col-span-2" />
+                      <Input placeholder="Major Subject" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white sm:col-span-2" />
+                    </div>
+
+                    {/* Section: Motivation */}
+                    <h4 className="text-xl sm:text-2xl font-bold text-white mt-6">Motivation</h4>
+                    <Textarea placeholder="Previous Volunteer Experience" rows={4} className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
+                    <Textarea placeholder="Why do you want to volunteer for this mission?" rows={4} className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
+                    <Textarea placeholder="What do you hope to achieve from this experience?" rows={4} className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
+
+                    {/* Dropdowns */}
+                    <h4 className="text-xl sm:text-2xl font-bold text-white mt-6">Preferences</h4>
+
+                    <select className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white rounded-md p-3 w-full">
+                      <option className="bg-black">15 - 30 Hours per month</option>
+                      <option className="bg-black">30 - 40 Hours per month</option>
+                      <option className="bg-black">40 - 50 Hours per month</option>
+                      <option className="bg-black">50+ Hours</option>
+                    </select>
+
+                    <select className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white rounded-md p-3 w-full mt-4">
+                      <option className="bg-black">Technical</option>
+                      <option className="bg-black">Academic</option>
+                      <option className="bg-black">Management</option>
+                    </select>
+
+                    <select className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white rounded-md p-3 w-full mt-4">
+                      <option className="bg-black">Facebook</option>
+                      <option className="bg-black">Instagram</option>
+                      <option className="bg-black">YouTube</option>
+                      <option className="bg-black">LinkedIn</option>
+                      <option className="bg-black">Twitter/X</option>
+                      <option className="bg-black">Friend informed me</option>
+                      <option className="bg-black">Family Member informed me</option>
+                    </select>
+
+                    <label className="flex items-center gap-2 mt-6 text-white">
+                      <input type="checkbox" />
+                      I am willing to commit to the full duration of the mission
+                    </label>
+
+                  </>
+                )}
+
+                {/* Non-volunteer forms stay same */}
+                {formType !== "volunteer" && (
+                  <>
+                    <Input placeholder="Country *" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" required />
+                    <Textarea
+                      rows={5}
+                      className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white resize-none"
+                      required
+                      placeholder={
+                        formType === "partner"
+                          ? "Tell us about your organization and how you'd like to partner..."
+                          : "Tell us about the student you're nominating..."
+                      }
+                    />
+                  </>
+                )}
 
                 <Button
                   type="submit"
                   size="lg"
                   className="w-full bg-[#FFD700] text-[#0B0C2A] hover:bg-[#FFD700]/90 font-semibold text-base sm:text-lg py-4 sm:py-6"
                 >
-                  Submit Application
+                  Submit {formType === "volunteer" ? "Volunteer Application" : "Application"}
                 </Button>
+
               </form>
             </div>
           )}

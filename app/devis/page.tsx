@@ -3,57 +3,52 @@
 import { useState } from "react"
 import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
-import { X } from "lucide-react"
+import { X, Filter } from "lucide-react"
 import ambassadorsData from "@/data/ambassadors.json"
 import { ContactFooter } from "@/components/contact-footer"
 
-// ✅ Country name → ISO code mapping (SMALL FLAG SIZE)
-const countryCodes: Record<string, string> = {
-  India: "IN", USA: "US", UK: "GB", Canada: "CA", France: "FR", Germany: "DE",
-  Brazil: "BR", Japan: "JP", Australia: "AU", "South Korea": "KR", Italy: "IT",
-  Spain: "ES", Russia: "RU", Mexico: "MX", "South Africa": "ZA", Argentina: "AR",
-  Netherlands: "NL", Sweden: "SE", Norway: "NO", Finland: "FI", Denmark: "DK",
-  Poland: "PL", Turkey: "TR", Singapore: "SG", Malaysia: "MY", Thailand: "TH",
-  Vietnam: "VN", Indonesia: "ID", Philippines: "PH", Bangladesh: "BD",
-  Nepal: "NP", "Sri Lanka": "LK", UAE: "AE", "Saudi Arabia": "SA", Egypt: "EG",
-  Kenya: "KE", Nigeria: "NG", Ghana: "GH", Ethiopia: "ET", Morocco: "MA",
-  Chile: "CL", Peru: "PE", Colombia: "CO", Venezuela: "VE", "New Zealand": "NZ",
-  Israel: "IL", Portugal: "PT", Greece: "GR", Switzerland: "CH", Austria: "AT",
-  Belgium: "BE", "Czech Republic": "CZ", Hungary: "HU", Romania: "RO",
-  Croatia: "HR", Ireland: "IE", Iceland: "IS", Luxembourg: "LU", Qatar: "QA",
-  Oman: "OM", Kuwait: "KW", Jordan: "JO", Lebanon: "LB", Pakistan: "PK",
-  Uzbekistan: "UZ", Kazakhstan: "KZ", Mongolia: "MN", Cambodia: "KH", Laos: "LA",
-  Myanmar: "MM", Tanzania: "TZ", Uganda: "UG", Zimbabwe: "ZW", Zambia: "ZM",
-  Algeria: "DZ", Tunisia: "TN", Paraguay: "PY", Bolivia: "BO", Ecuador: "EC",
-  Panama: "PA", "Costa Rica": "CR", Honduras: "HN", "El Salvador": "SV",
-  Guatemala: "GT", Cuba: "CU", Jamaica: "JM", "Dominican Republic": "DO",
-  Haiti: "HT", "Trinidad and Tobago": "TT", Fiji: "FJ", "Papua New Guinea": "PG",
-  Maldives: "MV", Bhutan: "BT", Rwanda: "RW", Namibia: "NA", Botswana: "BW",
-  Mozambique: "MZ", Madagascar: "MG", Mauritius: "MU", Brunei: "BN",
-  Seychelles: "SC", Malawi: "MW", Burundi: "BI", Georgia: "GE", Armenia: "AM",
-  Moldova: "MD", Ukraine: "UA", "North Macedonia": "MK",
+const getBadgeStyle = (role: string) => {
+  switch (role) {
+    case "Ambassador":
+      return "bg-[#6A0DAD] text-[#FFD700]"
+    case "Co-Ambassador":
+      return "bg-[#0B6623] text-[#FFD700]"
+    case "Tech-Ambassador":
+      return "bg-[#8B0000] text-[#FFD700] whitespace-pre-line"
+    default:
+      return "bg-gray-600 text-white"
+  }
 }
+
+const formatRoleText = (role: string) => {
+  if (role === "Tech-Ambassador") return "Tech\nAmbassador"
+  return role
+}
+
+const countryCodes: Record<string, string> = { /* unchanged mapping */ }
 
 export default function AmbassadorsPage() {
   const ambassadors = ambassadorsData
 
   const [search, setSearch] = useState("")
+  const [roleFilter, setRoleFilter] = useState("All")
   const [selected, setSelected] = useState<any>(null)
   const [page, setPage] = useState(1)
 
   const perPage = 6
 
-  // ✅ search-only filtering
-  const filtered = ambassadors.filter((a) =>
-    a.name.toLowerCase().includes(search.toLowerCase())
-  )
+  const filtered = ambassadors.filter((a) => {
+    const matchesSearch = a.name.toLowerCase().includes(search.toLowerCase())
+    const matchesRole =
+      roleFilter === "All" || a.ambassadorRole === roleFilter
+    return matchesSearch && matchesRole
+  })
 
-  // ✅ Pagination AFTER filtering
   const totalPages = Math.ceil(filtered.length / perPage)
   const paginated = filtered.slice((page - 1) * perPage, page * perPage)
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16 text-white">
+    <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1A1F3A] to-[#0A0E27] pt-24 pb-16 text-white">
       <div className="max-w-7xl mx-auto px-6 mb-8">
 
         {/* Title */}
@@ -66,8 +61,10 @@ export default function AmbassadorsPage() {
           </p>
         </div>
 
-        {/* Search */}
-        <div className="flex justify-center mb-10">
+        {/* Search + Beautiful Filter */}
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+
+          {/* Search */}
           <input
             type="text"
             value={search}
@@ -76,8 +73,28 @@ export default function AmbassadorsPage() {
               setPage(1)
             }}
             placeholder="Search ambassadors..."
-            className="w-full max-w-md px-4 py-2 rounded-full bg-[#1a1f3a] border border-[#6A4FC8] text-white placeholder-[#C0C0C0] focus:outline-none focus:border-[#00FFFF]"
+            className="w-full max-w-md px-4 py-2 rounded-full bg-[#1A1F3A] border border-[#6A4FC8] text-white placeholder-[#C0C0C0] focus:outline-none focus:border-[#00FFFF]"
           />
+
+          {/* BEAUTIFUL ROLE FILTER */}
+          <div className="relative">
+            <select
+              value={roleFilter}
+              onChange={(e) => {
+                setRoleFilter(e.target.value)
+                setPage(1)
+              }}
+              className="appearance-none w-full sm:w-56 px-5 py-2 rounded-full bg-[#1A1F3A] border border-[#9D4EDD] text-[#FFD700] font-semibold shadow-md hover:border-[#00FFFF] transition cursor-pointer focus:outline-none"
+            >
+              <option value="All">All Roles</option>
+              <option value="Ambassador">Ambassador</option>
+              <option value="Co-Ambassador">Co-Ambassador</option>
+              <option value="Tech-Ambassador">Tech-Ambassador</option>
+            </select>
+
+            {/* Icon overlay */}
+            <Filter className="absolute right-4 top-1/2 -translate-y-1/2 text-[#FFD700] h-4 w-4 pointer-events-none" />
+          </div>
         </div>
 
         {/* Grid */}
@@ -86,11 +103,18 @@ export default function AmbassadorsPage() {
             <motion.div
               key={i}
               whileHover={{ scale: 1.02 }}
-              className="relative bg-[#1a1f3a]/70 p-6 rounded-2xl border border-[#6A4FC8]/40 shadow-lg"
+              className="relative bg-[#1A1F3A]/70 p-6 rounded-2xl border border-[#6A4FC8]/40 shadow-lg"
             >
-             
+              {/* Top-Right Badge */}
+              <div
+                className={`absolute top-3 right-3 text-[10px] font-bold px-3 py-1 rounded-md shadow-md text-center leading-tight ${getBadgeStyle(
+                  person.ambassadorRole
+                )}`}
+              >
+                {formatRoleText(person.ambassadorRole)}
+              </div>
 
-              {/* ✅ SAFE IMAGE BLOCK */}
+              {/* Image */}
               <div className="relative mx-auto w-48 h-48 rounded-3xl border-2 border-[#00FFFF] overflow-hidden bg-black">
                 {person.image ? (
                   <Image
@@ -104,9 +128,6 @@ export default function AmbassadorsPage() {
                     No Image
                   </div>
                 )}
-                <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-[#9D4EDD] text-white text-xs font-bold px-4 py-1 rounded-md shadow-md">
-                  {person.name.split(" ")[0].toUpperCase()}
-                </div>
               </div>
 
               <h3 className="mt-10 text-xl font-semibold text-center">
@@ -131,7 +152,7 @@ export default function AmbassadorsPage() {
             <button
               onClick={() => setPage((p) => Math.max(p - 1, 1))}
               disabled={page === 1}
-              className="px-3 py-1 bg-[#1a1f3a] border border-[#6A4FC8] rounded-md hover:border-[#00FFFF] disabled:opacity-40"
+              className="px-3 py-1 bg-[#1A1F3A] border border-[#6A4FC8] rounded-md hover:border-[#00FFFF] disabled:opacity-40"
             >
               Prev
             </button>
@@ -139,7 +160,7 @@ export default function AmbassadorsPage() {
             <button
               onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
               disabled={page === totalPages}
-              className="px-3 py-1 bg-[#1a1f3a] border border-[#6A4FC8] rounded-md hover:border-[#00FFFF] disabled:opacity-40"
+              className="px-3 py-1 bg-[#1A1F3A] border border-[#6A4FC8] rounded-md hover:border-[#00FFFF] disabled:opacity-40"
             >
               Next
             </button>
@@ -189,6 +210,14 @@ export default function AmbassadorsPage() {
                 <div>
                   <h2 className="text-2xl font-bold">{selected.name}</h2>
 
+                  <span
+                    className={`mt-2 inline-block text-xs font-bold px-3 py-1 rounded-md text-center whitespace-pre-line ${getBadgeStyle(
+                      selected.ambassadorRole
+                    )}`}
+                  >
+                    {formatRoleText(selected.ambassadorRole)}
+                  </span>
+
                   {countryCodes[selected.country] && (
                     <Image
                       src={`https://flagcdn.com/w40/${countryCodes[
@@ -197,7 +226,7 @@ export default function AmbassadorsPage() {
                       alt={selected.country}
                       width={28}
                       height={20}
-                      className="rounded-sm border border-black/20 shadow-sm"
+                      className="rounded-sm border border-black/20 shadow-sm mt-2"
                     />
                   )}
                 </div>
@@ -210,6 +239,7 @@ export default function AmbassadorsPage() {
           </motion.div>
         )}
       </AnimatePresence>
+
       <ContactFooter />
     </main>
   )

@@ -37,12 +37,7 @@ export function ContactFooter() {
               <p className="text-sm sm:text-lg text-[#C0C0C0] mb-4 sm:mb-6 leading-relaxed">
                 Empowering 12,000 girls from 108 nations through space education and satellite technology.
               </p>
-              <div className="flex items-center gap-2 text-[#FFD700] break-words">
-                <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
-                <a href="mailto:shakthisat@hotmail.com" className="hover:underline text-sm sm:text-base">
-                  shakthisat@hotmail.com
-                </a>
-              </div>
+             
             </div>
 
             {/* Partners */}
@@ -61,17 +56,16 @@ export function ContactFooter() {
               <div className="space-y-2 sm:space-y-3 text-[#C0C0C0] break-words">
                 <div className="flex items-center gap-2">
                   <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-[#FFD700]" />
-                  <a href="mailto:spacekidzindia@gmail.com" className="hover:text-[#FFD700] transition-colors text-sm sm:text-base">
-                    spacekidzindia@gmail.com
+                  <a href="mailto:shakthisat@spacekidzindia.in" className="hover:text-[#FFD700] transition-colors text-sm sm:text-base">
+                    shakthisat@spacekidzindia.in
                   </a>
                 </div>
+                
                 <div className="flex items-center gap-2">
-                  <Mail className="h-4 w-4 sm:h-5 sm:w-5 text-[#FFD700]" />
-                  <a href="mailto:shakthisat@hotmail.com" className="hover:text-[#FFD700] transition-colors text-sm sm:text-base">
-                    shakthisat@hotmail.com
-                  </a>
+                  <Phone className="h-4 w-4 sm:h-5 sm:w-5 text-[#FFD700]" />
+                  <span className="text-sm sm:text-base">+91 81224 12261</span>
                 </div>
-               
+                
               </div>
             </div>
 

@@ -301,3 +301,62 @@
 .slide-out-to-bottom {
   animation: slide-out-to-bottom 0.3s ease-in;
 }
+
+
+.star-container {
+  perspective: 800px;
+}
+
+.star-tunnel {
+  position: absolute;
+  inset: 0;
+  width: 350%;
+  height: 350%;
+  opacity: 0.75;
+  background-image:
+    radial-gradient(2px 2px at 5% 10%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 15% 30%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 25% 70%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 35% 50%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 45% 85%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 55% 20%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 65% 60%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 75% 40%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 85% 90%, #ffffff 80%, transparent),
+    radial-gradient(2px 2px at 95% 25%, #ffffff 80%, transparent),
+    /* extra density */
+    radial-gradient(1px 1px at 10% 90%, #ffffff 80%, transparent),
+    radial-gradient(1px 1px at 30% 10%, #ffffff 80%, transparent),
+    radial-gradient(1px 1px at 50% 40%, #ffffff 80%, transparent),
+    radial-gradient(1px 1px at 70% 80%, #ffffff 80%, transparent),
+    radial-gradient(1px 1px at 90% 55%, #ffffff 80%, transparent);
+  animation: starTunnel 12s linear infinite;
+  transform-origin: center;
+  filter: blur(0.3px);
+}
+
+@keyframes starTunnel {
+  0% {
+    transform: scale(1) translate3d(0, 0, 0) rotateZ(0deg);
+  }
+  50% {
+    transform: scale(1.6) translate3d(0, 0, 180px) rotateZ(180deg);
+  }
+  100% {
+    transform: scale(2.4) translate3d(0, 0, 360px) rotateZ(360deg);
+  }
+}
+
+
+
+@keyframes starFloat {
+  0% {
+    transform: translate3d(-10%, -10%, 0) rotateZ(0deg);
+  }
+  50% {
+    transform: translate3d(10%, 10%, 200px) rotateZ(180deg);
+  }
+  100% {
+    transform: translate3d(-10%, -10%, 0) rotateZ(360deg);
+  }
+}

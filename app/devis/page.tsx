@@ -54,7 +54,7 @@ export default function AmbassadorsPage() {
 
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16 text-white">
-      <div className="max-w-7xl mx-auto px-6">
+      <div className="max-w-7xl mx-auto px-6 mb-8">
 
         {/* Title */}
         <div className="text-center mb-10">

@@ -121,7 +121,7 @@ export function HeroSection() {
       {/* ⭐ Header & Subheader */}
       <div className="absolute top-[40%] text-center text-white px-4 z-20">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-wide">
-          ShakthiSAT
+          Mission ShakthiSAT
         </h1>
         <p className="text-lg md:text-2xl mt-4">{displayText}</p>
       </div>

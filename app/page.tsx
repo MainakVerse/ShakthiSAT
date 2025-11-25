@@ -12,12 +12,17 @@ import { JoinMission } from "@/components/join-mission"
 import { ContactFooter } from "@/components/contact-footer"
 import { ScrollProgress } from "@/components/scroll-progress"
 import { Starfield } from "@/components/starfield"
+import { SpiralSatellite } from "@/components/spiral-satellite"
 
 export default function Page() {
   return (
     <main className="relative min-h-screen bg-[#0B0C2A] text-white overflow-x-hidden">
       <Starfield />
       <ScrollProgress />
+      
+      {/* 🚀 Add spiraling satellite */}
+      <SpiralSatellite />
+
       <HeroSection />
       <MissionOverview />      
       <WhyShakthiSAT />
@@ -32,3 +37,4 @@ export default function Page() {
     </main>
   )
 }
+

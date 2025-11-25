@@ -27,28 +27,34 @@ export default function PartnersPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
-        
-        <div className="text-center mb-16">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
-            Our Partners
-          </h1>
-        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {partners.map((partner) => (
-            <div
-              key={partner.id}
-              className="aspect-video bg-white border-2 border-[#FFD700]/20 rounded-lg flex items-center justify-center hover:shadow-lg hover:border-[#FFD700]/50 transition-all duration-300 overflow-hidden"
-            >
-              <img
-                src={partner.logo || "/placeholder.svg"}
-                alt={`${partner.name} logo`}
-                className="max-w-[70%] max-h-[70%] object-contain"
-              />
-            </div>
-          ))}
+  <div className="border-2 border-white rounded-xl p-8">
+
+    <div className="text-center mb-16">
+      <h1 className="text-5xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+        Our Partners
+      </h1>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      {partners.map((partner) => (
+        <div
+          key={partner.id}
+          className="aspect-video bg-white border-2 border-[#FFD700]/20 rounded-lg flex items-center justify-center hover:shadow-lg hover:border-[#FFD700]/50 transition-all duration-300 overflow-hidden"
+        >
+          <img
+            src={partner.logo || "/placeholder.svg"}
+            alt={`${partner.name} logo`}
+            className="max-w-[70%] max-h-[70%] object-contain"
+          />
         </div>
-      </div>
+      ))}
+    </div>
+
+  </div>
+
+</div>
+
       <ContactFooter  />
     </main>
   )

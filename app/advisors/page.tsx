@@ -32,67 +32,73 @@ export default function AdvisorsPage() {
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1a1f3a] to-[#0A0E27] pt-24 pb-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
 
-        {/* Hero */}
-        <div className="text-center mb-10">
-          <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
-            Our Advisors
-          </h1>
-        </div>
+  {/* Border Box */}
+  <div className="border-2 border-white rounded-xl p-8">
 
-        {/* Search */}
-        <div className="mb-10 max-w-md mx-auto">
-          <input
-            type="text"
-            placeholder="Search advisors by name..."
-            className="w-full px-4 py-3 rounded-lg bg-[#12152e] text-white border border-[#383c6b]"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-          />
-        </div>
+    {/* Hero */}
+    <div className="text-center mb-10">
+      <h1 className="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+        Our Advisors
+      </h1>
+    </div>
 
-        {/* Advisors Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          {filtered.map((advisor, index) => (
-            <div
-              key={advisor.name}
-              className="flex bg-[#12152e] rounded-xl p-6 shadow-lg hover:shadow-[#6A4FC8]/40 transition min-h-[220px]"
-            >
-              {/* Image */}
-              <div className="w-1/4 relative h-40 rounded-lg overflow-hidden">
-                <Image
-                  src={advisor.image}
-                  alt={advisor.name}
-                  fill
-                  className="object-cover"
-                />
-              </div>
+    {/* Search */}
+    <div className="mb-10 max-w-md mx-auto">
+      <input
+        type="text"
+        placeholder="Search advisors by name..."
+        className="w-full px-4 py-3 rounded-lg bg-[#12152e] text-white border border-[#383c6b]"
+        value={search}
+        onChange={(e) => setSearch(e.target.value)}
+      />
+    </div>
 
-              {/* Details */}
-              <div className="w-3/4 pl-6 flex flex-col justify-between">
-                <div>
-                  <h3 className="text-2xl font-bold text-[#FFD700] mb-3">
-                    {advisor.name}
-                  </h3>
-                  <p className="text-sm text-[#C0C0C0] leading-relaxed">
-                    {advisor.desc}
-                  </p>
-                </div>
+    {/* Advisors Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      {filtered.map((advisor, index) => (
+        <div
+          key={advisor.name}
+          className="flex bg-[#12152e] rounded-xl p-6 shadow-lg hover:shadow-[#6A4FC8]/40 transition min-h-[220px]"
+        >
+          {/* Image */}
+          <div className="w-1/4 relative h-40 rounded-lg overflow-hidden">
+            <Image
+              src={advisor.image}
+              alt={advisor.name}
+              fill
+              className="object-cover"
+            />
+          </div>
 
-                <div className="mt-4">
-                  <button
-                    type="button"
-                    onClick={() => openModal(index)}
-                    className="inline-block px-4 py-2 rounded-md bg-[#6A4FC8] text-white font-semibold hover:bg-[#8d6bff] transition"
-                  >
-                    View More
-                  </button>
-                </div>
-              </div>
+          {/* Details */}
+          <div className="w-3/4 pl-6 flex flex-col justify-between">
+            <div>
+              <h3 className="text-2xl font-bold text-[#FFD700] mb-3">
+                {advisor.name}
+              </h3>
+              <p className="text-sm text-[#C0C0C0] leading-relaxed">
+                {advisor.desc}
+              </p>
             </div>
-          ))}
-        </div>
 
-      </div>
+            <div className="mt-4">
+              <button
+                type="button"
+                onClick={() => openModal(index)}
+                className="inline-block px-4 py-2 rounded-md bg-[#6A4FC8] text-white font-semibold hover:bg-[#8d6bff] transition"
+              >
+                View More
+              </button>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+
+  </div>
+
+</div>
+
 
       {/* Modal */}
       {showModal && activeIndex !== null && (

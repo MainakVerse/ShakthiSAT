@@ -124,112 +124,145 @@ export default function AboutUsPage() {
 
         {/* ✅ Team Section */}
         <section className="mb-24">
-          <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
-            Meet Our Team
-          </h2>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-10">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 text-center p-6 min-h-[330px] flex flex-col justify-between">
-                
-                <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border border-[#FFD700]/40">
-                  <Image
-                    src={member.image}
-                    alt={member.name}
-                    width={200}
-                    height={200}
-                    className="object-cover"
-                  />
-                </div>
+  {/* White Border Container */}
+  <div className="border-2 border-white/30 rounded-xl p-8">
 
-                <h3 className="text-white text-lg font-semibold">{member.name}</h3>
-                <p className="text-[#C0C0C0] text-sm mt-2">{member.role}</p>
+    <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+      Meet Our Team
+    </h2>
 
-                {/* About Button */}
-                <button
-                  onClick={() => {
-                    setActiveTeam(index)
-                    setShowTeamModal(true)
-                  }}
-                  className="mt-4 px-4 py-2 rounded-md bg-[#6A4FC8] text-white text-sm hover:bg-[#8d6bff] transition"
-                >
-                  About
-                </button>
-              </Card>
-            ))}
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-10">
+      {teamMembers.map((member, index) => (
+        <Card
+          key={index}
+          className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 text-center p-6 min-h-[330px] flex flex-col justify-between"
+        >
+          <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border border-[#FFD700]/40">
+            <Image
+              src={member.image}
+              alt={member.name}
+              width={200}
+              height={200}
+              className="object-cover"
+            />
           </div>
-        </section>
+
+          <h3 className="text-white text-lg font-semibold">{member.name}</h3>
+          <p className="text-[#C0C0C0] text-sm mt-2">{member.role}</p>
+
+          {/* About Button */}
+          <button
+            onClick={() => {
+              setActiveTeam(index)
+              setShowTeamModal(true)
+            }}
+            className="mt-4 px-4 py-2 rounded-md bg-[#6A4FC8] text-white text-sm hover:bg-[#8d6bff] transition"
+          >
+            About
+          </button>
+        </Card>
+      ))}
+    </div>
+  </div>
+
+</section>
+
 
         {/* ✅ Team Modal */}
-        {showTeamModal && activeTeam !== null && (
-          <div
-            className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
-            onClick={() => setShowTeamModal(false)}
-          >
-            <div
-              className="bg-[#12152e] rounded-xl relative w-[80%] max-w-5xl text-left p-10"
-              onClick={(e) => e.stopPropagation()}
-            >
+{showTeamModal && activeTeam !== null && (
+  <div
+    className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+    onClick={() => setShowTeamModal(false)}
+  >
+    <div
+      className="bg-[#12152e] rounded-xl relative w-[80%] max-w-5xl text-left p-10 border-2 border-white/30"
+      onClick={(e) => e.stopPropagation()}
+    >
 
-              {/* Close Button */}
-              <button
-                className="absolute top-4 right-6 text-white text-3xl"
-                onClick={() => setShowTeamModal(false)}
-              >
-                ×
-              </button>
+      {/* Close Button */}
+      <button
+        className="absolute top-4 right-6 text-white text-3xl"
+        onClick={() => setShowTeamModal(false)}
+      >
+        ×
+      </button>
 
-              {/* Image */}
-              <div className="flex justify-center mb-8">
-                <Image
-                  src={teamMembers[activeTeam].image}
-                  alt={teamMembers[activeTeam].name}
-                  width={220}
-                  height={220}
-                  className="rounded-full object-cover border-2 border-[#FFD700]/60"
-                />
-              </div>
+      {/* Image */}
+      {/* SCI-FI HOLOGRAM RING CONTAINER */}
+<div className="flex justify-center mb-8 relative">
+  <div
+    className="relative w-[260px] h-[260px] flex items-center rounded-full justify-center"
+    style={{
+      backgroundImage: "url('/scifi-ring.png')",
+      backgroundSize: "cover",
+      backgroundPosition: "center",
+      backgroundRepeat: "no-repeat",
+      opacity: 0.9,
+    }}
+  >
+    <Image
+      src={teamMembers[activeTeam].image}
+      alt={teamMembers[activeTeam].name}
+      width={200}
+      height={200}
+      className="rounded-full object-cover border-4 border-[#FFD700]/70 shadow-xl"
+    />
+  </div>
+</div>
 
-              {/* Name */}
-              <h3 className="text-[#FFD700] text-3xl font-bold mb-6">
-                {teamMembers[activeTeam].name}                
-              </h3>
-              <p className="text-[#13b9d2] text-lg mb-6">{teamMembers[activeTeam].role}</p>
 
-              {/* ✅ About Text with paragraph breaks */}
-              <div className="text-[#C0C0C0] text-base leading-relaxed space-y-5 pr-4">
-                {teamMembers[activeTeam].about.split("\n").map((para, idx) => (
-                  <p key={idx}>{para}</p>
-                ))}
-              </div>
+      {/* Name */}
+      <h3 className="text-[#FFD700] text-3xl font-bold mb-6">
+        {teamMembers[activeTeam].name}
+      </h3>
+      <p className="text-[#13b9d2] text-lg mb-6">
+        {teamMembers[activeTeam].role}
+      </p>
 
-            </div>
-          </div>
-        )}
+      {/* About Text */}
+      <div className="text-[#C0C0C0] text-base leading-relaxed space-y-5 pr-4">
+        {teamMembers[activeTeam].about.split("\n").map((para, idx) => (
+          <p key={idx}>{para}</p>
+        ))}
+      </div>
+
+    </div>
+  </div>
+)}
+
 
         {/* ✅ Gallery Section */}
         <section>
-          <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
-            Gallery
-          </h2>
 
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
-            {galleryImages.map((item, index) => (
-              <div
-                key={index}
-                className="rounded-lg overflow-hidden border border-[#6A4FC8]/30 hover:scale-105 transition-transform duration-300"
-              >
-                <Image
-                  src={`/gallery/${index + 1}.jpeg`}
-                  alt={`Gallery Image ${index + 1}`}
-                  width={500}
-                  height={350}
-                  className="object-cover"
-                />
-              </div>
-            ))}
-          </div>
-        </section>
+  {/* White Border Container */}
+  <div className="border-2 border-white/30 rounded-xl p-8">
+
+    <h2 className="text-4xl font-bold text-center mb-10 bg-gradient-to-r from-[#FFD700] via-[#FF6EC7] to-[#6A4FC8] bg-clip-text text-transparent">
+      Gallery
+    </h2>
+
+    <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      {galleryImages.map((item, index) => (
+        <div
+          key={index}
+          className="rounded-lg overflow-hidden border border-[#6A4FC8]/30 hover:scale-105 transition-transform duration-300"
+        >
+          <Image
+            src={`/gallery/${index + 1}.jpeg`}
+            alt={`Gallery Image ${index + 1}`}
+            width={500}
+            height={350}
+            className="object-cover"
+          />
+        </div>
+      ))}
+    </div>
+
+  </div>
+
+</section>
+
 
       </div>
 

@@ -51,9 +51,9 @@ export function JoinMission() {
                 className="group p-6 sm:p-8 bg-[#E26EE5]/10 border-2 border-[#E26EE5]/30 rounded-lg backdrop-blur-sm hover:border-[#FFD700] transition-all"
               >
                 <UserPlus className="h-12 w-12 sm:h-16 sm:w-16 mx-auto mb-4 text-[#E26EE5] group-hover:text-[#FFD700] transition-colors" />
-                <h3 className="text-lg sm:text-2xl font-semibold mb-2 sm:mb-3 text-center">Join the Mission</h3>
+                <h3 className="text-lg sm:text-2xl font-semibold mb-2 sm:mb-3 text-center">Become an Ambassador</h3>
                 <p className="text-sm sm:text-lg text-[#C0C0C0] text-center">
-                  Help a girl reach for the stars
+                  Represent your potentials to the global stage.
                 </p>
               </button>
 
@@ -110,6 +110,7 @@ export function JoinMission() {
                       <Input placeholder="Age" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
                       <Input placeholder="Phone Number" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white" />
                       <Input placeholder="Village / City / State / Country" className="bg-[#0B0C2A]/50 border-[#6A4FC8]/50 text-white sm:col-span-2" />
+                      
                     </div>
 
                     {/* Section: Education */}

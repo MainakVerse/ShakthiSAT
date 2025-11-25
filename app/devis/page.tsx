@@ -51,122 +51,128 @@ export default function AmbassadorsPage() {
     <main className="min-h-screen bg-gradient-to-b from-[#0A0E27] via-[#1A1F3A] to-[#0A0E27] pt-24 pb-16 text-white">
       <div className="max-w-7xl mx-auto px-6 mb-8">
 
-        {/* Title */}
-        <div className="text-center mb-10">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-[#00FFFF] to-[#9D4EDD] bg-clip-text text-transparent">
-            ShakthiSAT Ambassadors
-          </h1>
-          <p className="text-[#C0C0C0] mt-4">
-            Meet the women inspiring the next generation of explorers.
-          </p>
-        </div>
+  {/* Border Box */}
+  <div className="border-2 border-white rounded-xl p-8">
 
-        {/* Search + Beautiful Filter */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
+    {/* Title */}
+    <div className="text-center mb-10">
+      <h1 className="text-5xl font-bold bg-gradient-to-r from-[#00FFFF] to-[#9D4EDD] bg-clip-text text-transparent">
+        ShakthiSAT Ambassadors
+      </h1>
+      <p className="text-[#C0C0C0] mt-4">
+        Meet the women inspiring the next generation of explorers.
+      </p>
+    </div>
 
-          {/* Search */}
-          <input
-            type="text"
-            value={search}
-            onChange={(e) => {
-              setSearch(e.target.value)
-              setPage(1)
-            }}
-            placeholder="Search ambassadors..."
-            className="w-full max-w-md px-4 py-2 rounded-full bg-[#1A1F3A] border border-[#6A4FC8] text-white placeholder-[#C0C0C0] focus:outline-none focus:border-[#00FFFF]"
-          />
+    {/* Search + Beautiful Filter */}
+    <div className="flex flex-col sm:flex-row justify-center gap-4 mb-10">
 
-          {/* BEAUTIFUL ROLE FILTER */}
-          <div className="relative">
-            <select
-              value={roleFilter}
-              onChange={(e) => {
-                setRoleFilter(e.target.value)
-                setPage(1)
-              }}
-              className="appearance-none w-full sm:w-56 px-5 py-2 rounded-full bg-[#1A1F3A] border border-[#9D4EDD] text-[#FFD700] font-semibold shadow-md hover:border-[#00FFFF] transition cursor-pointer focus:outline-none"
-            >
-              <option value="All">All Roles</option>
-              <option value="Ambassador">Ambassador</option>
-              <option value="Co-Ambassador">Co-Ambassador</option>
-              <option value="Tech-Ambassador">Tech-Ambassador</option>
-            </select>
+      {/* Search */}
+      <input
+        type="text"
+        value={search}
+        onChange={(e) => {
+          setSearch(e.target.value)
+          setPage(1)
+        }}
+        placeholder="Search ambassadors..."
+        className="w-full max-w-md px-4 py-2 rounded-full bg-[#1A1F3A] border border-[#6A4FC8] text-white placeholder-[#C0C0C0] focus:outline-none focus:border-[#00FFFF]"
+      />
 
-            {/* Icon overlay */}
-            <Filter className="absolute right-4 top-1/2 -translate-y-1/2 text-[#FFD700] h-4 w-4 pointer-events-none" />
-          </div>
-        </div>
+      {/* BEAUTIFUL ROLE FILTER */}
+      <div className="relative">
+        <select
+          value={roleFilter}
+          onChange={(e) => {
+            setRoleFilter(e.target.value)
+            setPage(1)
+          }}
+          className="appearance-none w-full sm:w-56 px-5 py-2 rounded-full bg-[#1A1F3A] border border-[#9D4EDD] text-[#FFD700] font-semibold shadow-md hover:border-[#00FFFF] transition cursor-pointer focus:outline-none"
+        >
+          <option value="All">All Roles</option>
+          <option value="Ambassador">Ambassador</option>
+          <option value="Co-Ambassador">Co-Ambassador</option>
+          <option value="Tech-Ambassador">Tech-Ambassador</option>
+        </select>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {paginated.map((person, i) => (
-            <motion.div
-              key={i}
-              whileHover={{ scale: 1.02 }}
-              className="relative bg-[#1A1F3A]/70 p-6 rounded-2xl border border-[#6A4FC8]/40 shadow-lg"
-            >
-              {/* Top-Right Badge */}
-              <div
-                className={`absolute top-3 right-3 text-[10px] font-bold px-3 py-1 rounded-md shadow-md text-center leading-tight ${getBadgeStyle(
-                  person.ambassadorRole
-                )}`}
-              >
-                {formatRoleText(person.ambassadorRole)}
-              </div>
-
-              {/* Image */}
-              <div className="relative mx-auto w-48 h-48 rounded-3xl border-2 border-[#00FFFF] overflow-hidden bg-black">
-                {person.image ? (
-                  <Image
-                    src={person.image}
-                    alt={person.name}
-                    fill
-                    className="object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center text-xs text-gray-400">
-                    No Image
-                  </div>
-                )}
-              </div>
-
-              <h3 className="mt-10 text-xl font-semibold text-center">
-                {person.name}
-              </h3>
-
-              <div className="flex justify-center mt-6">
-                <button
-                  onClick={() => setSelected(person)}
-                  className="px-6 py-2 bg-gradient-to-r from-[#00FFFF] to-[#9D4EDD] rounded-full text-black font-semibold hover:opacity-90 transition"
-                >
-                  Know More
-                </button>
-              </div>
-            </motion.div>
-          ))}
-        </div>
-
-        {/* Pagination */}
-        {totalPages > 1 && (
-          <div className="flex justify-center mt-10 space-x-4">
-            <button
-              onClick={() => setPage((p) => Math.max(p - 1, 1))}
-              disabled={page === 1}
-              className="px-3 py-1 bg-[#1A1F3A] border border-[#6A4FC8] rounded-md hover:border-[#00FFFF] disabled:opacity-40"
-            >
-              Prev
-            </button>
-            <span className="text-[#C0C0C0]">{page} / {totalPages}</span>
-            <button
-              onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
-              disabled={page === totalPages}
-              className="px-3 py-1 bg-[#1A1F3A] border border-[#6A4FC8] rounded-md hover:border-[#00FFFF] disabled:opacity-40"
-            >
-              Next
-            </button>
-          </div>
-        )}
+        {/* Icon overlay */}
+        <Filter className="absolute right-4 top-1/2 -translate-y-1/2 text-[#FFD700] h-4 w-4 pointer-events-none" />
       </div>
+    </div>
+
+    {/* Grid */}
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      {paginated.map((person, i) => (
+        <motion.div
+          key={i}
+          whileHover={{ scale: 1.02 }}
+          className="relative bg-[#1A1F3A]/70 p-6 rounded-2xl border border-[#6A4FC8]/40 shadow-lg"
+        >
+          {/* Top-Right Badge */}
+          <div
+            className={`absolute top-3 right-3 text-[10px] font-bold px-3 py-1 rounded-md shadow-md text-center leading-tight ${getBadgeStyle(
+              person.ambassadorRole
+            )}`}
+          >
+            {formatRoleText(person.ambassadorRole)}
+          </div>
+
+          {/* Image */}
+          <div className="relative mx-auto w-48 h-48 rounded-3xl border-2 border-[#00FFFF] overflow-hidden bg-black">
+            {person.image ? (
+              <Image
+                src={person.image}
+                alt={person.name}
+                fill
+                className="object-cover"
+              />
+            ) : (
+              <div className="w-full h-full flex items-center justify-center text-xs text-gray-400">
+                No Image
+              </div>
+            )}
+          </div>
+
+          <h3 className="mt-10 text-xl font-semibold text-center">
+            {person.name}
+          </h3>
+
+          <div className="flex justify-center mt-6">
+            <button
+              onClick={() => setSelected(person)}
+              className="px-6 py-2 bg-gradient-to-r from-[#00FFFF] to-[#9D4EDD] rounded-full text-black font-semibold hover:opacity-90 transition"
+            >
+              Know More
+            </button>
+          </div>
+        </motion.div>
+      ))}
+    </div>
+
+    {/* Pagination */}
+    {totalPages > 1 && (
+      <div className="flex justify-center mt-10 space-x-4">
+        <button
+          onClick={() => setPage((p) => Math.max(p - 1, 1))}
+          disabled={page === 1}
+          className="px-3 py-1 bg-[#1A1F3A] border border-[#6A4FC8] rounded-md hover:border-[#00FFFF] disabled:opacity-40"
+        >
+          Prev
+        </button>
+        <span className="text-[#C0C0C0]">{page} / {totalPages}</span>
+        <button
+          onClick={() => setPage((p) => Math.min(p + 1, totalPages))}
+          disabled={page === totalPages}
+          className="px-3 py-1 bg-[#1A1F3A] border border-[#6A4FC8] rounded-md hover:border-[#00FFFF] disabled:opacity-40"
+        >
+          Next
+        </button>
+      </div>
+    )}
+  </div>
+
+</div>
+
 
       {/* Modal */}
       <AnimatePresence>

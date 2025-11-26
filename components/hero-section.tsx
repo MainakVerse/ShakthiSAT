@@ -7,8 +7,6 @@ import * as THREE from "three";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 
-
-
 const phrases = [
   "From AzaadiSAT to the Moon.",
   "108 Nations — 12,000 Girls.",
@@ -27,34 +25,70 @@ function MoonModel() {
   );
 }
 
-/* ⭐ Background Stars (separate canvas) */
+/* ⭐ Background Stars (Round, glowing, twinkling) */
 function BackgroundStars() {
   const ref = useRef<THREE.Points | null>(null);
   const starCount = 5000;
 
+  // ⭐ ROUND TEXTURE (TS SAFE, INSIDE COMPONENT)
+  const circleTexture = useMemo(() => {
+    const size = 64;
+    const canvas = document.createElement("canvas");
+    canvas.width = size;
+    canvas.height = size;
+
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return null;
+
+    ctx.clearRect(0, 0, size, size);
+    ctx.beginPath();
+    ctx.arc(size / 2, size / 2, size / 2, 0, Math.PI * 2);
+    ctx.fillStyle = "white";
+    ctx.fill();
+
+    const tex = new THREE.CanvasTexture(canvas);
+    tex.needsUpdate = true;
+    return tex;
+  }, []);
+
+  // ⭐ STAR FIELD POSITIONS
   const positions = useMemo(() => {
     const arr = new Float32Array(starCount * 3);
     for (let i = 0; i < starCount; i++) {
-      arr[i * 3] = (Math.random() - 0.5) * 200;
-      arr[i * 3 + 1] = (Math.random() - 0.5) * 200;
-      arr[i * 3 + 2] = (Math.random() - 0.5) * 200;
+      arr[i * 3] = (Math.random() - 0.5) * 600;
+      arr[i * 3 + 1] = (Math.random() - 0.5) * 600;
+      arr[i * 3 + 2] = (Math.random() - 0.5) * 600;
     }
     return arr;
   }, []);
 
+  // ⭐ ROTATION + TWINKLE
   useFrame(() => {
-    if (ref.current) ref.current.rotation.z += 0.0002;
+    if (!ref.current) return;
+    ref.current.rotation.z += 0.0001;
+
+    const t = performance.now() * 0.001;
+    const mat = ref.current.material as THREE.PointsMaterial;
+    mat.opacity = 0.75 + Math.sin(t * 2) * 0.2;
   });
 
   return (
     <points ref={ref}>
       <bufferGeometry>
-        <bufferAttribute
-          attach="attributes-position"
-          args={[positions, 3]}
-        />
+        <bufferAttribute attach="attributes-position" args={[positions, 3]} />
       </bufferGeometry>
-      <pointsMaterial size={0.4} color="#ffffff" opacity={0.8} />
+
+      <pointsMaterial
+        size={1.0}
+        color="#ffe9a3"
+        map={circleTexture ?? undefined}
+        transparent
+        alphaTest={0.2}
+        depthWrite={false}
+        blending={THREE.AdditiveBlending}
+        opacity={0.9}
+        sizeAttenuation
+      />
     </points>
   );
 }
@@ -75,10 +109,7 @@ export function HeroSection() {
         index++;
       } else {
         clearInterval(interval);
-        setTimeout(
-          () => setCurrentPhrase((p) => (p + 1) % phrases.length),
-          2000
-        );
+        setTimeout(() => setCurrentPhrase((p) => (p + 1) % phrases.length), 2000);
       }
     }, 80);
 
@@ -86,21 +117,21 @@ export function HeroSection() {
   }, [currentPhrase]);
 
   const scrollToMission = () =>
-    document
-      .getElementById("mission-overview")
-      ?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("mission-overview")?.scrollIntoView({
+      behavior: "smooth",
+    });
 
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center overflow-hidden bg-black">
+    <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-black overflow-visible">
 
       {/* ⭐ Background Stars Canvas */}
-      <div className="absolute inset-0 -z-20">
+      <div className="absolute inset-0 z-10">
         <Canvas camera={{ position: [0, 0, 50], fov: 75 }}>
           <BackgroundStars />
         </Canvas>
       </div>
 
-      {/* ⭐ Moon Canvas centered, mobile-friendly */}
+      {/* ⭐ Moon Canvas */}
       <div className="relative flex justify-center items-center mt-5 z-10">
         <Canvas
           className="moon-canvas"
@@ -118,7 +149,7 @@ export function HeroSection() {
         </Canvas>
       </div>
 
-      {/* ⭐ Header & Subheader */}
+      {/* ⭐ Header Text */}
       <div className="absolute top-[40%] text-center text-white px-4 z-20">
         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold uppercase tracking-wide">
           Mission ShakthiSAT
@@ -138,9 +169,6 @@ export function HeroSection() {
         </Button>
       </div>
 
-    
-
-      {/* ⭐ Mobile centering override */}
       <style>
         {`
           @media (max-width: 640px) {

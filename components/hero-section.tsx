@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, Suspense, useMemo, useRef } from "react";
-import { Canvas, useFrame } from "@react-three/fiber";
+import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import { Button } from "@/components/ui/button";
@@ -24,6 +24,30 @@ function MoonModel() {
     />
   );
 }
+
+function SatelliteSprite() {
+  const texture = useLoader(THREE.TextureLoader, "/sat.png");
+  const ref = useRef<THREE.Sprite>(null);
+
+  useFrame(({ clock }) => {
+    const t = clock.getElapsedTime();
+    const radius = 3.5;  // distance from moon
+    const speed = 0.4;   // orbit speed
+
+    if (ref.current) {
+      ref.current.position.x = Math.cos(t * speed) * radius;
+      ref.current.position.z = Math.sin(t * speed) * radius;
+      ref.current.position.y = 0.5 * Math.sin(t * speed * 1.5); // slight vertical wobble = cooler effect
+    }
+  });
+
+  return (
+    <sprite ref={ref} scale={[0.7, 0.7, 1]}>
+      <spriteMaterial map={texture} transparent />
+    </sprite>
+  );
+}
+
 
 /* ⭐ Background Stars (Round, glowing, twinkling) */
 function BackgroundStars() {
@@ -143,6 +167,7 @@ export function HeroSection() {
 
           <Suspense fallback={null}>
             <MoonModel />
+            <SatelliteSprite />
           </Suspense>
 
           <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.7} />

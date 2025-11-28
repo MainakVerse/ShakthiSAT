@@ -6,6 +6,8 @@ import { OrbitControls, useGLTF } from "@react-three/drei";
 import * as THREE from "three";
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
+import { extend } from "@react-three/fiber";
+extend({ Sprite: THREE.Sprite, SpriteMaterial: THREE.SpriteMaterial });
 
 const phrases = [
   "From AzaadiSAT to the Moon.",
@@ -25,36 +27,40 @@ function MoonModel() {
   );
 }
 
+/* 🛰 Satellite in the full-screen background Canvas */
 function SatelliteSprite() {
   const texture = useLoader(THREE.TextureLoader, "/sat.png");
   const ref = useRef<THREE.Sprite>(null);
 
   useFrame(({ clock }) => {
     const t = clock.getElapsedTime();
-    const radius = 3.5;  // distance from moon
-    const speed = 0.4;   // orbit speed
+    const radius = 10; // big orbit so it moves well beyond the moon area
+    const speed = 0.3;
+    const tilt = THREE.MathUtils.degToRad(35);
 
     if (ref.current) {
       ref.current.position.x = Math.cos(t * speed) * radius;
       ref.current.position.z = Math.sin(t * speed) * radius;
-      ref.current.position.y = 0.5 * Math.sin(t * speed * 1.5); // slight vertical wobble = cooler effect
+      ref.current.position.y = Math.sin(tilt) * ref.current.position.z;
+
+      ref.current.scale.set(1.5, 1.5, 1);
+      ref.current.renderOrder = 999;
     }
   });
 
   return (
-    <sprite ref={ref} scale={[0.7, 0.7, 1]}>
-      <spriteMaterial map={texture} transparent />
+    <sprite ref={ref}>
+      <spriteMaterial map={texture} transparent depthTest={false} />
     </sprite>
   );
 }
-
 
 /* ⭐ Background Stars (Round, glowing, twinkling) */
 function BackgroundStars() {
   const ref = useRef<THREE.Points | null>(null);
   const starCount = 5000;
 
-  // ⭐ ROUND TEXTURE (TS SAFE, INSIDE COMPONENT)
+  // Round star texture
   const circleTexture = useMemo(() => {
     const size = 64;
     const canvas = document.createElement("canvas");
@@ -75,7 +81,7 @@ function BackgroundStars() {
     return tex;
   }, []);
 
-  // ⭐ STAR FIELD POSITIONS
+  // Star positions
   const positions = useMemo(() => {
     const arr = new Float32Array(starCount * 3);
     for (let i = 0; i < starCount; i++) {
@@ -86,7 +92,7 @@ function BackgroundStars() {
     return arr;
   }, []);
 
-  // ⭐ ROTATION + TWINKLE
+  // Rotation + twinkle
   useFrame(() => {
     if (!ref.current) return;
     ref.current.rotation.z += 0.0001;
@@ -133,7 +139,10 @@ export function HeroSection() {
         index++;
       } else {
         clearInterval(interval);
-        setTimeout(() => setCurrentPhrase((p) => (p + 1) % phrases.length), 2000);
+        setTimeout(
+          () => setCurrentPhrase((p) => (p + 1) % phrases.length),
+          2000
+        );
       }
     }, 80);
 
@@ -148,14 +157,15 @@ export function HeroSection() {
   return (
     <section className="relative min-h-screen w-full flex flex-col items-center justify-center bg-black overflow-visible">
 
-      {/* ⭐ Background Stars Canvas */}
+      {/* 🌌 Full-screen background Canvas: stars + satellite */}
       <div className="absolute inset-0 z-10">
         <Canvas camera={{ position: [0, 0, 50], fov: 75 }}>
           <BackgroundStars />
+          <SatelliteSprite />
         </Canvas>
       </div>
 
-      {/* ⭐ Moon Canvas */}
+      {/* 🌕 Moon Canvas (fixed size, centered) */}
       <div className="relative flex justify-center items-center mt-5 z-10">
         <Canvas
           className="moon-canvas"
@@ -167,7 +177,6 @@ export function HeroSection() {
 
           <Suspense fallback={null}>
             <MoonModel />
-            <SatelliteSprite />
           </Suspense>
 
           <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={0.7} />

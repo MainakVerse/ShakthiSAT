@@ -132,104 +132,123 @@ export default function AboutUsPage() {
       Meet Our Team
     </h2>
 
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-10">
-      {teamMembers.map((member, index) => (
-        <Card
-          key={index}
-          className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 text-center p-6 min-h-[330px] flex flex-col justify-between"
-        >
-          <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border border-[#FFD700]/40">
-            <Image
-              src={member.image}
-              alt={member.name}
-              width={200}
-              height={200}
-              className="object-cover"
-            />
-          </div>
+    {/* Team Grid */}
+      <div className="
+        grid 
+        grid-cols-1           /* Mobile → 1 per row */
+        sm:grid-cols-2        /* Small screens → 2 per row */
+        md:grid-cols-3        /* Tablets → 3 per row */
+        lg:grid-cols-4        /* Large screens → 4 per row */
+        gap-8
+        place-items-center    /* Center cards perfectly */
+      ">
+  {teamMembers.map((member, index) => (
+    <Card
+      key={index}
+      className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30 text-center p-6 w-full max-w-[260px] 
+                 min-h-[340px] flex flex-col justify-between
+                 hover:scale-[1.03] transition-transform duration-200"
+    >
+      <div className="w-28 h-28 mx-auto rounded-full overflow-hidden mb-4 border border-[#FFD700]/40">
+        <Image
+          src={member.image}
+          alt={member.name}
+          width={200}
+          height={200}
+          className="object-cover"
+        />
+      </div>
 
-          <h3 className="text-white text-lg font-semibold">{member.name}</h3>
-          <p className="text-[#C0C0C0] text-sm mt-2">{member.role}</p>
+      <h3 className="text-white text-lg font-semibold">{member.name}</h3>
+      <p className="text-[#C0C0C0] text-sm mt-2">{member.role}</p>
 
-          {/* About Button */}
-          <button
-            onClick={() => {
-              setActiveTeam(index)
-              setShowTeamModal(true)
-            }}
-            className="mt-4 px-4 py-2 rounded-md bg-[#6A4FC8] text-white text-sm hover:bg-[#8d6bff] transition"
-          >
-            About
-          </button>
-        </Card>
-      ))}
-    </div>
+      <button
+        onClick={() => {
+          setActiveTeam(index)
+          setShowTeamModal(true)
+        }}
+        className="mt-4 px-4 py-2 rounded-md bg-[#6A4FC8] text-white text-sm hover:bg-[#8d6bff] transition"
+      >
+        About
+      </button>
+    </Card>
+  ))}
+</div>
+
   </div>
 
 </section>
 
-
-        {/* ✅ Team Modal */}
+{/* Team Modal */}
 {showTeamModal && activeTeam !== null && (
   <div
-    className="fixed inset-0 bg-black/70 flex items-center justify-center z-50"
+    className="fixed inset-0 bg-black/70 flex items-center justify-center z-50 px-4"
     onClick={() => setShowTeamModal(false)}
   >
     <div
-      className="bg-[#12152e] rounded-xl relative w-[80%] max-w-5xl text-left p-10 border-2 border-white/30"
+      className="
+        bg-[#12152e] rounded-xl relative border-2 border-white/30
+        w-full max-w-3xl
+        max-h-[85vh]  /* prevents edge-to-edge height */
+        overflow-hidden
+        p-6 sm:p-10
+      "
       onClick={(e) => e.stopPropagation()}
     >
-
       {/* Close Button */}
       <button
-        className="absolute top-4 right-6 text-white text-3xl"
+        className="absolute top-4 right-5 text-white text-3xl z-50"
         onClick={() => setShowTeamModal(false)}
       >
         ×
       </button>
 
-      {/* Image */}
-      {/* SCI-FI HOLOGRAM RING CONTAINER */}
-<div className="flex justify-center mb-8 relative">
-  <div
-    className="relative w-[260px] h-[260px] flex items-center rounded-full justify-center"
-    style={{
-      backgroundImage: "url('/scifi-ring.png')",
-      backgroundSize: "cover",
-      backgroundPosition: "center",
-      backgroundRepeat: "no-repeat",
-      opacity: 0.9,
-    }}
-  >
-    <Image
-      src={teamMembers[activeTeam].image}
-      alt={teamMembers[activeTeam].name}
-      width={200}
-      height={200}
-      className="rounded-full object-cover border-4 border-[#FFD700]/70 shadow-xl"
-    />
-  </div>
-</div>
+      {/* Scrollable inner content */}
+      <div className="overflow-y-auto max-h-[75vh] pr-2 sm:pr-4">
 
+        {/* Profile Image */}
+        <div className="flex justify-center mb-6 sm:mb-8 relative">
+          <div
+            className="relative w-[200px] h-[200px] sm:w-[260px] sm:h-[260px] flex items-center justify-center rounded-full"
+            style={{
+              backgroundImage: "url('/scifi-ring.png')",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+              opacity: 0.9,
+            }}
+          >
+            <Image
+              src={teamMembers[activeTeam].image}
+              alt={teamMembers[activeTeam].name}
+              width={200}
+              height={200}
+              className="rounded-full object-cover border-4 border-[#FFD700]/70 shadow-xl"
+            />
+          </div>
+        </div>
 
-      {/* Name */}
-      <h3 className="text-[#FFD700] text-3xl font-bold mb-6">
-        {teamMembers[activeTeam].name}
-      </h3>
-      <p className="text-[#13b9d2] text-lg mb-6">
-        {teamMembers[activeTeam].role}
-      </p>
+        {/* Name */}
+        <h3 className="text-[#FFD700] text-2xl sm:text-3xl font-bold text-center mb-4">
+          {teamMembers[activeTeam].name}
+        </h3>
 
-      {/* About Text */}
-      <div className="text-[#C0C0C0] text-base leading-relaxed space-y-5 pr-4">
-        {teamMembers[activeTeam].about.split("\n").map((para, idx) => (
-          <p key={idx}>{para}</p>
-        ))}
+        {/* Role */}
+        <p className="text-[#13b9d2] text-base sm:text-lg text-center mb-6">
+          {teamMembers[activeTeam].role}
+        </p>
+
+        {/* About */}
+        <div className="text-[#C0C0C0] text-sm sm:text-base leading-relaxed space-y-4 px-2 sm:px-0">
+          {teamMembers[activeTeam].about.split("\n").map((para, idx) => (
+            <p key={idx}>{para}</p>
+          ))}
+        </div>
       </div>
-
     </div>
   </div>
 )}
+
 
 
         {/* ✅ Gallery Section */}

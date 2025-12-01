@@ -42,10 +42,10 @@ export function ShakthiSATInSpace() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <h2 className="text-3xl md:text-4xl font-bold uppercase tracking-tight">
+            <h2 className="text-3xl md:text-6xl font-bold uppercase tracking-tight">
               Our Journey
             </h2>
-            <p className="text-base md:text-lg text-[#C0C0C0] max-w-3xl mx-auto leading-relaxed">
+            <p className="text-base md:text-lg text-[#C0C0C0] max-w-2xl mx-auto leading-relaxed">
               A legacy of innovation and empowerment through missions that inspire and elevate young minds across the world.
             </p>
           </motion.div>

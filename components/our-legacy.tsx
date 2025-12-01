@@ -32,7 +32,7 @@ export function OurLegacy() {
     <section className="relative py-24 px-4">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tight mb-6">Our Legacy</h2>
+          <h2 className="text-4xl md:text-8xl font-bold uppercase tracking-tight mb-6">Our Legacy</h2>
           <p className="text-xl md:text-2xl text-[#C0C0C0] max-w-3xl mx-auto">
             From 75 schools to 108 nations — the dream expands
           </p>

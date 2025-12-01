@@ -43,9 +43,13 @@ export function WhyShakthiSAT() {
 
             {/* RIGHT TEXT */}
             <div className="col-span-12 md:col-span-6 space-y-4 sm:space-y-5 md:space-y-6 flex flex-col justify-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight">
-                What is Mission ShakthiSAT?
+              <h2 className="text-2xl sm:text-3xl md:text-6xl font-bold uppercase tracking-tight">
+                What is Mission 
               </h2>
+              <h2 className="text-2xl sm:text-3xl md:text-6xl font-bold tracking-tight">
+                "ShakthiSAT" ?
+              </h2>
+
 
               <p className="text-sm sm:text-base md:text-lg text-[#C0C0C0] leading-relaxed">
                 ShakthiSAT represents more than a satellite mission—it's a philosophy of building bridges across cultures through STEM and space collaboration.
@@ -63,9 +67,6 @@ export function WhyShakthiSAT() {
                 With every step forward, the mission reinforces the belief that space is not the privilege of a few, but a frontier that belongs to all.
               </p>
 
-              <blockquote className="text-base sm:text-lg md:text-xl font-semibold text-[#FFD700] italic border-l-4 border-[#FFD700] pl-3 sm:pl-4">
-                "When humanity looks up, we see no borders."
-              </blockquote>
             </div>
 
           </div>

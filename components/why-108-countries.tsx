@@ -49,7 +49,7 @@ export function Why108Countries() {
 
             {/* RIGHT TEXT */}
             <div className="col-span-12 md:col-span-6 space-y-5 sm:space-y-6 flex flex-col justify-center">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold uppercase tracking-tight">
+              <h2 className="text-2xl sm:text-3xl md:text-6xl font-bold uppercase tracking-tight">
                 Why 108 Countries?
               </h2>
 

@@ -1,4 +1,8 @@
+'use client'
+
+import { useState } from "react"
 import { Award, Rocket, Users, Sparkles } from "lucide-react"
+import { AboutSrimathyModal } from "@/components/about-modal"
 
 const achievements = [
   { icon: Rocket, title: "Space Pioneer", description: "Leading India's youth satellite missions" },
@@ -8,10 +12,13 @@ const achievements = [
 ]
 
 export function DirectorSection() {
+  const [open, setOpen] = useState(false)
+
   return (
     <section className="relative py-16 sm:py-20 md:py-24 px-3 sm:px-4 bg-gradient-to-b from-transparent via-[#6A4FC8]/10 to-transparent">
       <div className="max-w-7xl mx-auto">
 
+       
         {/* CUT-CORNER BOX */}
         <div className="relative w-full border border-white/40 overflow-hidden p-6 sm:p-8 md:p-10 mx-auto">
 
@@ -30,8 +37,8 @@ export function DirectorSection() {
 
           {/* TITLE */}
           <div className="text-center mb-12 sm:mb-16">
-            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold uppercase tracking-tight mb-4 sm:mb-6 bg-gradient-to-r from-[#FFD700] to-[#E26EE5] bg-clip-text text-transparent">
-              Meet Our Director
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold uppercase tracking-tight mb-4 sm:mb-6 bg-gradient-to-r from-[#FFD700] to-[#58c1fa] bg-clip-text text-transparent">
+              Meet Our Mission Director
             </h2>
             <p className="text-sm sm:text-lg md:text-2xl text-[#C0C0C0] max-w-3xl mx-auto leading-relaxed">
               Visionary leader driving the mission to empower girls through space education
@@ -95,6 +102,13 @@ export function DirectorSection() {
                 <span className="px-3 py-1 sm:px-4 sm:py-2 bg-[#FFD700]/20 border border-[#FFD700]/50 rounded-full text-xs sm:text-sm font-medium">
                   Innovation Leader
                 </span>
+
+                 {/* MODAL (rendered once at root of section) */}
+                  
+            <AboutSrimathyModal open={open} setOpen={setOpen} />
+  
+
+
               </div>
             </div>
           </div>

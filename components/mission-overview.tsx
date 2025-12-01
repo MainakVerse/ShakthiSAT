@@ -25,15 +25,9 @@ export function MissionOverview() {
             </p>
 
             <p className="text-sm sm:text-base md:text-xl text-[#C0C0C0] leading-relaxed">
-              The mission aims to ignite passion for STEM and space by bringing together
-              12000 girls across 108 nations. Driven by the desire to empower young girls
-              globally through the awe-inspiring realm of space exploration, ShakthiSAT
-              welcomes participation from every corner of the world.
-            </p>
+             The mission sets out on a bold journey to spark curiosity, courage, and a lifelong passion for STEM and space exploration in 12,000 brilliant young girls from 108 nations. United by a shared spirit of discovery, these future pioneers will step into the fascinating world of satellites, science, and innovation. ShakthiSAT isn’t just a project — it’s a global movement, opening doors to dreamers from every continent and every culture. Together, we explore the cosmos, break down barriers, and rise as the next generation of space leaders who will boldly shape the future among the stars.</p>
 
-            <p className="text-lg sm:text-2xl md:text-3xl font-semibold text-[#63d7e9] italic pt-2 sm:pt-4">
-              "Uniting Humanity Under One Sky."
-            </p>
+           
           </div>
 
          

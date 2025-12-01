@@ -14,7 +14,7 @@ const rajdhani = Rajdhani({
 export const metadata: Metadata = {
   title: "ShakthiSAT | Female-led Lunar Satellite Mission",
   description: "Dr. Srimathy Kesan's dream. From AzaadiSAT to the Moon. 108 Nations — 12,000 Girls. One Mission: Empower Futures.",
-  generator: "v0.app",
+  generator: "Mainak Chaudhuri",
 }
 
 export default function RootLayout({

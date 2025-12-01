@@ -1,5 +1,14 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&display=swap');
+
+.font-rajdhani {
+  font-family: 'Rajdhani', sans-serif;
+}
+
+
 @import "tailwindcss";
 /* Removed tw-animate-css import that was causing empty utility error */
+
 
 @custom-variant dark (&:is(.dark *));
 

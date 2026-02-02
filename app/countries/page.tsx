@@ -16,7 +16,9 @@ import { GlobalParticipation } from "@/components/global-participation";
 import { ContactFooter } from "@/components/contact-footer";
 
 export default function CountriesPage() {
+
   const [showCountries, setShowCountries] = useState(false);
+
 
   /*
    ✅ Single source of truth
@@ -190,6 +192,7 @@ export default function CountriesPage() {
 
         <Card className="bg-[#1a1f3a]/50 border-[#6A4FC8]/30">
 
+
           <CardHeader className="flex flex-col sm:flex-row items-start sm:items-center justify-between">
 
             <CardTitle className="text-2xl text-white flex items-center gap-2">
@@ -198,15 +201,17 @@ export default function CountriesPage() {
             </CardTitle>
 
             <Button
+
               onClick={() => setShowCountries(true)}
               className="bg-[#6A4FC8] hover:bg-blue-800 text-white rounded-xl mt-4 sm:mt-0"
-            >
+           >
               View Participating Countries
             </Button>
           </CardHeader>
 
           <CardContent className="text-[#C0C0C0] space-y-4">
             <p>
+
               Our mission spans across every participating nation. Each country
               contributes talent, perspective, and local impact that strengthens
               the global ecosystem around space science and technology education.
@@ -216,6 +221,7 @@ export default function CountriesPage() {
               This is not symbolic participation. It is operational collaboration.
               Every flag here represents real students, real programs, and real
               outcomes.
+
             </p>
           </CardContent>
         </Card>
